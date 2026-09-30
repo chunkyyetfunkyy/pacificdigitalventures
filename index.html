@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pacific Digital Ventures — Software built inside the clinic</title>
-  <meta name="description" content="Pacific Digital Ventures builds HIPAA-conscious software for medical teams and modern websites for local businesses. Founded in Honolulu by a practicing orthopedic PA. Makers of VocaTranslate.">
+  <meta name="description" content="Pacific Digital Ventures builds HIPAA-conscious software for medical teams, consumer apps, and modern websites for local businesses. Founded in Honolulu by a practicing orthopedic PA. Makers of VocaTranslate, Master Scheduler and Mamba.">
   <meta name="theme-color" content="#0b1f33">
   <link rel="canonical" href="https://pacificdigitalventures.org/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -38,7 +38,8 @@
     "description": "Healthcare software and web development studio in Honolulu, Hawaiʻi. Makers of VocaTranslate.",
     "makesOffer": [
       { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "VocaTranslate", "applicationCategory": "MedicalApplication", "operatingSystem": "iPadOS", "url": "https://apps.apple.com/us/app/vocatranslate/id6753782707" } },
-      { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Master Scheduler", "applicationCategory": "BusinessApplication", "operatingSystem": "iOS" } }
+      { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Master Scheduler", "applicationCategory": "BusinessApplication", "operatingSystem": "iOS" } },
+      { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Mamba: Hypertrophy Trainer", "applicationCategory": "HealthApplication", "operatingSystem": "iOS", "url": "https://apps.apple.com/us/app/mamba-hypertrophy-trainer/id6794737427" } }
     ]
   }
   </script>
@@ -350,6 +351,14 @@
     .sched-foot { display: flex; justify-content: space-between; padding: 8px 12px; background: var(--bg-elev); border-top: 1px solid var(--line); color: var(--ink-3); }
     .sched-foot b { color: var(--teal-2); font-weight: 500; }
 
+    /* Mamba recovery mini demo */
+    .recov { display: grid; gap: 8px; padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--bg-soft); font-size: 12.5px; }
+    .recov-row { display: grid; grid-template-columns: 72px 1fr 74px; align-items: center; gap: 10px; color: var(--ink-2); font-weight: 600; }
+    .recov-row em { font-style: normal; font-family: var(--mono); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); text-align: right; }
+    .recov .bar { height: 8px; border-radius: 999px; background: var(--line); overflow: hidden; }
+    .recov .bar i { display: block; height: 100%; width: 0; border-radius: 999px; background: var(--c); transition: width 1.2s var(--ease); }
+    .recov.on .bar i { width: var(--w); }
+
     /* Intake mini demo */
     .intake-flow { display: grid; gap: 8px; }
     .step { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg-soft); font-size: 13.5px; font-weight: 600; color: var(--ink-2); }
@@ -476,7 +485,7 @@
       <div>
         <span class="eyebrow reveal">Healthcare software · Honolulu, Hawaiʻi</span>
         <h1 class="reveal" data-delay="1">Software built <em>inside the clinic.</em></h1>
-        <p class="lede reveal" data-delay="2">Pacific Digital Ventures builds HIPAA-conscious tools for medical teams and sharp, fast websites for local businesses. Founded and run by a practicing orthopedic PA who ships what the exam room actually needs.</p>
+        <p class="lede reveal" data-delay="2">Pacific Digital Ventures builds HIPAA-conscious tools for medical teams, apps people actually keep on their phone, and sharp, fast websites for local businesses. Founded and run by a practicing orthopedic PA.</p>
         <div class="hero-cta reveal" data-delay="3">
           <a class="btn btn-primary" href="#products">See our products
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
@@ -536,7 +545,7 @@
       <div class="section-head reveal">
         <span class="eyebrow">Products</span>
         <h2>Tools that pull their weight on a real shift.</h2>
-        <p class="lede">Every product here started as a problem we hit at work. We build the version we'd actually want to use between patients.</p>
+        <p class="lede">Every product here started as something we wanted for ourselves, in the clinic or in the gym. We build the version we'd actually want to use.</p>
       </div>
 
       <div class="products">
@@ -619,16 +628,29 @@
         <!-- Mamba -->
         <article class="card span-6 reveal" data-delay="1">
           <div class="card-top">
-            <div class="app-icon" style="background:linear-gradient(135deg,#0b1f33,#33475b)">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>
+            <div class="app-icon" style="background:linear-gradient(135deg,#0b1f33,#2f5fd0)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8v8M18 8v8M3 10v4M21 10v4M6 12h12"/><rect x="4" y="7" width="4" height="10" rx="1"/><rect x="16" y="7" width="4" height="10" rx="1"/></svg>
             </div>
-            <span class="status soon">Coming soon</span>
+            <span class="status live">Live on the App Store</span>
           </div>
-          <h3>Mamba<small>Our next release</small></h3>
-          <p>Mamba is in active development. We're keeping the details under wraps until it's ready, but if you'd like early access when it ships, drop us a line and we'll put you on the list.</p>
+          <h3>Mamba<small>A hypertrophy trainer that reads your recovery, muscle by muscle.</small></h3>
+          <p>Mamba tells you what to train today and what can wait. It learns from each set you log, tracks how recovered each major muscle group is, and builds your next workout from that. It also flags any muscle group you've gone too long without training. Free on iPhone and iPad, with an optional Pro subscription.</p>
+          <ul class="feat">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span>Workouts built from your recovery and volume</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span>A recovery read for every major muscle group</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span>Food logging with barcode scanning</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span>A 3D avatar that grows with the sets you log</span></li>
+          </ul>
+          <div class="recov" id="recov" aria-hidden="true">
+            <div class="recov-row"><span>Chest</span><div class="bar"><i style="--w:92%;--c:#0fb5a5"></i></div><em>Ready</em></div>
+            <div class="recov-row"><span>Back</span><div class="bar"><i style="--w:58%;--c:#f2b84b"></i></div><em>Recovering</em></div>
+            <div class="recov-row"><span>Quads</span><div class="bar"><i style="--w:84%;--c:#0fb5a5"></i></div><em>Ready</em></div>
+            <div class="recov-row"><span>Shoulders</span><div class="bar"><i style="--w:100%;--c:#ff7a59"></i></div><em>Overdue</em></div>
+          </div>
           <div class="card-actions">
-            <a class="link" href="mailto:info@pacificdigitalventures.org?subject=Mamba%20early%20access">Request early access
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <a class="appstore" href="https://apps.apple.com/us/app/mamba-hypertrophy-trainer/id6794737427" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.4 2-3.6 2.1-3.7-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1.9-4 2.4-1.7 3-.4 7.3 1.2 9.7.8 1.2 1.8 2.5 3 2.4 1.2 0 1.7-.8 3.2-.8s1.9.8 3.2.8c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.7 1.3-2.8 0 0-2.6-1-2.6-3.8zM14 5.4c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.2-.6 2.8-1.4z"/></svg>
+              <span><small>Download on the</small><b>App Store</b></span>
             </a>
           </div>
         </article>
@@ -868,6 +890,10 @@
         };
         new IntersectionObserver((e, o) => { if (e[0].isIntersecting && !started) { started = true; run(); o.disconnect(); } }, { threshold: 0.4 }).observe(sched);
       }
+
+      // ---------- Mamba recovery demo ----------
+      const recov = document.getElementById('recov');
+      if (recov) new IntersectionObserver((e, o) => { if (e[0].isIntersecting) { recov.classList.add('on'); o.disconnect(); } }, { threshold: 0.5 }).observe(recov);
 
       // ---------- Intake demo ----------
       const flow = document.getElementById('intakeFlow');
