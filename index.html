@@ -1,141 +1,909 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pacific Digital Ventures LLC</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-        }
-        
-        .header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
-        
-        .header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            font-weight: 300;
-            letter-spacing: 2px;
-        }
-        
-        .tagline {
-            font-size: 1.5em;
-            font-weight: 300;
-            opacity: 0.9;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-        
-        .content {
-            background: white;
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        
-        .content p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            color: #555;
-            line-height: 1.8;
-        }
-        
-        .highlight {
-            color: #2a5298;
-            font-weight: 500;
-        }
-        
-        .contact {
-            margin-top: 40px;
-            padding-top: 40px;
-            border-top: 2px solid #eee;
-        }
-        
-        .contact h3 {
-            color: #333;
-            margin-bottom: 15px;
-            font-size: 1.3em;
-        }
-        
-        .contact a {
-            color: #2a5298;
-            text-decoration: none;
-            font-size: 1.1em;
-            font-weight: 500;
-        }
-        
-        .contact a:hover {
-            text-decoration: underline;
-        }
-        
-        .footer {
-            text-align: center;
-            padding: 30px;
-            color: #777;
-            font-size: 0.9em;
-        }
-        
-        @media (max-width: 600px) {
-            .header h1 {
-                font-size: 2em;
-            }
-            .tagline {
-                font-size: 1.2em;
-            }
-            .content {
-                padding: 30px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pacific Digital Ventures — Software built inside the clinic</title>
+  <meta name="description" content="Pacific Digital Ventures builds HIPAA-conscious software for medical teams, consumer apps, and modern websites for local businesses. Founded in Honolulu by a practicing orthopedic PA. Makers of VocaTranslate, Master Scheduler and Mamba.">
+  <meta name="theme-color" content="#0b1f33">
+  <link rel="canonical" href="https://pacificdigitalventures.org/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pacific Digital Ventures">
+  <meta property="og:title" content="Pacific Digital Ventures — Software built inside the clinic">
+  <meta property="og:description" content="HIPAA-conscious tools for medical teams and modern websites for local businesses. Makers of VocaTranslate. Honolulu, Hawaiʻi.">
+  <meta property="og:url" content="https://pacificdigitalventures.org/">
+  <meta property="og:image" content="https://pacificdigitalventures.org/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pacific Digital Ventures — Software built inside the clinic">
+  <meta name="twitter:description" content="HIPAA-conscious tools for medical teams and modern websites for local businesses. Makers of VocaTranslate.">
+  <meta name="twitter:image" content="https://pacificdigitalventures.org/assets/og.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Pacific Digital Ventures LLC",
+    "url": "https://pacificdigitalventures.org/",
+    "logo": "https://pacificdigitalventures.org/assets/logo.png",
+    "email": "info@pacificdigitalventures.org",
+    "address": { "@type": "PostalAddress", "addressLocality": "Honolulu", "addressRegion": "HI", "addressCountry": "US" },
+    "description": "Healthcare software and web development studio in Honolulu, Hawaiʻi. Makers of VocaTranslate.",
+    "makesOffer": [
+      { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "VocaTranslate", "applicationCategory": "MedicalApplication", "operatingSystem": "iPadOS", "url": "https://apps.apple.com/us/app/vocatranslate/id6753782707" } },
+      { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Master Scheduler", "applicationCategory": "BusinessApplication", "operatingSystem": "iOS", "url": "https://apps.apple.com/us/app/master-scheduler/id6760582034" } },
+      { "@type": "Offer", "itemOffered": { "@type": "SoftwareApplication", "name": "Mamba: Hypertrophy Trainer", "applicationCategory": "HealthApplication", "operatingSystem": "iOS", "url": "https://apps.apple.com/us/app/mamba-hypertrophy-trainer/id6794737427" } }
+    ]
+  }
+  </script>
+
+  <style>
+    /* ------------------------------------------------------------------
+       Design tokens
+       ------------------------------------------------------------------ */
+    :root {
+      --bg: #f6f8fb;
+      --bg-elev: #ffffff;
+      --bg-soft: #eef2f7;
+      --ink: #0b1f33;
+      --ink-2: #33475b;
+      --ink-3: #6b7d90;
+      --line: #dfe6ee;
+      --line-strong: #c7d2de;
+
+      --navy: #0b1f33;
+      --navy-2: #10304d;
+      --teal: #0fb5a5;
+      --teal-2: #0a8f83;
+      --teal-soft: #d7f5f1;
+      --coral: #ff7a59;
+      --coral-soft: #ffe6de;
+      --gold: #f2b84b;
+
+      --hero-bg: #071527;
+      --hero-ink: #e9f1fa;
+      --hero-ink-2: #a8bacd;
+      --hero-line: rgba(255,255,255,0.10);
+      --hero-card: rgba(255,255,255,0.05);
+
+      --radius: 18px;
+      --radius-sm: 12px;
+      --shadow: 0 1px 2px rgba(11,31,51,0.05), 0 12px 32px -12px rgba(11,31,51,0.18);
+      --shadow-lg: 0 2px 4px rgba(11,31,51,0.06), 0 30px 60px -20px rgba(11,31,51,0.30);
+
+      --font: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+      --max: 1180px;
+      --gutter: clamp(16px, 4vw, 40px);
+      --ease: cubic-bezier(.2,.7,.2,1);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0a1626;
+        --bg-elev: #0f1f33;
+        --bg-soft: #0d1b2d;
+        --ink: #e9f1fa;
+        --ink-2: #c1cfdd;
+        --ink-3: #8598ac;
+        --line: #1e3048;
+        --line-strong: #2b405b;
+        --teal-soft: #0f3a3a;
+        --coral-soft: #3a1f19;
+        --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 12px 32px -12px rgba(0,0,0,0.5);
+        --shadow-lg: 0 2px 4px rgba(0,0,0,0.3), 0 30px 60px -20px rgba(0,0,0,0.6);
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #0a1626;
+      --bg-elev: #0f1f33;
+      --bg-soft: #0d1b2d;
+      --ink: #e9f1fa;
+      --ink-2: #c1cfdd;
+      --ink-3: #8598ac;
+      --line: #1e3048;
+      --line-strong: #2b405b;
+      --teal-soft: #0f3a3a;
+      --coral-soft: #3a1f19;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 12px 32px -12px rgba(0,0,0,0.5);
+      --shadow-lg: 0 2px 4px rgba(0,0,0,0.3), 0 30px 60px -20px rgba(0,0,0,0.6);
+    }
+
+    /* ------------------------------------------------------------------
+       Base
+       ------------------------------------------------------------------ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+    ::selection { background: var(--teal); color: #fff; }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
+    .section { padding: clamp(72px, 10vw, 128px) 0; }
+    .section-soft { background: var(--bg-soft); }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--teal-2); font-weight: 500;
+    }
+    .eyebrow::before { content: ''; width: 22px; height: 2px; background: var(--teal); border-radius: 2px; }
+    h1, h2, h3, h4 { line-height: 1.1; letter-spacing: -0.02em; font-weight: 800; }
+    h2 { font-size: clamp(30px, 4.2vw, 46px); margin-top: 14px; }
+    .lede { color: var(--ink-2); font-size: clamp(17px, 1.4vw, 19px); max-width: 640px; margin-top: 16px; }
+    .section-head { max-width: 760px; margin-bottom: clamp(36px, 5vw, 64px); }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 22px; border-radius: 999px; font-weight: 700; font-size: 15px;
+      transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s, color .25s;
+      white-space: nowrap;
+    }
+    .btn svg { width: 18px; height: 18px; }
+    .btn-primary { background: var(--teal); color: #05231f; box-shadow: 0 8px 24px -8px rgba(15,181,165,.7); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -8px rgba(15,181,165,.8); background: #16c9b8; }
+    .btn-ghost { border: 1px solid var(--line-strong); color: var(--ink); background: var(--bg-elev); }
+    .btn-ghost:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+    .btn-dark { background: var(--navy); color: #fff; }
+    .btn-dark:hover { transform: translateY(-2px); background: var(--navy-2); }
+    .hero .btn-ghost { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.18); color: var(--hero-ink); }
+    .hero .btn-ghost:hover { background: rgba(255,255,255,0.12); }
+
+    /* reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+    .reveal.in { opacity: 1; transform: none; }
+    .reveal[data-delay="1"] { transition-delay: .1s; }
+    .reveal[data-delay="2"] { transition-delay: .2s; }
+    .reveal[data-delay="3"] { transition-delay: .3s; }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+      * { animation-duration: .001s !important; animation-iteration-count: 1 !important; }
+    }
+
+    /* ------------------------------------------------------------------
+       Nav
+       ------------------------------------------------------------------ */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 14px 0;
+      transition: background .3s, box-shadow .3s, padding .3s;
+    }
+    .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav.scrolled { background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: 0 1px 0 var(--line); padding: 10px 0; }
+    .nav:not(.scrolled) { color: var(--hero-ink); }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -0.01em; font-size: 17px; }
+    .brand .mark { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; background: linear-gradient(135deg, var(--teal) 0%, #1c6fd1 100%); box-shadow: 0 6px 16px -6px rgba(15,181,165,.8); flex-shrink: 0; }
+    .brand .mark svg { width: 22px; height: 22px; }
+    .brand small { display: block; font-weight: 500; font-size: 11px; opacity: .7; letter-spacing: .08em; text-transform: uppercase; line-height: 1; margin-top: 2px; }
+    .nav-links { display: flex; gap: 6px; align-items: center; list-style: none; }
+    .nav-links a { padding: 8px 12px; border-radius: 999px; font-weight: 600; font-size: 14px; opacity: .85; transition: background .2s, opacity .2s; }
+    .nav-links a:hover { opacity: 1; background: color-mix(in srgb, currentColor 10%, transparent); }
+    .nav-cta { margin-left: 8px; padding: 10px 16px !important; background: var(--teal); color: #05231f !important; opacity: 1 !important; }
+    .nav-cta:hover { background: #16c9b8 !important; }
+    .nav-toggle { display: none; width: 44px; height: 44px; border-radius: 12px; place-items: center; }
+    .nav-toggle svg { width: 24px; height: 24px; }
+    @media (max-width: 860px) {
+      .nav-links { position: fixed; inset: 64px 12px auto 12px; flex-direction: column; align-items: stretch; background: var(--bg-elev); color: var(--ink); border: 1px solid var(--line); border-radius: 16px; padding: 10px; box-shadow: var(--shadow-lg); transform: translateY(-12px); opacity: 0; pointer-events: none; transition: .25s var(--ease); }
+      .nav-links.open { transform: none; opacity: 1; pointer-events: auto; }
+      .nav-links a { padding: 12px 14px; }
+      .nav-cta { margin: 6px 0 0; text-align: center; }
+      .nav-toggle { display: grid; }
+    }
+
+    /* ------------------------------------------------------------------
+       Hero
+       ------------------------------------------------------------------ */
+    .hero {
+      position: relative; background: var(--hero-bg); color: var(--hero-ink);
+      padding: clamp(120px, 16vw, 170px) 0 clamp(60px, 8vw, 100px);
+      overflow: hidden; isolation: isolate;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0; z-index: -1;
+      background:
+        radial-gradient(900px 500px at 8% -10%, rgba(15,181,165,.35), transparent 60%),
+        radial-gradient(700px 500px at 100% 10%, rgba(28,111,209,.35), transparent 60%),
+        radial-gradient(600px 400px at 60% 110%, rgba(255,122,89,.18), transparent 60%);
+    }
+    .hero::after {
+      content: ''; position: absolute; inset: 0; z-index: -1; opacity: .35;
+      background-image: linear-gradient(var(--hero-line) 1px, transparent 1px), linear-gradient(90deg, var(--hero-line) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(ellipse at 50% 30%, #000 20%, transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse at 50% 30%, #000 20%, transparent 70%);
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
+    .hero h1 { font-size: clamp(40px, 6vw, 72px); letter-spacing: -0.035em; margin-top: 18px; }
+    .hero h1 em { font-style: normal; background: linear-gradient(90deg, #5ee7d9 0%, #7fb6ff 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero .lede { color: var(--hero-ink-2); font-size: clamp(17px, 1.5vw, 20px); max-width: 560px; }
+    .hero .eyebrow { color: #6fe3d6; }
+    .hero .eyebrow::before { background: #6fe3d6; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .hero-proof { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--hero-line); }
+    .hero-proof div { display: flex; flex-direction: column; }
+    .hero-proof strong { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; }
+    .hero-proof span { font-size: 12.5px; color: var(--hero-ink-2); }
+    @media (max-width: 960px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-visual { order: 2; }
+    }
+
+    /* Device mock: VocaTranslate dual-sided demo */
+    .hero-visual { position: relative; }
+    .device {
+      position: relative; margin: 0 auto; width: min(100%, 440px); aspect-ratio: 3 / 4;
+      background: #0d1a29; border-radius: 34px; padding: 14px;
+      box-shadow: 0 0 0 1px rgba(255,255,255,.08), 0 40px 80px -30px rgba(0,0,0,.8), inset 0 0 0 2px #1b2a3c;
+      transform: perspective(1400px) rotateY(-8deg) rotateX(4deg);
+      transition: transform .8s var(--ease);
+    }
+    .hero-visual:hover .device { transform: perspective(1400px) rotateY(-3deg) rotateX(2deg); }
+    .screen { position: absolute; inset: 14px; border-radius: 24px; background: #f4f7fb; overflow: hidden; display: grid; grid-template-rows: 1fr auto 1fr; color: #0b1f33; }
+    .pane { padding: 22px 22px 18px; display: flex; flex-direction: column; gap: 10px; min-height: 0; }
+    .pane.patient { transform: rotate(180deg); background: linear-gradient(180deg, #e8f7f5, #f4f7fb); }
+    .pane-head { display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: #5d7189; }
+    .pane-head .lang { color: #0a8f83; font-weight: 500; display: inline-flex; align-items: center; gap: 6px; }
+    .pane-head .lang::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #0fb5a5; box-shadow: 0 0 0 4px rgba(15,181,165,.2); animation: pulse 1.8s infinite; }
+    @keyframes pulse { 0%,100% { box-shadow: 0 0 0 3px rgba(15,181,165,.2);} 50% { box-shadow: 0 0 0 7px rgba(15,181,165,.08);} }
+    .bubble { font-size: clamp(15px, 1.7vw, 18px); font-weight: 600; line-height: 1.4; letter-spacing: -0.01em; min-height: 3.6em; }
+    .bubble .cursor { display: inline-block; width: 2px; height: 1em; background: #0fb5a5; margin-left: 2px; vertical-align: -2px; animation: blink 1s steps(2) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .pane-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .pill { font-size: 11.5px; font-weight: 700; padding: 6px 10px; border-radius: 999px; background: #0b1f33; color: #fff; display: inline-flex; align-items: center; gap: 6px; }
+    .pill.soft { background: #d7f5f1; color: #0a8f83; }
+    .waveform { display: flex; gap: 3px; align-items: center; height: 18px; }
+    .waveform i { width: 3px; border-radius: 2px; background: #0fb5a5; height: 30%; animation: wave 1.1s ease-in-out infinite; }
+    .waveform i:nth-child(2) { animation-delay: .1s } .waveform i:nth-child(3) { animation-delay: .2s } .waveform i:nth-child(4) { animation-delay: .3s } .waveform i:nth-child(5) { animation-delay: .4s } .waveform i:nth-child(6) { animation-delay: .5s } .waveform i:nth-child(7) { animation-delay: .6s }
+    @keyframes wave { 0%,100% { height: 25%; } 50% { height: 100%; } }
+    .divider { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 10px 22px; background: #0b1f33; color: #fff; font-family: var(--mono); font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; }
+    .divider span { opacity: .7; }
+    .divider b { color: #6fe3d6; font-weight: 500; }
+    .float-badge {
+      position: absolute; display: flex; align-items: center; gap: 10px;
+      background: rgba(11,31,51,.85); border: 1px solid var(--hero-line); backdrop-filter: blur(12px);
+      border-radius: 14px; padding: 10px 14px; font-size: 13px; font-weight: 600; color: var(--hero-ink);
+      box-shadow: 0 20px 40px -20px rgba(0,0,0,.8);
+      animation: floaty 6s ease-in-out infinite;
+    }
+    .float-badge svg { width: 18px; height: 18px; color: #6fe3d6; flex-shrink: 0; }
+    .float-badge.b1 { left: -6px; top: 8%; animation-delay: -1s; }
+    .float-badge.b2 { right: -6px; bottom: 12%; animation-delay: -3s; }
+    @keyframes floaty { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-8px);} }
+    @media (max-width: 480px) { .float-badge { display: none; } .device { transform: none; } }
+
+    /* ------------------------------------------------------------------
+       Logos / trust row
+       ------------------------------------------------------------------ */
+    .trust { background: var(--bg-elev); border-bottom: 1px solid var(--line); }
+    .trust .wrap { display: flex; flex-wrap: wrap; gap: 14px 36px; align-items: center; justify-content: center; padding-top: 22px; padding-bottom: 22px; }
+    .trust span { display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 600; color: var(--ink-3); }
+    .trust svg { width: 18px; height: 18px; color: var(--teal-2); }
+
+    /* ------------------------------------------------------------------
+       Products
+       ------------------------------------------------------------------ */
+    .products { display: grid; grid-template-columns: repeat(12, 1fr); gap: 20px; }
+    .card {
+      background: var(--bg-elev); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: clamp(22px, 3vw, 34px); position: relative; overflow: hidden;
+      transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--line-strong); }
+    .card-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .app-icon { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; color: #fff; box-shadow: 0 10px 20px -10px rgba(0,0,0,.5); flex-shrink: 0; }
+    .app-icon svg { width: 28px; height: 28px; }
+    .status { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; padding: 6px 10px; border-radius: 999px; font-weight: 500; display: inline-flex; align-items: center; gap: 6px; }
+    .status::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+    .status.live { background: var(--teal-soft); color: var(--teal-2); }
+    .status.pilot { background: #e8efff; color: #2f5fd0; }
+    .status.soon { background: var(--coral-soft); color: #c9502f; }
+    :root[data-theme="dark"] .status.pilot, :root:not([data-theme="light"]) .status.pilot { }
+    .card h3 { font-size: 24px; letter-spacing: -0.02em; }
+    .card h3 small { display: block; font-size: 13.5px; font-weight: 600; color: var(--ink-3); letter-spacing: 0; margin-top: 4px; }
+    .card p { color: var(--ink-2); font-size: 15.5px; }
+    .feat { list-style: none; display: grid; gap: 8px; margin-top: 4px; }
+    .feat li { display: flex; gap: 10px; font-size: 14.5px; color: var(--ink-2); align-items: flex-start; }
+    .feat svg { width: 18px; height: 18px; color: var(--teal-2); flex-shrink: 0; margin-top: 2px; }
+    .card-actions { margin-top: auto; display: flex; flex-wrap: wrap; gap: 10px; padding-top: 10px; }
+    .link { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: 14.5px; color: var(--teal-2); }
+    .link svg { width: 16px; height: 16px; transition: transform .25s; }
+    .link:hover svg { transform: translateX(3px); }
+    .span-7 { grid-column: span 7; } .span-5 { grid-column: span 5; } .span-6 { grid-column: span 6; } .span-4 { grid-column: span 4; } .span-12 { grid-column: span 12; }
+    @media (max-width: 900px) { .products > * { grid-column: span 12 !important; } }
+
+    /* App Store badge (official Apple artwork, not restyled) */
+    .appstore { display: inline-flex; align-items: center; transition: transform .25s; line-height: 0; }
+    .appstore:hover { transform: translateY(-2px); }
+    .appstore img { height: 48px; width: auto; }
+
+    /* Scheduler mini demo */
+    .sched { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--bg-soft); font-family: var(--mono); font-size: 10.5px; }
+    .sched-head { display: grid; grid-template-columns: 54px repeat(7, 1fr); background: var(--navy); color: #fff; }
+    .sched-head div { padding: 8px 4px; text-align: center; letter-spacing: .06em; }
+    .sched-row { display: grid; grid-template-columns: 54px repeat(7, 1fr); border-top: 1px solid var(--line); }
+    .sched-row div { padding: 7px 4px; text-align: center; color: var(--ink-3); }
+    .sched-row div:first-child { text-align: left; padding-left: 10px; font-weight: 500; color: var(--ink-2); background: var(--bg-elev); }
+    .chip { display: inline-block; padding: 2px 6px; border-radius: 6px; font-weight: 500; opacity: 0; transform: scale(.7); transition: opacity .4s var(--ease), transform .4s var(--ease); }
+    .chip.on { opacity: 1; transform: none; }
+    .chip.a { background: #d7f5f1; color: #0a8f83; } .chip.b { background: #e8efff; color: #2f5fd0; } .chip.c { background: #fff1d6; color: #b3720a; } .chip.d { background: #ffe6de; color: #c9502f; }
+    .sched-foot { display: flex; justify-content: space-between; padding: 8px 12px; background: var(--bg-elev); border-top: 1px solid var(--line); color: var(--ink-3); }
+    .sched-foot b { color: var(--teal-2); font-weight: 500; }
+
+    /* Mamba recovery mini demo */
+    .recov { display: grid; gap: 8px; padding: 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--bg-soft); font-size: 12.5px; }
+    .recov-row { display: grid; grid-template-columns: 72px 1fr 74px; align-items: center; gap: 10px; color: var(--ink-2); font-weight: 600; }
+    .recov-row em { font-style: normal; font-family: var(--mono); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); text-align: right; }
+    .recov .bar { height: 8px; border-radius: 999px; background: var(--line); overflow: hidden; }
+    .recov .bar i { display: block; height: 100%; width: 0; border-radius: 999px; background: var(--c); transition: width 1.2s var(--ease); }
+    .recov.on .bar i { width: var(--w); }
+
+    /* Intake mini demo */
+    .intake-flow { display: grid; gap: 8px; }
+    .step { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg-soft); font-size: 13.5px; font-weight: 600; color: var(--ink-2); }
+    .step i { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; background: var(--bg-elev); border: 1px solid var(--line); font-family: var(--mono); font-style: normal; font-size: 11px; color: var(--ink-3); flex-shrink: 0; }
+    .step.done { border-color: var(--teal); background: var(--teal-soft); color: var(--teal-2); }
+    .step.done i { background: var(--teal); color: #fff; border-color: var(--teal); }
+
+    /* ------------------------------------------------------------------
+       Web studio
+       ------------------------------------------------------------------ */
+    .studio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
+    @media (max-width: 900px) { .studio-grid { grid-template-columns: 1fr; } }
+    .browser { display: block; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow-lg); background: #111; transform: perspective(1200px) rotateY(6deg); transition: transform .8s var(--ease); }
+    .browser:hover { transform: perspective(1200px) rotateY(2deg); }
+    .browser-bar { display: flex; align-items: center; gap: 8px; padding: 10px 12px; background: #1c1c1e; }
+    .browser-bar i { width: 10px; height: 10px; border-radius: 50%; background: #3a3a3c; }
+    .browser-bar i:nth-child(1) { background: #ff5f57 } .browser-bar i:nth-child(2) { background: #febc2e } .browser-bar i:nth-child(3) { background: #28c840 }
+    .browser-bar span { margin-left: auto; margin-right: auto; font-family: var(--mono); font-size: 11px; color: #9a9a9e; background: #2c2c2e; padding: 4px 12px; border-radius: 6px; }
+    .browser img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; }
+    .studio-list { list-style: none; display: grid; gap: 14px; margin-top: 26px; }
+    .studio-list li { display: flex; gap: 14px; align-items: flex-start; }
+    .studio-list .ico { width: 40px; height: 40px; border-radius: 12px; background: var(--teal-soft); color: var(--teal-2); display: grid; place-items: center; flex-shrink: 0; }
+    .studio-list .ico svg { width: 20px; height: 20px; }
+    .studio-list b { display: block; font-size: 16px; }
+    .studio-list span { color: var(--ink-2); font-size: 14.5px; }
+    .case-tag { display: inline-flex; gap: 8px; align-items: center; margin-top: 14px; font-size: 13.5px; color: var(--ink-3); }
+    .case-tag b { color: var(--ink); }
+
+    /* ------------------------------------------------------------------
+       Approach
+       ------------------------------------------------------------------ */
+    .pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    @media (max-width: 1000px) { .pillars { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .pillars { grid-template-columns: 1fr; } }
+    .pillar { background: var(--bg-elev); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
+    .pillar .num { font-family: var(--mono); font-size: 12px; color: var(--teal-2); letter-spacing: .12em; }
+    .pillar h3 { font-size: 20px; margin: 12px 0 8px; letter-spacing: -0.01em; }
+    .pillar p { color: var(--ink-2); font-size: 15px; }
+
+    /* ------------------------------------------------------------------
+       About
+       ------------------------------------------------------------------ */
+    .about { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
+    @media (max-width: 900px) { .about { grid-template-columns: 1fr; } }
+    .founder-card { background: var(--navy); color: #fff; border-radius: var(--radius); padding: clamp(24px, 3vw, 36px); position: relative; overflow: hidden; }
+    .founder-card::before { content: ''; position: absolute; inset: auto -40% -60% auto; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, rgba(15,181,165,.45), transparent 65%); }
+    .founder-card .avatar { width: 64px; height: 64px; border-radius: 18px; background: linear-gradient(135deg, var(--teal), #1c6fd1); display: grid; place-items: center; font-weight: 800; font-size: 22px; letter-spacing: -0.02em; }
+    .founder-card h3 { font-size: 24px; margin-top: 18px; }
+    .founder-card .role { color: #a8bacd; font-size: 14px; margin-top: 4px; }
+    .founder-card p { color: #d5e0ec; margin-top: 16px; font-size: 15.5px; position: relative; }
+    .about-body p + p { margin-top: 14px; }
+    .about-body p { color: var(--ink-2); }
+    .about-body strong { color: var(--ink); }
+
+    /* ------------------------------------------------------------------
+       Contact
+       ------------------------------------------------------------------ */
+    .contact { background: var(--hero-bg); color: var(--hero-ink); position: relative; overflow: hidden; }
+    .contact::before { content: ''; position: absolute; inset: 0; background: radial-gradient(800px 400px at 90% 0%, rgba(15,181,165,.3), transparent 60%), radial-gradient(600px 400px at 0% 100%, rgba(28,111,209,.3), transparent 60%); }
+    .contact .wrap { position: relative; display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
+    @media (max-width: 900px) { .contact .wrap { grid-template-columns: 1fr; } }
+    .contact h2 { font-size: clamp(32px, 4.5vw, 52px); }
+    .contact .lede { color: var(--hero-ink-2); }
+    .contact .eyebrow { color: #6fe3d6; } .contact .eyebrow::before { background: #6fe3d6; }
+    .contact-cards { display: grid; gap: 12px; }
+    .ccard { display: flex; align-items: center; gap: 16px; padding: 18px 20px; border-radius: 16px; background: var(--hero-card); border: 1px solid var(--hero-line); transition: background .25s, transform .25s var(--ease); }
+    .ccard:hover { background: rgba(255,255,255,.09); transform: translateX(4px); }
+    .ccard .ico { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; background: rgba(111,227,214,.15); color: #6fe3d6; flex-shrink: 0; }
+    .ccard .ico svg { width: 22px; height: 22px; }
+    .ccard b { display: block; font-size: 16px; }
+    .ccard span { font-size: 13.5px; color: var(--hero-ink-2); }
+    .ccard .arrow { margin-left: auto; width: 18px; height: 18px; opacity: .6; }
+    .email-line { margin-top: 24px; font-family: var(--mono); font-size: 14px; color: var(--hero-ink-2); }
+    .email-line a { color: #6fe3d6; border-bottom: 1px dashed rgba(111,227,214,.5); }
+
+    /* ------------------------------------------------------------------
+       Footer
+       ------------------------------------------------------------------ */
+    footer { background: #050f1c; color: #a8bacd; padding: 40px 0 32px; font-size: 13.5px; }
+    footer .wrap { display: flex; flex-wrap: wrap; gap: 20px 40px; justify-content: space-between; align-items: center; }
+    footer .brand { color: #fff; font-size: 15px; }
+    footer ul { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 22px; }
+    footer a:hover { color: #fff; }
+    footer .copy { width: 100%; border-top: 1px solid rgba(255,255,255,.08); padding-top: 18px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
+
+    .theme-btn { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; opacity: .8; }
+    .theme-btn:hover { opacity: 1; background: color-mix(in srgb, currentColor 10%, transparent); }
+    .theme-btn svg { width: 18px; height: 18px; }
+    .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  </style>
 </head>
 <body>
-    <header class="header">
-        <h1>Pacific Digital Ventures LLC</h1>
-        <p class="tagline">Digital Solutions for Healthcare & Beyond</p>
-    </header>
-    
-    <div class="container">
-        <div class="content">
-            <p>
-                We develop <span class="highlight">innovative software applications</span> focused on improving 
-                communication, efficiency, and workflow in professional environments.
-            </p>
-            
-            <p>
-                Our current projects include <span class="highlight">secure medical translation tools</span> 
-                and <span class="highlight">intelligent scheduling solutions</span>.
-            </p>
-            
-            <div class="contact">
-                <h3>Contact Us</h3>
-                <p>
-                    <a href="mailto:info@pacificdigitalventures.org">info@pacificdigitalventures.org</a>
-                </p>
-            </div>
-        </div>
+
+  <!-- ================= NAV ================= -->
+  <nav class="nav" id="nav" aria-label="Primary">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="Pacific Digital Ventures home">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/><path d="M2 8c2-3 4-3 6 0s4 3 6 0 4-3 6 0" opacity=".55"/></svg>
+        </span>
+        <span>Pacific Digital Ventures<small>Honolulu, Hawaiʻi</small></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#products">Products</a></li>
+        <li><a href="#studio">Web Studio</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="nav-cta">Get in touch</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:4px">
+        <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode" title="Toggle theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
     </div>
-    
-    <footer class="footer">
-        <p>&copy; 2024 Pacific Digital Ventures LLC. All rights reserved.</p>
-    </footer>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+  <header class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow reveal">Healthcare software · Honolulu, Hawaiʻi</span>
+        <h1 class="reveal" data-delay="1">Software built <em>inside the clinic.</em></h1>
+        <p class="lede reveal" data-delay="2">Pacific Digital Ventures builds HIPAA-conscious tools for medical teams, apps people actually keep on their phone, and sharp, fast websites for local businesses. Founded and run by a practicing orthopedic PA.</p>
+        <div class="hero-cta reveal" data-delay="3">
+          <a class="btn btn-primary" href="#products">See our products
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#contact">Start a project</a>
+        </div>
+        <div class="hero-proof reveal" data-delay="3">
+          <div><strong>46</strong><span>languages in VocaTranslate</span></div>
+          <div><strong>AES-256</strong><span>encryption in transit &amp; at rest</span></div>
+          <div><strong>0</strong><span>PHI stored after a session</span></div>
+          <div><strong>365-day</strong><span>audit log retention</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal" data-delay="2">
+        <div class="float-badge b1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          HIPAA-compliant · BAA in place
+        </div>
+        <div class="float-badge b2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="3"/><path d="M8 21h8"/></svg>
+          Designed for iPad at the bedside
+        </div>
+
+        <div class="device" role="img" aria-label="VocaTranslate dual-sided interface: the patient side is rotated to face the patient across the table while the provider side faces the clinician.">
+          <div class="screen">
+            <div class="pane patient">
+              <div class="pane-head"><span>Patient</span><span class="lang" id="demoLang">Español</span></div>
+              <div class="bubble" id="demoOut"></div>
+              <div class="pane-foot"><span class="pill soft">Tap to reply</span><div class="waveform" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+            </div>
+            <div class="divider"><span>VocaTranslate</span><b id="demoMode">Smart Hold Mode</b></div>
+            <div class="pane provider">
+              <div class="pane-head"><span>Provider</span><span class="lang">English</span></div>
+              <div class="bubble" id="demoIn"></div>
+              <div class="pane-foot"><div class="waveform" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="pill">● Listening</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= TRUST ROW ================= -->
+  <div class="trust">
+    <div class="wrap">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/></svg>HIPAA-first architecture</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Business Associate Agreements with cloud providers</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 20V9"/></svg>Native Swift on iOS &amp; iPadOS</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>24-hour response on critical support issues</span>
+    </div>
+  </div>
+
+  <!-- ================= PRODUCTS ================= -->
+  <section class="section" id="products">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Products</span>
+        <h2>Tools that pull their weight on a real shift.</h2>
+        <p class="lede">Every product here started as something we wanted for ourselves, in the clinic or in the gym. We build the version we'd actually want to use.</p>
+      </div>
+
+      <div class="products">
+        <!-- VocaTranslate -->
+        <article class="card span-7 reveal">
+          <div class="card-top">
+            <div class="app-icon" style="background:linear-gradient(135deg,#0fb5a5,#1c6fd1)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h9M8 3v2M6 5c.6 4 3 7 6 9"/><path d="M11 12c-1.5 1.5-3.5 2.5-6 3"/><path d="M13 21l4-10 4 10M14.5 17h5"/></svg>
+            </div>
+            <span class="status live">Live on the App Store</span>
+          </div>
+          <h3>VocaTranslate<small>HIPAA-compliant medical translation for iPad</small></h3>
+          <p>Real-time, two-way spoken translation built for the exam room. Speech recognition tuned for orthopedic, surgical and general medical vocabulary, with a dual-sided layout so patient and provider can talk face to face across one device.</p>
+          <ul class="feat">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span><strong>46 languages</strong>, with terminology weighting for medical conversations.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span><strong>Smart Hold Mode:</strong> patient and provider buttons with 180° text rotation for across-the-table use.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span><strong>Compliance by design:</strong> BAAs with cloud providers, AES-256 encryption, zero PHI retained after a session, 365-day audit logging.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span><strong>Enterprise-ready:</strong> organization-managed accounts, first-login password reset, lockout after failed attempts, 15-minute inactivity timeout.</span></li>
+          </ul>
+          <div class="card-actions">
+            <a class="appstore" href="https://apps.apple.com/us/app/vocatranslate/id6753782707" target="_blank" rel="noopener">
+              <img src="assets/appstore-badge.svg" alt="Download on the App Store" width="120" height="40">
+            </a>
+            <a class="btn btn-ghost" href="#contact">Deploy across your organization</a>
+          </div>
+        </article>
+
+        <!-- Master Scheduler -->
+        <article class="card span-5 reveal" data-delay="1">
+          <div class="card-top">
+            <div class="app-icon" style="background:linear-gradient(135deg,#2f5fd0,#7fb6ff)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/><path d="M8 14h3M13 14h3M8 18h3"/></svg>
+            </div>
+            <span class="status live">Live on the App Store</span>
+          </div>
+          <h3>Master Scheduler<small>Provider shift scheduling that respects the humans on it</small></h3>
+          <p>Builds the monthly coverage schedule for a clinical team: shift types, hours targets, PTO and off-requests, and the week-by-week shift deficit, so the person making the schedule sees the gaps before the month starts. In daily use at an orthopedic practice on Oʻahu, and available to other clinics as a subscription.</p>
+          <div class="sched" id="sched" aria-hidden="true">
+            <div class="sched-head"><div></div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div><div>Sun</div></div>
+            <div class="sched-row"><div>8–6</div><div><span class="chip a">BB</span></div><div><span class="chip b">MK</span></div><div><span class="chip a">BB</span></div><div><span class="chip c">CD</span></div><div><span class="chip b">HH</span></div><div><span class="chip d">CG</span></div><div><span class="chip a">CC</span></div></div>
+            <div class="sched-row"><div>9–7</div><div><span class="chip c">JM</span></div><div><span class="chip d">ML</span></div><div><span class="chip c">KO</span></div><div><span class="chip a">MR</span></div><div><span class="chip d">JM</span></div><div><span class="chip b">MK</span></div><div><span class="chip c">CD</span></div></div>
+            <div class="sched-row"><div>10–8</div><div><span class="chip b">AE</span></div><div><span class="chip a">CC</span></div><div><span class="chip d">TK</span></div><div><span class="chip b">JJ</span></div><div><span class="chip a">ED</span></div><div>—</div><div>—</div></div>
+            <div class="sched-foot"><span>Week of Sep 1</span><span>Shifts <b id="schedCount">0</b> / 19 · Deficit <b id="schedDef">19</b></span></div>
+          </div>
+          <div class="card-actions">
+            <a class="appstore" href="https://apps.apple.com/us/app/master-scheduler/id6760582034" target="_blank" rel="noopener">
+              <img src="assets/appstore-badge.svg" alt="Download on the App Store" width="120" height="40">
+            </a>
+            <a class="link" href="mailto:info@pacificdigitalventures.org?subject=Master%20Scheduler%20subscription%20for%20our%20clinic">Clinic subscription packages
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Intake -->
+        <article class="card span-6 reveal">
+          <div class="card-top">
+            <div class="app-icon" style="background:linear-gradient(135deg,#ff7a59,#f2b84b)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 14h3v3M21 14v7h-7"/></svg>
+            </div>
+            <span class="status pilot">Demo available</span>
+          </div>
+          <h3>Digital Patient Intake<small>Replace the paper packet with a QR code</small></h3>
+          <p>Patients scan a code at the front desk, answer a short triage flow on their own phone, and only see the forms their visit actually needs: new vs. established, body part, insurer, work injury or auto claim. Staff get a live dashboard and insurer-ready PDFs.</p>
+          <div class="intake-flow" id="intakeFlow" aria-hidden="true">
+            <div class="step"><i>1</i>Scan QR at check-in</div>
+            <div class="step"><i>2</i>Triage: visit type, body part, insurance</div>
+            <div class="step"><i>3</i>Only the right forms, e-signed on phone</div>
+            <div class="step"><i>4</i>Staff dashboard + PDF to the chart</div>
+          </div>
+          <div class="card-actions">
+            <a class="link" href="#contact">Ask about a pilot for your clinic
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Mamba -->
+        <article class="card span-6 reveal" data-delay="1">
+          <div class="card-top">
+            <div class="app-icon" style="background:linear-gradient(135deg,#0b1f33,#2f5fd0)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8v8M18 8v8M3 10v4M21 10v4M6 12h12"/><rect x="4" y="7" width="4" height="10" rx="1"/><rect x="16" y="7" width="4" height="10" rx="1"/></svg>
+            </div>
+            <span class="status live">Live on the App Store</span>
+          </div>
+          <h3>Mamba<small>A hypertrophy trainer that reads your recovery, muscle by muscle.</small></h3>
+          <p>Mamba tells you what to train today and what can wait. It learns from each set you log, tracks how recovered each major muscle group is, and builds your next workout from that. It also flags any muscle group you've gone too long without training. Free on iPhone and iPad, with an optional Pro subscription.</p>
+          <ul class="feat">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span>Workouts built from your recovery and volume</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span>A recovery read for every major muscle group</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span>Food logging with barcode scanning</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span>A 3D avatar that grows with the sets you log</span></li>
+          </ul>
+          <div class="recov" id="recov" aria-hidden="true">
+            <div class="recov-row"><span>Chest</span><div class="bar"><i style="--w:92%;--c:#0fb5a5"></i></div><em>Ready</em></div>
+            <div class="recov-row"><span>Back</span><div class="bar"><i style="--w:58%;--c:#f2b84b"></i></div><em>Recovering</em></div>
+            <div class="recov-row"><span>Quads</span><div class="bar"><i style="--w:84%;--c:#0fb5a5"></i></div><em>Ready</em></div>
+            <div class="recov-row"><span>Shoulders</span><div class="bar"><i style="--w:100%;--c:#ff7a59"></i></div><em>Overdue</em></div>
+          </div>
+          <div class="card-actions">
+            <a class="appstore" href="https://apps.apple.com/us/app/mamba-hypertrophy-trainer/id6794737427" target="_blank" rel="noopener">
+              <img src="assets/appstore-badge.svg" alt="Download on the App Store" width="120" height="40">
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WEB STUDIO ================= -->
+  <section class="section section-soft" id="studio">
+    <div class="wrap studio-grid">
+      <div class="reveal">
+        <span class="eyebrow">Web Studio</span>
+        <h2>Websites for businesses that would rather be running the business.</h2>
+        <p class="lede">We design and build fast, mobile-first websites for local shops, restaurants and practices. No page builders, no monthly bloat. A site you own outright, that loads instantly and looks like you mean it.</p>
+        <ul class="studio-list">
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span>
+            <div><b>Fast, focused builds</b><span>A clear scope, a short timeline, and a launch date you can plan around.</span></div>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg></span>
+            <div><b>Mobile first</b><span>Most of your customers will find you on a phone. We design for that screen first.</span></div>
+          </li>
+          <li>
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg></span>
+            <div><b>Hosting, domain and SEO handled</b><span>Menus, maps, reviews, catering forms, online ordering links. Whatever your business runs on.</span></div>
+          </li>
+        </ul>
+        <div class="hero-cta" style="margin-top:28px">
+          <a class="btn btn-dark" href="mailto:info@pacificdigitalventures.org?subject=Website%20project">Get a quote for your site</a>
+        </div>
+      </div>
+
+      <div class="reveal" data-delay="1">
+        <a class="browser" href="https://kakaakomarket.com" target="_blank" rel="noopener" aria-label="Open the Kaka'ako Market and Catering website">
+          <div class="browser-bar"><i></i><i></i><i></i><span>kakaakomarket.com</span></div>
+          <img src="assets/kakaako-market.jpg" alt="Homepage of the Kaka'ako Market and Catering website, showing a lobster roll hero image and the headline Fresh Seafood and Local Favorites" loading="lazy" width="1440" height="900">
+        </a>
+        <div class="case-tag">
+          <b>Case study:</b> Kaka'ako Market &amp; Catering, Honolulu · menu, catering inquiries, reviews and directions in one page
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= APPROACH ================= -->
+  <section class="section" id="approach">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">How we work</span>
+        <h2>Small team. Clinical instincts. No shortcuts on compliance.</h2>
+      </div>
+      <div class="pillars">
+        <div class="pillar reveal">
+          <div class="num">01</div>
+          <h3>Built by a clinician</h3>
+          <p>Our founder still sees patients. Every feature is tested against the question "would I use this at 4:45pm on a Friday with a full waiting room?"</p>
+        </div>
+        <div class="pillar reveal" data-delay="1">
+          <div class="num">02</div>
+          <h3>Compliance from day one</h3>
+          <p>We sign BAAs before writing code, encrypt everything, keep audit trails, and store no more patient data than the job requires. Usually none.</p>
+        </div>
+        <div class="pillar reveal" data-delay="2">
+          <div class="num">03</div>
+          <h3>Native where it matters</h3>
+          <p>Our clinical apps are written in Swift for iOS and iPadOS, so they feel like the rest of the device and inherit Apple's security, accessibility and device-management features.</p>
+        </div>
+        <div class="pillar reveal" data-delay="3">
+          <div class="num">04</div>
+          <h3>Rooted in Hawaiʻi</h3>
+          <p>We're based in Honolulu and build for the communities and languages we actually serve. We answer our own email, usually the same day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="section section-soft" id="about">
+    <div class="wrap about">
+      <div class="founder-card reveal">
+        <div class="avatar" aria-hidden="true">KO</div>
+        <h3>Kevin Osborne, PA-C</h3>
+        <div class="role">Founder · Orthopedic Physician Assistant · Developer</div>
+        <p>Kevin practices orthopedics on Oʻahu and founded Pacific Digital Ventures to build the tools he kept wishing existed at work: a translator that doesn't make patients wait on a phone line, a scheduler that doesn't live in a spreadsheet, and intake that doesn't start with a clipboard.</p>
+      </div>
+      <div class="about-body reveal" data-delay="1">
+        <span class="eyebrow">About</span>
+        <h2>Why a PA started a software company.</h2>
+        <p style="margin-top:16px">Most healthcare software is built far away from the people who use it. The result is tools that technically work and practically get in the way. <strong>Pacific Digital Ventures is the opposite bet:</strong> a small company where the person writing the code is also the person using it on shift.</p>
+        <p>That's why VocaTranslate was tuned for orthopedic and surgical vocabulary, why Master Scheduler counts shift deficits the way a real schedule-maker does, and why our intake flow asks about work injuries and auto claims up front instead of on page nine.</p>
+        <p>It's also why we take compliance seriously. Clinicians live with the consequences of a privacy failure. We build as if we'll be the ones explaining it to the patient, because we might be.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="eyebrow">Contact</span>
+        <h2>Let's build something useful.</h2>
+        <p class="lede">Whether you want VocaTranslate across your organization, a Master Scheduler subscription for your clinic, an intake pilot, or a website that finally does your business justice, start with an email. A real person replies.</p>
+        <div class="email-line">Email us directly: <a href="mailto:info@pacificdigitalventures.org">info@pacificdigitalventures.org</a></div>
+      </div>
+      <div class="contact-cards reveal" data-delay="1">
+        <a class="ccard" href="mailto:info@pacificdigitalventures.org?subject=VocaTranslate%20for%20our%20organization">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h9M8 3v2M6 5c.6 4 3 7 6 9"/><path d="M11 12c-1.5 1.5-3.5 2.5-6 3"/><path d="M13 21l4-10 4 10M14.5 17h5"/></svg></span>
+          <div><b>VocaTranslate for your team</b><span>Enterprise deployment, managed accounts, BAA</span></div>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="ccard" href="mailto:info@pacificdigitalventures.org?subject=Master%20Scheduler%20subscription%20or%20intake%20pilot">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></span>
+          <div><b>Master Scheduler for your clinic</b><span>Subscription packages for practices, plus intake pilots</span></div>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="ccard" href="mailto:info@pacificdigitalventures.org?subject=Website%20project">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="3"/><path d="M8 21h8M3 9h18"/></svg></span>
+          <div><b>A website for your business</b><span>Restaurants, shops, practices, professionals</span></div>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="ccard" href="https://chunkyyetfunkyy.github.io/vocatranslate-privacy/support.html" target="_blank" rel="noopener">
+          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5M12 17h.01"/></svg></span>
+          <div><b>VocaTranslate support</b><span>Help for existing users and administrators</span></div>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="wrap">
+      <a class="brand" href="#top">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/><path d="M2 8c2-3 4-3 6 0s4 3 6 0 4-3 6 0" opacity=".55"/></svg>
+        </span>
+        <span>Pacific Digital Ventures LLC</span>
+      </a>
+      <ul>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#studio">Web Studio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="https://chunkyyetfunkyy.github.io/vocatranslate-privacy/privacy-policy.html" target="_blank" rel="noopener">VocaTranslate Privacy Policy</a></li>
+        <li><a href="https://chunkyyetfunkyy.github.io/vocatranslate-privacy/support.html" target="_blank" rel="noopener">VocaTranslate Support</a></li>
+        <li><a href="mailto:info@pacificdigitalventures.org">info@pacificdigitalventures.org</a></li>
+      </ul>
+      <div class="copy">
+        <span>&copy; <span id="year">2026</span> Pacific Digital Ventures LLC. Honolulu, Hawaiʻi. All rights reserved.</span>
+        <span>Apple, iPad and App Store are trademarks of Apple Inc.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      // ---------- Theme ----------
+      const root = document.documentElement;
+      const stored = (() => { try { return localStorage.getItem('pdv-theme'); } catch (e) { return null; } })();
+      if (stored === 'dark' || stored === 'light') root.setAttribute('data-theme', stored);
+      document.getElementById('themeBtn').addEventListener('click', () => {
+        const isDark = root.getAttribute('data-theme') === 'dark' || (!root.getAttribute('data-theme') && matchMedia('(prefers-color-scheme: dark)').matches);
+        const next = isDark ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('pdv-theme', next); } catch (e) {}
+      });
+
+      // ---------- Nav ----------
+      const nav = document.getElementById('nav');
+      const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+      onScroll(); addEventListener('scroll', onScroll, { passive: true });
+      const toggle = document.getElementById('navToggle'), links = document.getElementById('navLinks');
+      toggle.addEventListener('click', () => {
+        const open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+      links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { links.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }));
+
+      // ---------- Reveal on scroll ----------
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+      // ---------- VocaTranslate demo ----------
+      const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const phrases = [
+        { lang: 'Español',   en: 'Where does it hurt the most when you climb stairs?', out: '¿Dónde le duele más cuando sube escaleras?' },
+        { lang: '日本語',     en: 'Can you point to where the pain started?',           out: '痛みが始まった場所を指で示していただけますか？' },
+        { lang: 'Tagalog',   en: 'Did you fall, or did it start on its own?',          out: 'Nahulog po ba kayo, o kusa lang itong nagsimula?' },
+        { lang: '한국어',     en: 'Rate the pain from zero to ten.',                    out: '통증을 0에서 10까지로 말씀해 주세요.' },
+        { lang: '中文',       en: 'We will take an X-ray before we decide anything.',   out: '在做任何决定之前，我们会先拍一张X光片。' },
+        { lang: 'Tiếng Việt',en: 'Have you had surgery on this knee before?',          out: 'Trước đây bạn đã từng phẫu thuật đầu gối này chưa?' },
+        { lang: 'Chuukese',  en: 'Take this medicine with food, twice a day.',         out: 'Kopwe wonei ei safei ren mwongo, ruu fansoun non eu ran.' }
+      ];
+      const elIn = document.getElementById('demoIn'), elOut = document.getElementById('demoOut'), elLang = document.getElementById('demoLang');
+      let idx = 0;
+      function type(el, text, speed) {
+        return new Promise(res => {
+          el.innerHTML = '<span class="cursor"></span>';
+          if (reduce) { el.textContent = text; return res(); }
+          let i = 0;
+          const t = setInterval(() => {
+            i++;
+            el.innerHTML = text.slice(0, i) + '<span class="cursor"></span>';
+            if (i >= text.length) { clearInterval(t); el.textContent = text; res(); }
+          }, speed);
+        });
+      }
+      const wait = ms => new Promise(r => setTimeout(r, reduce ? 0 : ms));
+      async function loop() {
+        const p = phrases[idx % phrases.length]; idx++;
+        elLang.textContent = p.lang;
+        elOut.textContent = '';
+        await type(elIn, p.en, 28);
+        await wait(350);
+        await type(elOut, p.out, 26);
+        await wait(reduce ? 4000 : 2600);
+        loop();
+      }
+      loop();
+
+      // ---------- Scheduler demo ----------
+      const sched = document.getElementById('sched');
+      if (sched) {
+        const chips = Array.from(sched.querySelectorAll('.chip'));
+        const count = document.getElementById('schedCount'), def = document.getElementById('schedDef');
+        let started = false;
+        const run = () => {
+          chips.forEach(c => c.classList.remove('on'));
+          let n = 0;
+          chips.forEach((c, i) => setTimeout(() => {
+            c.classList.add('on'); n++;
+            count.textContent = n; def.textContent = 19 - n;
+          }, reduce ? 0 : 120 * i + 300));
+          setTimeout(run, reduce ? 999999 : 120 * chips.length + 5000);
+        };
+        new IntersectionObserver((e, o) => { if (e[0].isIntersecting && !started) { started = true; run(); o.disconnect(); } }, { threshold: 0.4 }).observe(sched);
+      }
+
+      // ---------- Mamba recovery demo ----------
+      const recov = document.getElementById('recov');
+      if (recov) new IntersectionObserver((e, o) => { if (e[0].isIntersecting) { recov.classList.add('on'); o.disconnect(); } }, { threshold: 0.5 }).observe(recov);
+
+      // ---------- Intake demo ----------
+      const flow = document.getElementById('intakeFlow');
+      if (flow) {
+        const steps = Array.from(flow.querySelectorAll('.step'));
+        let s = 0, on = false;
+        const tick = () => {
+          steps.forEach((st, i) => st.classList.toggle('done', i < s));
+          s = (s + 1) % (steps.length + 2);
+          setTimeout(tick, reduce ? 999999 : 900);
+        };
+        new IntersectionObserver((e, o) => { if (e[0].isIntersecting && !on) { on = true; tick(); o.disconnect(); } }, { threshold: 0.4 }).observe(flow);
+      }
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>
