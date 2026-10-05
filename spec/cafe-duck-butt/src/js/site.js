@@ -62,9 +62,13 @@ var TEL = '+18085931880'; // only used when phone.telVerified is true
   var chip = d.getElementById('open-chip');
   if (chip && on('hours.daysConfirmed') && window.Intl && Intl.DateTimeFormat) {
     try {
-      var h = Number(new Intl.DateTimeFormat('en-US', { hour: 'numeric', hour12: false, timeZone: 'Pacific/Honolulu' }).format(new Date()));
-      if (h === 24) h = 0;
-      var openNow = (h >= 17 || h < 2);
+      var parts = new Intl.DateTimeFormat('en-US', { hour: 'numeric', hour12: false, weekday: 'short', timeZone: 'Pacific/Honolulu' }).formatToParts(new Date());
+      var h = 0, wd = '';
+      parts.forEach(function (pt) { if (pt.type === 'hour') h = Number(pt.value) % 24; if (pt.type === 'weekday') wd = pt.value; });
+      var day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(wd);
+      if (h < 2) day = (day + 6) % 7;      // 00:00–01:59 belongs to the previous night
+      var days = chip.getAttribute('data-days') || '0123456';   // edit in index.html with the confirmed nights (0 = Sun)
+      var openNow = days.indexOf(String(day)) !== -1 && (h >= 17 || h < 2);
       chip.querySelector('.chip__en').textContent = openNow ? 'Open now · till 2 AM' : 'Opens at 5 PM';
       chip.classList.add(openNow ? 'is-open' : 'is-closed');
     } catch (e) { /* leave the static chip */ }
@@ -87,11 +91,19 @@ var TEL = '+18085931880'; // only used when phone.telVerified is true
           e.target.classList.add('is-in');
           io.unobserve(e.target);
         });
-      }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
+      }, { threshold: 0, rootMargin: '100% 0px -8% 0px' });   // top margin: targets reached by scrolling up are ready before they arrive
       each(targets, function (t) { if (!t.classList.contains('is-in')) io.observe(t); });
       setTimeout(function () { each(initial, function (t) { t.classList.remove('is-instant'); }); }, 100);
       // Safety net: anything on screen that the observer somehow missed lights without rolling; off-screen targets keep their motion.
-      setInterval(function () { each(targets, function (t) { if (!t.classList.contains('is-in') && inView(t)) { t.classList.add('is-in', 'is-instant'); setTimeout(function () { t.classList.remove('is-instant'); }, 100); } }); }, 1500);
+      var net = setInterval(function () {
+        var left = 0;
+        each(targets, function (t) {
+          if (t.classList.contains('is-in')) return;
+          left++;
+          if (inView(t)) { t.classList.add('is-in', 'is-instant'); setTimeout(function () { t.classList.remove('is-instant'); }, 100); }
+        });
+        if (!left) clearInterval(net);
+      }, 1500);
     }
   }
 

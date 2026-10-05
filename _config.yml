@@ -1,0 +1,3 @@
+# GitHub Pages: never publish the client spec work in this repo.
+exclude:
+  - spec

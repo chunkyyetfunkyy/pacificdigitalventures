@@ -297,7 +297,7 @@ em { font-style: normal; font-family: var(--f-mono); font-size: .9em; }
 
 /* ------------------------------------------------------------------ the scene */
 .prose-lede { max-width: 48ch; font-size: 18px; margin-bottom: 28px; }
-.stickers { display: grid; gap: 22px; }
+.stickers { display: grid; gap: 22px; align-items: start; }
 .sticker { background: var(--c-vinyl); color: var(--c-ink); padding: 16px 16px 14px; box-shadow: 4px 4px 0 var(--c-sign-red); max-width: 420px; }
 .sticker p { font-family: var(--f-text); font-weight: 700; font-size: 18px; line-height: 1.25; }
 .sticker figcaption { margin-top: 8px; color: var(--c-ink); }
@@ -315,14 +315,15 @@ em { font-style: normal; font-family: var(--f-mono); font-size: .9em; }
 .findlist__row dt { font-weight: 700; }
 .findlist__row dt::after { content: ""; display: block; width: 100%; border-bottom: 2px dotted var(--c-ink); margin-top: 6px; }
 .findlist strong { font-weight: 700; }
+.findlist .gate { white-space: nowrap; }
 .findlist .addr { color: var(--c-ink); text-decoration-color: var(--c-red-print); }
 .street { position: relative; max-width: 420px; }
 .street__svg { width: 100%; height: auto; background: var(--c-tar); padding: 0; border: 1px solid rgba(200,194,180,.18); }
 .street__labels { position: absolute; inset: 0; font-size: 12px; color: var(--c-vinyl); }
 .street__l { position: absolute; background: var(--c-asphalt); padding: 2px 4px; }
 .street__l--st { left: 3%; top: 60%; }
-.street__l--ward { left: 71%; top: 6%; }
-.street__l--pin { left: 28%; top: 9%; color: var(--c-sodium); }
+.street__l--ward { right: 2%; top: 6%; color: var(--c-vinyl-dim); }
+.street__l--pin { left: 45%; top: 9%; color: var(--c-sodium); }
 .street__labels .tiny { position: absolute; right: 2%; bottom: 3%; color: var(--c-vinyl-dim); }
 .hero__cta--find { margin-top: var(--gap); }
 

@@ -81,7 +81,7 @@
     <div class="hero__facts">
       <p class="hours-big">
         <span class="hours-big__time">5 PM – 2 AM</span><!-- F069–F074 VERIFIED window -->
-        <span class="chip chip--open" id="open-chip"><span lang="ko" class="chip__ko">영업중</span><span class="chip__en">yeongeop-jung · open for business</span></span><!-- the sign word; open-now text only under hours.daysConfirmed -->
+        <span class="chip chip--open" id="open-chip" data-days="0123456"><span lang="ko" class="chip__ko">영업중</span><span class="chip__en">yeongeop-jung · open for business</span></span><!-- the sign word; open-now text only under hours.daysConfirmed -->
       </p>
       <p class="gate-line ticket-type">Happy hour 5–8<!-- F087 VERIFIED window; days of the week are gated in Find us (C1) --></p>
       <p class="addr-line ticket-type">
@@ -220,14 +220,17 @@
 <section class="soju section" id="soju" aria-labelledby="soju-h">
   <div class="pool pool--tr" aria-hidden="true"></div>
   <div class="wrap">
-    <header class="plate plate--red reveal">
-      <p class="plate__ko"><span lang="ko" class="hangul hangul--rail">소주</span> <span class="label">soju · Korean spirit, here by the pitcher</span></p><!-- F131 -->
-      <h2 class="h2" id="soju-h">Watermelon soju comes in the watermelon</h2><!-- F121 VERIFIED -->
+    <header class="plate plate--red plate--railed reveal">
+      <div class="plate__rail"><span lang="ko" class="hangul hangul--rail">소주</span></div>
+      <div class="plate__body">
+        <p class="label plate__gloss">soju · Korean spirit, here by the pitcher</p><!-- F131 -->
+        <h2 class="h2" id="soju-h">Watermelon soju comes in the watermelon</h2><!-- F121 VERIFIED -->
+      </div>
     </header>
 
     <div class="soju__grid">
       <figure class="melon reveal">
-        <svg class="melon__svg" viewBox="0 0 320 200" aria-hidden="true" focusable="false">
+        <svg class="melon__svg" viewBox="0 0 320 216" aria-hidden="true" focusable="false">
           <defs><clipPath id="flesh-clip"><rect class="melon__rise" x="0" y="0" width="320" height="200"/></clipPath></defs>
           <path d="M8 60a152 152 0 0 0 304 0z" fill="#15603C"/>
           <path d="M22 60a138 138 0 0 0 276 0z" fill="none" stroke="#F4F1E8" stroke-width="8"/>
@@ -385,7 +388,7 @@
           <div class="findlist__row"><dt>Hours</dt><dd><strong>5 PM – 2 AM</strong><br><span class="gate" data-gate="hours.daysConfirmed" data-value="Seven nights a week"><span class="gate__value">Nights:&nbsp;—</span> <span class="stamp">Ask at the bar</span></span><br>Happy hour 5–8</dd></div><!-- F069–F074; C1; F087 -->
           <div class="findlist__row"><dt>Address</dt><dd><a class="addr" href="https://maps.apple.com/?q=901+Kawaiahao+St+Honolulu+HI+96814" rel="noopener">901 Kawaiahaʻo St<br>Honolulu, HI 96814<span class="visually-hidden"> (opens map)</span></a><br>A block off Ward Avenue.</dd></div><!-- F052, F053, F057 -->
           <div class="findlist__row"><dt>Phone</dt><dd><span class="phone" data-phone>(808) 593-1880</span></dd></div><!-- F056 -->
-          <div class="findlist__row"><dt>Parking</dt><dd>Street parking nearby.<br><span class="gate" data-gate="parking.validation" data-value="Validated parking available"><span class="gate__value">Validation&nbsp;—</span> <span class="stamp">Ask at the bar</span></span><br><span class="gate" data-gate="parking.valet" data-value="Valet available"><span class="gate__value">Valet&nbsp;—</span> <span class="stamp">Ask at the bar</span></span></dd></div><!-- F058–F062 -->
+          <div class="findlist__row"><dt>Parking</dt><dd>Street parking nearby.<br><span class="gate" data-gate="parking.validation" data-value="Validated parking available"><span class="gate__value">Validation&nbsp;—</span> <span class="stamp">Ask at the bar</span></span><span hidden data-gate="parking.valet"><br>Valet available</span></dd></div><!-- F058–F062 -->
           <div class="findlist__row"><dt>Look for</dt><dd>A plain building with no windows.<span class="gate gate--inline" data-gate="sign.duckConfirmed" data-value=" Look for the duck on the sign."><span class="gate__value"></span></span></dd></div><!-- F271 VERIFIED windowless, F272 VERIFIED plain; "gray, one-story" is SINGLE and old, not used -->
         </dl>
       </div>
@@ -394,13 +397,12 @@
         <svg class="street__svg" viewBox="0 0 343 120" aria-labelledby="street-t" role="img">
           <title id="street-t">Schematic: 901 Kawaiahaʻo Street, a block off Ward Avenue. Not to scale.</title>
           <line x1="0" y1="70" x2="343" y2="70" stroke="#C8C2B4" stroke-width="4"/>
-          <line x1="236" y1="0" x2="236" y2="120" stroke="#C8C2B4" stroke-width="4"/>
-          <rect x="96" y="40" width="46" height="26" fill="#F4F1E8" stroke="#E0202A" stroke-width="4"/>
-          <circle cx="119" cy="70" r="7" fill="#F2A51A"/>
+                    <rect x="148" y="40" width="46" height="26" fill="#F4F1E8" stroke="#E0202A" stroke-width="4"/>
+          <circle cx="171" cy="70" r="7" fill="#F2A51A"/>
         </svg>
         <figcaption class="street__labels ticket-type">
           <span class="street__l street__l--st">Kawaiahaʻo St</span>
-          <span class="street__l street__l--ward">Ward Ave</span>
+          <span class="street__l street__l--ward">A block off Ward Ave</span>
           <span class="street__l street__l--pin">901</span>
           <span class="tiny">Not to scale</span>
         </figcaption>
@@ -427,7 +429,7 @@
     <div class="foot__text ticket-type">
       <p><span lang="ko" class="hangul-inline" data-hangul>오리궁뎅이</span> <span class="foot__say">oh ri goong deng ee</span> · Café Duck Butt · Since 2010</p><!-- F001, F005, F023 -->
       <p>901 Kawaiahaʻo St, Honolulu, HI 96814 · 5 PM – 2 AM · <span class="phone" data-phone>(808) 593-1880</span></p>
-      <p><a hidden data-gate="social.facebook" href="https://www.facebook.com/Cafe-Duck-Butt-132145946808402/" rel="noopener">Facebook</a></p><!-- F065 / C17: hidden until social.facebook -->
+      <p hidden data-gate="social.facebook"><a data-gate="social.facebook" href="https://www.facebook.com/Cafe-Duck-Butt-132145946808402/" rel="noopener">Facebook</a></p><!-- F065 / C17: hidden until social.facebook -->
       <p class="tiny foot__credit">Site concept by Kevin Osborne</p>
     </div>
   </div>
