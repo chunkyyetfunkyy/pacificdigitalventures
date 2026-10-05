@@ -39,7 +39,7 @@ if len(sys.argv) > 1 and os.path.exists(sys.argv[1]):
             row = json.loads(line)
         except Exception:
             continue
-        if row.get('type') != 'completed':
+        if row.get('type') not in ('completed', 'result'):
             continue
         res = row.get('result') or row.get('value') or row.get('output')
         if isinstance(res, str):

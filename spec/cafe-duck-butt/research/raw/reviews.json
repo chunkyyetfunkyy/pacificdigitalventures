@@ -1,0 +1,410 @@
+{
+  "angle": "reviews",
+  "facts": [
+    {
+      "claim": "Yelp listing shows 616 reviews and 1,145 photos as of September 2026",
+      "category": "metric",
+      "source_url": "https://www.yelp.com/biz/caf%C3%A9-duck-butt-honolulu-2",
+      "source_title": "CAFÉ DUCK BUTT - Updated September 2026 - 1145 Photos & 616 Reviews - 901 Kawaiahao St, Honolulu, Hawaii - Karaoke - Restaurant Reviews - Phone Number - Menu - Yelp",
+      "source_date": "September 2026",
+      "verbatim_snippet": "CAFÉ DUCK BUTT - Updated September 2026 - 1145 Photos & 616 Reviews - 901 Kawaiahao St, Honolulu, Hawaii - Karaoke - Restaurant Reviews - Phone Number - Menu - Yelp",
+      "confidence": "single-source",
+      "notes": "Yelp page title exactly as returned in search results; the identical title surfaced in six separate searches. Matches the 616 reviews / 1,145 photos figures in the research brief. Only Yelp can state its own counts, so this cannot be independently corroborated."
+    },
+    {
+      "claim": "Yelp star rating is 3.7 (616 reviews)",
+      "category": "metric",
+      "source_url": "https://www.yelp.com/biz/caf%C3%A9-duck-butt-honolulu-2",
+      "source_title": "CAFÉ DUCK BUTT - Updated September 2026 - 1145 Photos & 616 Reviews - 901 Kawaiahao St, Honolulu, Hawaii - Karaoke - Restaurant Reviews - Phone Number - Menu - Yelp",
+      "source_date": "September 2026",
+      "verbatim_snippet": "It has a 3.7 rating on Yelp with 616 reviews and is categorized as a karaoke bar and Korean restaurant.",
+      "confidence": "single-source",
+      "notes": "Search-summary sentence for the Yelp listing (query: \"Cafe Duck Butt\" yelp Honolulu). Two other summaries stated the same figure: 'On Yelp, it has a 3.7 rating with 616 reviews' and 'The establishment has a 3.7-star rating with 616 reviews.' Yelp's page title labels the category 'Karaoke'."
+    },
+    {
+      "claim": "Earlier Yelp page-title snapshots (Oct 2025, Nov 2025, Dec 2025, Feb 2026) all show '1142 Photos & 616 Reviews'",
+      "category": "metric",
+      "source_url": "https://www.yelp.com/biz/caf%C3%A9-duck-butt-honolulu-2?start=160",
+      "source_title": "CAFÉ DUCK BUTT - Updated February 2026 - 1142 Photos & 616 Reviews - 901 Kawaiahao St, Honolulu, Hawaii - Karaoke - Restaurant Reviews - Phone Number - Menu - Yelp",
+      "source_date": "February 2026",
+      "verbatim_snippet": "CAFÉ DUCK BUTT - Updated February 2026 - 1142 Photos & 616 Reviews - 901 Kawaiahao St, Honolulu, Hawaii - Karaoke - Restaurant Reviews - Phone Number - Menu - Yelp",
+      "confidence": "single-source",
+      "notes": "Other cached titles seen: 'Updated October 2025 - 1142 Photos & 616 Reviews' (?start=20), 'Updated November 2025 - 1142 Photos & 616 Reviews' (?start=80), 'Updated December 2025 - 1142 Photos & 616 Reviews' (?start=40). Compared with the September 2026 title (1145 Photos & 616 Reviews), the review count shown did not change between Oct 2025 and Sept 2026 and the photo count rose by 3."
+    },
+    {
+      "claim": "Yelp listing attributes: vibe casual/loud/good for groups/dogs allowed; takes reservations, take-out, many vegetarian options; popular dishes fried chicken, kim chee fried rice, kimchee pancake",
+      "category": "listing",
+      "source_url": "https://www.yelp.com/biz/caf%C3%A9-duck-butt-honolulu-2",
+      "source_title": "CAFÉ DUCK BUTT - Updated September 2026 - 1145 Photos & 616 Reviews - 901 Kawaiahao St, Honolulu, Hawaii - Karaoke - Restaurant Reviews - Phone Number - Menu - Yelp",
+      "source_date": "September 2026",
+      "verbatim_snippet": "The vibe is casual, loud, good for groups, and dogs are allowed. | Popular dishes include fried chicken, kim chee fried rice, and kimchee pancake. | The restaurant takes reservations, offers take-out, and has many vegetarian options. The venue offers karaoke rooms that can be reserved for private events and gatherings.",
+      "confidence": "single-source",
+      "notes": "Three separate sentences from the same search summary of the Yelp listing, joined with ' | '. A second summary (query: \"Café Duck Butt\" Honolulu) stated: 'It has a casual, loud atmosphere with karaoke, happy hour specials, and is good for groups and dogs allowed.' Yelp hours shown: 'open Monday through Sunday from 5:00 PM to 2:00 AM'; phone (808) 593-1880."
+    },
+    {
+      "claim": "TripAdvisor nightlife/attraction listing: 4.5 of 5 bubbles from 10 reviews, ranked #30 of 96 Nightlife in Honolulu",
+      "category": "metric",
+      "source_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d5835416-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Cafe Duck Butt - All You SHOULD Know Before Going 2026 (with Reviews)",
+      "source_date": "2026",
+      "verbatim_snippet": "Cafe Duck Butt is ranked among attractions in Honolulu, and it has a 4.5 out of 5 bubble rating with 10 reviews and is ranked #30 of 96 Nightlife in Honolulu.",
+      "confidence": "single-source",
+      "notes": "Stated consistently in three separate search summaries ('rated 4.5 of 5 bubbles on TripAdvisor and ranked #30 of 96 Nightlife in Honolulu'; 'On TripAdvisor, it has a 4.5 of 5 rating based on 10 reviews'). TripAdvisor address: 901 Kawaiahao St, Honolulu, Oahu, HI 96814-3301. Older cached pages show different ranks; see the two 'conflicting' facts."
+    },
+    {
+      "claim": "An older TripAdvisor snapshot shows rank #26 of 85 Nightlife in Honolulu",
+      "category": "metric",
+      "source_url": "https://www.tripadvisor.com/ShowUserReviews-g60982-d5835416-r419919617-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Awesomeness, silliness, just plain fun. - Review of Cafe Duck Butt, Honolulu, HI - Tripadvisor",
+      "source_date": "",
+      "verbatim_snippet": "Cafe Duck Butt is located at 901 Kawaiahao St, Honolulu, Oahu, HI 96814-3301 and is ranked #26 of 85 Nightlife in Honolulu.",
+      "confidence": "conflicting",
+      "notes": "Conflicts with '#30 of 96' on the 2026 attraction page and '#28 of 90' on the Watermelon Time review page. These are cached snapshots from different dates (the rank moves over time), not a genuine dispute. The summary did not state which TripAdvisor page in the result set carried this figure; the individual review page is the most likely."
+    },
+    {
+      "claim": "Another TripAdvisor snapshot shows rank #28 of 90 Nightlife in Honolulu",
+      "category": "metric",
+      "source_url": "https://www.tripadvisor.com/ShowUserReviews-g60982-d5835416-r456808387-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Watermelon Time - Review of Cafe Duck Butt, Honolulu, HI - Tripadvisor",
+      "source_date": "",
+      "verbatim_snippet": "Cafe Duck Butt is located at 901 Kawaiahao St, Honolulu, and is ranked #28 of 90 Nightlife in Honolulu.",
+      "confidence": "conflicting",
+      "notes": "Conflicts with '#30 of 96' (2026 attraction page) and '#26 of 85' (another cached page). Treat #30 of 96 as current (it appears on the page titled for 2026)."
+    },
+    {
+      "claim": "TripAdvisor carries the business under three listing IDs: nightlife/attraction d5835416, restaurant d27921500, and a legacy restaurant listing d4634698 whose old review pages still resolve",
+      "category": "listing",
+      "source_url": "https://www.tripadvisor.com/Restaurant_Review-g60982-d27921500-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "CAFE DUCK BUTT, Honolulu - Restaurant Reviews & Phone Number - Tripadvisor",
+      "source_date": "",
+      "verbatim_snippet": "CAFE DUCK BUTT, Honolulu - Restaurant Reviews & Phone Number - Tripadvisor",
+      "confidence": "single-source",
+      "notes": "Result titles observed: d5835416 = 'Cafe Duck Butt - All You SHOULD Know Before Going 2026 (with Reviews)'; d27921500 = 'CAFE DUCK BUTT, Honolulu - Restaurant Reviews & Phone Number - Tripadvisor'; the d4634698 URL now returns the title 'THE 10 BEST Restaurants in Honolulu (Updated October 2026)', suggesting that listing was merged or retired, while its review pages r217629824, r235106513 and r312898237 still carry Cafe Duck Butt titles. No rating or review count was shown for d27921500."
+    },
+    {
+      "claim": "Uber Eats store rating 4.5 with 320+ ratings",
+      "category": "metric",
+      "source_url": "https://www.ubereats.com/store/cafe-duck-butt/mfKJqauFV56u8CaOi_JhoQ",
+      "source_title": "Order Cafe Duck Butt (Kawaiaha‘o St) - Menu & Prices - Honolulu Delivery",
+      "source_date": "",
+      "verbatim_snippet": "On Uber Eats, the restaurant has a 4.5 rating with 320+ ratings",
+      "confidence": "single-source",
+      "notes": "From the search summary for the query \"Cafe Duck Butt\" review wings; snapshot date not shown."
+    },
+    {
+      "claim": "Facebook page URL; 3,213 likes and 26,897 people who have visited (check-ins)",
+      "category": "metric",
+      "source_url": "https://www.facebook.com/Cafe-Duck-Butt-132145946808402/",
+      "source_title": "Cafe Duck Butt",
+      "source_date": "",
+      "verbatim_snippet": "Cafe Duck Butt is located in Honolulu, Hawaii and has 3,213 likes on Facebook with 26,897 people who have visited.",
+      "confidence": "single-source",
+      "notes": "Facebook page ID 132145946808402. Snapshot date not shown; Facebook like counts in search snippets are often stale. Facebook was blocked for direct fetch."
+    },
+    {
+      "claim": "Facebook page copy advertises take out, curbside service, family packs and Soju kit specials",
+      "category": "listing",
+      "source_url": "https://www.facebook.com/Cafe-Duck-Butt-132145946808402/",
+      "source_title": "Cafe Duck Butt",
+      "source_date": "",
+      "verbatim_snippet": "The establishment offers take out and curbside service, along with family packs and Soju kit specials.",
+      "confidence": "single-source",
+      "notes": "Reads as pandemic-era page copy; date not shown."
+    },
+    {
+      "claim": "Hours and happy hour as shown in the Facebook-query results: open Mon-Sat 5:00 pm-2:00 am; happy hour Mon-Fri 4:30-7pm; late-night specials Sun/Tue/Thu",
+      "category": "hours",
+      "source_url": "https://www.facebook.com/Cafe-Duck-Butt-132145946808402/",
+      "source_title": "Cafe Duck Butt",
+      "source_date": "",
+      "verbatim_snippet": "It's located at 901 Kawaiahao St, Honolulu, HI 96814 and is open Monday-Saturday from 5:00 pm to 2:00 am. | They offer happy hours Monday-Friday from 4:30 to 7pm with drink specials and late night specials on Sunday, Tuesday and Thursday.",
+      "confidence": "conflicting",
+      "notes": "Conflicts with Yelp ('open Monday through Sunday from 5:00 PM to 2:00 AM') and with The Abroad Guide ('They also have happy hour from 5pm-8pm.'). The summary for the Facebook query may have drawn the happy-hour sentence from https://www.totalhappyhour.com/happy-hour-for-cafe-duck-butt-in-honolulu-hi-96814/ (also in that result set) rather than from Facebook. Outside the reviews angle; recorded only because it surfaced."
+    },
+    {
+      "claim": "Wheree aggregator listing exists, updated May 2026",
+      "category": "listing",
+      "source_url": "https://cafe-duck-butt.wheree.com/",
+      "source_title": "Cafe Duck Butt - Reviews, Photos & Phone Number - Updated May 2026 - Karaoke Bars in Honolulu City, Honolulu County - Wheree",
+      "source_date": "May 2026",
+      "verbatim_snippet": "Cafe Duck Butt - Reviews, Photos & Phone Number - Updated May 2026 - Karaoke Bars in Honolulu City, Honolulu County - Wheree",
+      "confidence": "single-source",
+      "notes": "Direct fetch returned EGRESS_BLOCKED; no rating figure appeared in the snippet."
+    },
+    {
+      "claim": "Other third-party listings found: Apple Maps, MenuPix, DoorDash, Giftly, corner.inc, TotalHappyHour, NetWaiter online-ordering site",
+      "category": "listing",
+      "source_url": "https://maps.apple.com/place?place-id=IE5E6F554C2685A7D",
+      "source_title": "Cafe Duck Butt in Honolulu, HI United States - Apple Maps",
+      "source_date": "",
+      "verbatim_snippet": "Cafe Duck Butt in Honolulu, HI United States - Apple Maps",
+      "confidence": "single-source",
+      "notes": "URLs seen: https://www.menupix.com/hawaii/restaurants/751408/Cafe-Duck-Butt-Honolulu-HI ('Online Menu of Cafe Duck Butt, Honolulu, HI'); https://www.doordash.com/store/cafe-duck-butt-honolulu-1243951/ ('Order Cafe Duck Butt (Kawaiahao St) - Honolulu, HI Menu Delivery [Menu & Prices]'); https://www.giftly.com/gift-card/caf%C3%A9-duck-butt-honolulu-2 ('Café Duck Butt Giftly - Email, Text or Print, 901 Kawaiahao St, Honolulu, HI'); https://www.corner.inc/place/17581 ('Cafe Duck Butt • restaurant'); https://www.totalhappyhour.com/happy-hour-for-cafe-duck-butt-in-honolulu-hi-96814/; https://cafduckbutt.netwaiter.com/ ('Cafe Duck Butt - Honolulu, HI'). No ratings were shown for any of these in snippets."
+    },
+    {
+      "claim": "A Weebly site presents itself as the business's home page ('Home of the Duck Butt'); its About page says the business was founded in 2010",
+      "category": "listing",
+      "source_url": "http://cafeduckbutt.weebly.com/about-the-duck.html",
+      "source_title": "About the Duck - Cafe Duck Butt",
+      "source_date": "",
+      "verbatim_snippet": "Founded in 2010, it's a Korean establishment that offers quality food, drinks, and fun with a Korean flair.",
+      "confidence": "single-source",
+      "notes": "Home page: https://cafeduckbutt.weebly.com/ titled 'Cafe Duck Butt - Home of the Duck Butt'. The summary did not explicitly attribute the 'Founded in 2010' sentence to the Weebly page; it appeared in the summary for the query \"901 Kawaiahao\" Duck Butt, where the About page was in the result set. A Honolulu Star-Advertiser Pau Hana Patrol column titled 'Do the duck' dated 2010/09/17 is consistent with a 2010 opening."
+    },
+    {
+      "claim": "TripAdvisor review title: 'Good place for drinks, food, social.'",
+      "category": "quote",
+      "source_url": "https://www.tripadvisor.com/ShowUserReviews-g60982-d5835416-r404298920-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Good place for drinks, food, social. - Review of Cafe Duck Butt, Honolulu, HI - Tripadvisor",
+      "source_date": "",
+      "verbatim_snippet": "Good place for drinks, food, social.",
+      "confidence": "single-source",
+      "notes": "Reviewer: Alfred T. (Los Angeles, California) | Platform: TripAdvisor | Date: not shown in result. Search-summary paraphrase of the body (NOT verbatim): 'the atmosphere was typical bar/karaoke, the soju was excellent, and the food was good bar-type food, though it's small and reservations are highly needed for Friday and Saturday.'"
+    },
+    {
+      "claim": "TripAdvisor review title: 'Awesomeness, silliness, just plain fun.'",
+      "category": "quote",
+      "source_url": "https://www.tripadvisor.com/ShowUserReviews-g60982-d5835416-r419919617-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Awesomeness, silliness, just plain fun. - Review of Cafe Duck Butt, Honolulu, HI - Tripadvisor",
+      "source_date": "",
+      "verbatim_snippet": "Awesomeness, silliness, just plain fun.",
+      "confidence": "single-source",
+      "notes": "Reviewer: not shown | Platform: TripAdvisor | Date: not shown. Search-summary paraphrase of the body (NOT verbatim): the review 'is characterized by comments about the anju (Korean appetizers), drinks, fun vibe, ridiculous name'."
+    },
+    {
+      "claim": "Reviewer calls the bar 'a slice of Korea in Honolulu'",
+      "category": "quote",
+      "source_url": "https://www.tripadvisor.com/ShowUserReviews-g60982-d5835416-r419919617-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Awesomeness, silliness, just plain fun. - Review of Cafe Duck Butt, Honolulu, HI - Tripadvisor",
+      "source_date": "",
+      "verbatim_snippet": "a slice of Korea in Honolulu",
+      "confidence": "single-source",
+      "notes": "Reviewer: not shown | Platform: TripAdvisor (from the 'Awesomeness, silliness, just plain fun.' review) | Date: not shown. The phrase appeared inside quotation marks in the search summary, i.e. copied from the review."
+    },
+    {
+      "claim": "TripAdvisor review title: 'Watermelon Time' (February 2, 2017)",
+      "category": "quote",
+      "source_url": "https://www.tripadvisor.com/ShowUserReviews-g60982-d5835416-r456808387-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Watermelon Time - Review of Cafe Duck Butt, Honolulu, HI - Tripadvisor",
+      "source_date": "February 2, 2017",
+      "verbatim_snippet": "Watermelon Time",
+      "confidence": "single-source",
+      "notes": "Reviewer: not shown | Platform: TripAdvisor | Date: February 2, 2017. Search-summary rendering of the body (NOT confirmed verbatim): 'the bartender was extremely hospitable and made the experience enjoyable, with an awesome crazy feel within the building, an impressive menu and Soju selection, and notes it as a great scene to visit, especially for Korean Food & Soju.' The fragments 'extremely hospitable', 'awesome crazy feel', 'impressive menu and Soju selection' and 'Korean Food & Soju' recurred with identical capitalization in three separate summaries, so they are probably the reviewer's own words, but the review body was not seen directly."
+    },
+    {
+      "claim": "TripAdvisor review title: 'K-Pop, Karaoke and Korean Food....What Could Go Wrong??'",
+      "category": "quote",
+      "source_url": "https://www.tripadvisor.com/ShowUserReviews-g60982-d5835416-r723875643-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "K-Pop, Karaoke and Korean Food....What Could Go Wrong?? - Review of Cafe Duck Butt, Honolulu, HI - Tripadvisor",
+      "source_date": "",
+      "verbatim_snippet": "K-Pop, Karaoke and Korean Food....What Could Go Wrong??",
+      "confidence": "single-source",
+      "notes": "Reviewer: not shown | Platform: TripAdvisor (also mirrored on tripadvisor.co.uk/.ca/.co.nz) | Date: not shown. Search-summary paraphrase of the body (NOT verbatim): 'it offers decent food, massive drinks and K-Pop music videos, all at a decent price without a lot of tourists.'"
+    },
+    {
+      "claim": "TripAdvisor review title: 'If the name makes you smile, so will the soju!'",
+      "category": "quote",
+      "source_url": "https://www.tripadvisor.com/ShowUserReviews-g60982-d4634698-r235106513-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "If the name makes you smile, so will the soju! - Review of Cafe Duck Butt, Honolulu, HI - TripAdvisor",
+      "source_date": "",
+      "verbatim_snippet": "If the name makes you smile, so will the soju!",
+      "confidence": "single-source",
+      "notes": "Reviewer: not shown | Platform: TripAdvisor (legacy restaurant listing d4634698) | Date: not shown. Title only; body not surfaced."
+    },
+    {
+      "claim": "TripAdvisor review title: 'Fantastic place!'",
+      "category": "quote",
+      "source_url": "https://www.tripadvisor.com/ShowUserReviews-g60982-d4634698-r217629824-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Fantastic place! - Review of Cafe Duck Butt, Honolulu, HI - Tripadvisor",
+      "source_date": "",
+      "verbatim_snippet": "Fantastic place!",
+      "confidence": "single-source",
+      "notes": "Reviewer: not shown | Platform: TripAdvisor (legacy restaurant listing d4634698) | Date: not shown. Title only; body not surfaced."
+    },
+    {
+      "claim": "TripAdvisor review title: 'Great Food & Happy Hour, Locals Spot !'",
+      "category": "quote",
+      "source_url": "https://www.tripadvisor.com/ShowUserReviews-g60982-d4634698-r312898237-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Great Food & Happy Hour, Locals Spot ! - Review of Cafe Duck Butt, Honolulu, HI - Tripadvisor",
+      "source_date": "",
+      "verbatim_snippet": "Great Food & Happy Hour, Locals Spot !",
+      "confidence": "single-source",
+      "notes": "Reviewer: not shown | Platform: TripAdvisor (legacy restaurant listing d4634698) | Date: not shown. Title only; body not surfaced. Spacing before '!' is as shown."
+    },
+    {
+      "claim": "Reviewer describes it as 'a small place with great food and Korean Sojo and beer'",
+      "category": "quote",
+      "source_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d5835416-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Cafe Duck Butt - All You SHOULD Know Before Going 2026 (with Reviews)",
+      "source_date": "",
+      "verbatim_snippet": "a small place with great food and Korean Sojo and beer",
+      "confidence": "single-source",
+      "notes": "Reviewer: not shown | Platform: TripAdvisor | Date: not shown. Appeared inside quotation marks in the summary for the query \"Duck Butt\" Honolulu soju review (every result in that set was a TripAdvisor page). Spelling 'Sojo' is as shown. Two other summaries rendered it as 'a small place with great food and Korean soju and beer'. Which of the ten reviews it comes from is not stated."
+    },
+    {
+      "claim": "Reviewer: 'a neat experience from this unique pub'",
+      "category": "quote",
+      "source_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d5835416-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Cafe Duck Butt - All You SHOULD Know Before Going 2026 (with Reviews)",
+      "source_date": "",
+      "verbatim_snippet": "a neat experience from this unique pub",
+      "confidence": "single-source",
+      "notes": "Reviewer: not shown | Platform: TripAdvisor | Date: not shown. Appeared inside quotation marks in the same summary sentence as the 'small place' quote: 'The establishment is described as \"a small place with great food and Korean Sojo and beer\" that offers \"a neat experience from this unique pub\".'"
+    },
+    {
+      "claim": "Reviewers describe the soju as 'gooood'",
+      "category": "quote",
+      "source_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d5835416-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Cafe Duck Butt - All You SHOULD Know Before Going 2026 (with Reviews)",
+      "source_date": "",
+      "verbatim_snippet": "gooood",
+      "confidence": "single-source",
+      "notes": "Reviewer: not shown | Platform: TripAdvisor | Date: not shown. Full summary sentence: 'Reviewers consistently describe the soju as \"gooood\", with particular praise for their signature drink.' (query: \"Duck Butt\" Honolulu soju review; all results TripAdvisor)."
+    },
+    {
+      "claim": "Reviewer warns the watermelon soju 'tastes just like watermelon juice .. until it hits you'",
+      "category": "quote",
+      "source_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d5835416-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Cafe Duck Butt - All You SHOULD Know Before Going 2026 (with Reviews)",
+      "source_date": "",
+      "verbatim_snippet": "tastes just like watermelon juice .. until it hits you",
+      "confidence": "single-source",
+      "notes": "Reviewer: not shown | Platform: TripAdvisor | Date: not shown. Full summary sentence: 'The watermelon soju is described as definitely worth trying, though reviewers caution that it \"tastes just like watermelon juice .. until it hits you\".' Punctuation ('..') as shown."
+    },
+    {
+      "claim": "Reviewer explains the name: 'the name refers to the way a beautiful woman walks, it's a Korean thing'",
+      "category": "quote",
+      "source_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d5835416-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Cafe Duck Butt - All You SHOULD Know Before Going 2026 (with Reviews)",
+      "source_date": "",
+      "verbatim_snippet": "the name refers to the way a beautiful woman walks, it's a Korean thing",
+      "confidence": "single-source",
+      "notes": "Reviewer: not shown | Platform: TripAdvisor | Date: not shown. Appeared (unquoted) inside the summary for the query \"Cafe Duck Butt\" tripadvisor, whose results were all TripAdvisor pages: 'The venue features several private rooms designed for karaoke, and the name refers to the way a beautiful woman walks, it's a Korean thing.' The colloquial phrasing indicates review text rather than summarizer wording; treat as near-verbatim, not confirmed character-for-character."
+    },
+    {
+      "claim": "Reviewers describe the food as 'delicious and authentic'",
+      "category": "quote",
+      "source_url": "https://cafe-duck-butt.wheree.com/",
+      "source_title": "Cafe Duck Butt - Reviews, Photos & Phone Number - Updated May 2026 - Karaoke Bars in Honolulu City, Honolulu County - Wheree",
+      "source_date": "",
+      "verbatim_snippet": "delicious and authentic",
+      "confidence": "unverified",
+      "notes": "Reviewer: not shown | Platform: not stated | Date: not shown. Appeared inside quotation marks in the summary for the query \"Cafe Duck Butt\" review wings: 'The restaurant is family-owned with very well-prepared food and enormous portions. The atmosphere is consistently praised for being fun and energetic, and reviewers describe the food as \"delicious and authentic\".' Source page NOT confirmed: candidates in that result set are the Wheree listing (assigned here as most likely for aggregated-sentiment wording), the TripAdvisor attraction page d5835416, the TripAdvisor restaurant page d27921500 and the Yelp listing."
+    },
+    {
+      "claim": "Kakaako Bar Tour blog: local Korean bar, dive-bar vibe, $1/song karaoke, soju out of a watermelon",
+      "category": "quote",
+      "source_url": "https://theabroadguide.com/kakaako-bar-tour/",
+      "source_title": "Kakaako Bar Tour",
+      "source_date": "",
+      "verbatim_snippet": "Cafe Duck Butt is a local Korean bar where you can sing karaoke, watch K-pop music videos, eat Korean food and drink soju out of a watermelon. It has a bit of a hole in the wall, dive bar vibe but you can't beat the $1/song karaoke.",
+      "confidence": "single-source",
+      "notes": "Platform: blog (The Abroad Guide), not a review site | author/date not shown. The search summary presented this as the page's description; the voice ('you can't beat the $1/song karaoke') indicates blog copy rather than summarizer wording. Direct fetch returned EGRESS_BLOCKED, so exact wording is unconfirmed. The $1/song figure is undated."
+    },
+    {
+      "claim": "Blog: bar sits in a nondescript warehouse off Ward Ave; happy hour 5pm-8pm",
+      "category": "sentiment",
+      "source_url": "https://theabroadguide.com/kakaako-bar-tour/",
+      "source_title": "Kakaako Bar Tour",
+      "source_date": "",
+      "verbatim_snippet": "The bar is located in a nondescript warehouse at 901 Kawaiahao St Honolulu, HI 96814, off of Ward Ave. They also have happy hour from 5pm-8pm.",
+      "confidence": "single-source",
+      "notes": "Happy-hour window conflicts with 'Monday-Friday from 4:30 to 7pm' in the Facebook-query summary; blog date unknown, so either may be stale."
+    },
+    {
+      "claim": "Signature watermelon soju served in a carved-out half watermelon, $30; other fruit soju carafes $20",
+      "category": "sentiment",
+      "source_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d5835416-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Cafe Duck Butt - All You SHOULD Know Before Going 2026 (with Reviews)",
+      "source_date": "",
+      "verbatim_snippet": "Their signature watermelon soju is served as half a watermelon with the insides carved out, with soju and ice added along with watermelon juice, priced at $30. | Other fruit flavored soju carafes are available for $20.",
+      "confidence": "single-source",
+      "notes": "Two sentences from the summary for the query \"Duck Butt\" Honolulu soju review (all results TripAdvisor), joined with ' | '. Prices come from undated TripAdvisor review text (one review on the listing is dated Feb 2, 2017), so they may be stale. The Watermelon Time review-page summary also stated the drink is 'made from a half watermelon with the insides carved out, with soju and ice added along with the watermelon juice.'"
+    },
+    {
+      "claim": "Reservations highly needed for Friday and Saturday; free valet parking available",
+      "category": "sentiment",
+      "source_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d5835416-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Cafe Duck Butt - All You SHOULD Know Before Going 2026 (with Reviews)",
+      "source_date": "",
+      "verbatim_snippet": "Reservations are highly needed for Friday and Saturday, and there is free valet parking available.",
+      "confidence": "single-source",
+      "notes": "Platform: TripAdvisor (query \"Cafe Duck Butt\" tripadvisor; all results TripAdvisor). The Friday/Saturday reservation advice recurs in four summaries and is attributed in one to Alfred T.'s review. Another summary: 'The venue is small with reservations highly needed for Friday and Saturday, with parking challenges that are helped by free valet service.' Contrast with the negative 'parking is extremely difficult to find' recorded separately; valet availability is undated."
+    },
+    {
+      "claim": "Several private karaoke rooms; advice to reserve a room on weekends",
+      "category": "sentiment",
+      "source_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d5835416-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Cafe Duck Butt - All You SHOULD Know Before Going 2026 (with Reviews)",
+      "source_date": "",
+      "verbatim_snippet": "There are several private rooms designed for karaoke.",
+      "confidence": "single-source",
+      "notes": "Platform: TripAdvisor (appeared in the all-TripAdvisor query summary as 'The venue features several private rooms designed for karaoke'). A mixed-source summary (query: \"Duck Butt\" karaoke room review Honolulu) added 'with great ambiance' and: 'It's advised to reserve your karaoke room especially on the weekends, as the fun, friendly atmosphere attracts plenty of people celebrating special occasions.' The source page for that second sentence is not confirmed (GiftYa blog or Wheree most likely). Yelp summary separately said 'The venue offers karaoke rooms that can be reserved for private events and gatherings.'"
+    },
+    {
+      "claim": "Negatives surfaced: plain exterior, parking extremely difficult, occasional service lapses at peak hours",
+      "category": "sentiment",
+      "source_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d5835416-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Cafe Duck Butt - All You SHOULD Know Before Going 2026 (with Reviews)",
+      "source_date": "",
+      "verbatim_snippet": "The outside of the building is very plain and parking is extremely difficult to find, and some feedback indicates occasional lapses in service during peak hours.",
+      "confidence": "unverified",
+      "notes": "From the summary for the query \"Cafe Duck Butt\" google reviews (results: TripAdvisor pages, Yelp, MenuPix, Wheree). The first clause reads like review text; 'some feedback indicates occasional lapses in service during peak hours' reads like aggregator/summarizer wording. Source page not confirmed; TripAdvisor attraction page assigned as most likely. Only negative sentiment that surfaced in any snippet."
+    },
+    {
+      "claim": "Positives surfaced: house-special fried chicken crispy but juicy; well-prepared food, enormous portions, family-owned; bartenders keep drinks flowing on busy nights",
+      "category": "sentiment",
+      "source_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d5835416-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Cafe Duck Butt - All You SHOULD Know Before Going 2026 (with Reviews)",
+      "source_date": "",
+      "verbatim_snippet": "The house special fried chicken is noted as crispy but juicy inside, and the food is very well prepared with enormous portions at this family-owned establishment. The atmosphere is consistently praised as fun and energetic, with bartenders ensuring drinks flow smoothly during busy nights.",
+      "confidence": "unverified",
+      "notes": "From the summary for the query \"Cafe Duck Butt\" google reviews. The 'family-owned with very well-prepared food and enormous portions' wording also appeared in the summary for \"Cafe Duck Butt\" review wings. Source page not confirmed; candidates common to both result sets: TripAdvisor attraction page d5835416 (assigned), Yelp listing, MenuPix, Wheree. Not confirmed as a Google review despite the query wording."
+    },
+    {
+      "claim": "'Customers love the chicken wings and kimchee fries'; menu noted for spicy chicken gizzards, edamame, kimchi fried rice, watermelon soju and lilikoi soju",
+      "category": "sentiment",
+      "source_url": "https://blog.giftya.com/article/cant-miss-karaoke-bars-and-lounges-in-hawaii",
+      "source_title": "8 Can’t-Miss Karaoke Bars and Lounges in Hawaii",
+      "source_date": "",
+      "verbatim_snippet": "Customers love the chicken wings and kimchee fries at Café Duck Butt. The menu features spicy chicken gizzards and vegetarian selections like edamame and kimchi fried rice, with creative cocktails such as watermelon soju and lilikoi soju.",
+      "confidence": "unverified",
+      "notes": "From the summary for the query \"Duck Butt\" karaoke room review Honolulu (results: TripAdvisor review pages, GiftYa blog, Yelp search page, Wheree, Wikipedia). Source page not confirmed; the GiftYa blog is assigned as most likely for listicle-style wording, Wheree is the alternative. Fetch of blog.giftya.com returned EGRESS_BLOCKED. This is the only wings/kimchee-fries sentiment that surfaced; no customer quote about either dish appeared verbatim in any snippet."
+    },
+    {
+      "claim": "Uber Eats menu lists three wing styles: Spicy Gochujang, Garlic Soy, Regular",
+      "category": "menu",
+      "source_url": "https://www.ubereats.com/store/cafe-duck-butt/mfKJqauFV56u8CaOi_JhoQ",
+      "source_title": "Order Cafe Duck Butt (Kawaiaha‘o St) - Menu & Prices - Honolulu Delivery",
+      "source_date": "",
+      "verbatim_snippet": "The restaurant offers three types of wings: Spicy Gochujang Wings with a sweet and savory gochujang sauce, Garlic Soy Chicken Wings infused with soy and garlic, and Regular Chicken Wings. Chicken Wings are listed as one of their popular dishes.",
+      "confidence": "single-source",
+      "notes": "Summary for the query \"Cafe Duck Butt\" review wings; attributed to the Uber Eats store page (first result). Exact menu wording not seen directly."
+    },
+    {
+      "claim": "Uber Eats menu: Kimchi Fries $22.00",
+      "category": "menu",
+      "source_url": "https://www.ubereats.com/store/cafe-duck-butt/mfKJqauFV56u8CaOi_JhoQ",
+      "source_title": "Order Cafe Duck Butt (Kawaiaha‘o St) - Menu & Prices - Honolulu Delivery",
+      "source_date": "",
+      "verbatim_snippet": "Café Duck Butt's Kimchi Fries ($22.00) feature spicy Korean-style fermented kimchi tops loaded on crispy fries.",
+      "confidence": "single-source",
+      "notes": "Summary for the query \"Duck Butt\" Honolulu kimchee fries; attributed to the Uber Eats store page (first result). Delivery-app pricing typically runs above in-house pricing. Yelp popular-dish list spells the dish 'kim chee'; Uber Eats spells it 'Kimchi'."
+    }
+  ],
+  "dead_ends": [
+    "Google Maps star rating and review count: not stated in any search result title or summary. Google, Apple Maps (maps.apple.com/place?place-id=IE5E6F554C2685A7D), wanderlog.com and cafe-duck-butt.wheree.com are all blocked by the egress proxy, and the search budget ran out before aggregator queries (Wanderlog, Restaurantji, Restaurant Guru, BirdEye) could be run.",
+    "Yelp individual review text with reviewer names/dates: never surfaced in snippets (only page titles and aggregate stats); yelp.com is blocked for direct fetch. No Yelp quote could be recorded.",
+    "TripAdvisor restaurant listing d27921500: no rating or review count appeared in results. Review bodies for 'Fantastic place!', 'If the name makes you smile, so will the soju!', 'Great Food & Happy Hour, Locals Spot !' and 'K-Pop, Karaoke and Korean Food....' were not retrievable (tripadvisor.com blocked; follow-up searches refused by the session cap).",
+    "Facebook: snapshot date for the 3,213 likes / 26,897 visits figure not shown; page blocked for direct fetch.",
+    "Instagram handle and follower count: not found before the search budget was exhausted.",
+    "Reddit / forum discussions: query attempted after the session cap (200 of 200 WebSearch calls, shared across the session) was reached; not run.",
+    "Honolulu Magazine 'Beyond kalbi & mandoo: Night at Duck Butt' (https://www.honolulumagazine.com/beyond-kalbi-mandoo-night-at-duck-butt/) surfaced but its text was not retrievable. A kimchee-fries description ('crinkle fries that arrive under a thick bed of tangy nacho cheese, minced kimchi, bulgogi beef, sour cream and pickled jalapenos') appeared in one summary but could not be attributed to the Honolulu location versus an excluded topic in the same result set, so it was deliberately not recorded.",
+    "Honolulu Star-Advertiser Pau Hana Patrol column 'Do the duck' (2010/09/17, https://www.staradvertiser.com/2010/09/17/play/pau-hana-patrol/do-the-duck/) surfaced but content not retrievable (news sites blocked).",
+    "GiftYa blog '8 Can’t-Miss Karaoke Bars and Lounges in Hawaii' (https://blog.giftya.com/article/cant-miss-karaoke-bars-and-lounges-in-hawaii) lists the bar; direct fetch returned EGRESS_BLOCKED, so its wording could not be captured verbatim.",
+    "Direct WebFetch of cafe-duck-butt.wheree.com, wanderlog.com, theabroadguide.com and blog.giftya.com all returned EGRESS_BLOCKED (one bounded attempt, four URLs).",
+    "Search budget: 14 distinct searches completed ('Cafe Duck Butt' yelp Honolulu; 'Cafe Duck Butt' tripadvisor; 'Cafe Duck Butt' review wings; 'Duck Butt' Honolulu kimchee fries; 'Duck Butt' karaoke room review Honolulu; 'Cafe Duck Butt' google reviews; 'Duck Butt' Honolulu soju review; 'Cafe Duck Butt' facebook; 'Café Duck Butt' Honolulu; 'Duck Butt' Kakaako karaoke; '901 Kawaiahao' Duck Butt; and three TripAdvisor review-title searches). Twelve further queries were refused by the session cap: Wanderlog rating; Restaurantji/Restaurant Guru; the four TripAdvisor review bodies; Yelp 'karaoke room'/wings/late-night phrasing; Honolulu Magazine kimchee fries; Star-Advertiser 'Do the duck'; Korean karaoke Honolulu 'Duck Butt'; 'Duck Butt' Kaka'ako (okina spelling); Reddit; Instagram/GiftYa.",
+    "Name collision: Yelp also lists 'DUCK BUTT CAFE - CLOSED' at 161-22 Northern Blvd, Flushing, New York (https://www.yelp.com/biz/duck-butt-cafe-flushing). Unrelated business; excluded. Wanderlog results /place/details/1063237 and /1953646 appeared without titles and could not be confirmed as this business.",
+    "No verbatim customer quote specifically about the wings, the kimchee fries, the karaoke rooms, late-night hours or named staff members surfaced in any snippet; the closest are the TripAdvisor soju/bartender fragments recorded above."
+  ]
+}
