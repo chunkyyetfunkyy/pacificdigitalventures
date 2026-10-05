@@ -45,7 +45,7 @@ function serve() {
 
 const expectedPath = path.join(ROOT, 'tools', 'expected.json');
 const expected = fs.existsSync(expectedPath) ? JSON.parse(fs.readFileSync(expectedPath, 'utf8')) : { strings: [] };
-const norm = s => s.replace(/\s+/g, ' ').replace(/[’]/g, "'").trim().toLowerCase();
+const norm = s => s.replace(/\s+/g, ' ').replace(/[’ʻ‘]/g, "'").trim().toLowerCase();
 
 const report = { dir: DIR, checks: [], hardFailures: 0 };
 function check(name, ok, detail) { report.checks.push({ name, ok: !!ok, detail }); if (!ok) report.hardFailures++; console.log((ok ? 'PASS' : 'FAIL') + '  ' + name + (detail ? '  — ' + (typeof detail === 'string' ? detail : JSON.stringify(detail)).slice(0, 400) : '')); }
@@ -75,7 +75,7 @@ async function pageProbe(browser, name, ctxOpts, opts = {}) {
     const imgs = Array.from(document.images).map(i => ({ src: i.currentSrc || i.src, ok: i.complete && i.naturalWidth > 0, alt: i.alt }));
     // text visibility: every expected string must exist in innerText of a visible element
     const bodyText = document.body.innerText;
-    const n = s => s.replace(/\s+/g, ' ').replace(/[’]/g, "'").trim().toLowerCase();
+    const n = s => s.replace(/\s+/g, ' ').replace(/[’ʻ‘]/g, "'").trim().toLowerCase();
     const missing = expectedStrings.filter(s => !n(bodyText).includes(n(s)));
     // elements with text but effectively invisible (opacity ~0 or offscreen transform)
     const hidden = [];
@@ -85,8 +85,9 @@ async function pageProbe(browser, name, ctxOpts, opts = {}) {
       if (!node.nodeValue.trim()) continue;
       const el = node.parentElement; if (!el || seen.has(el)) continue; seen.add(el);
       if (/^(SCRIPT|STYLE|NOSCRIPT|TEMPLATE|TITLE)$/.test(el.tagName)) continue;
-      let e = el, op = 1, vis = true;
-      while (e && e !== document.body) { const cs = getComputedStyle(e); op *= parseFloat(cs.opacity); if (cs.visibility === 'hidden' || cs.display === 'none') vis = false; e = e.parentElement; }
+      let e = el, op = 1, vis = true, gone = false;
+      while (e && e !== document.body) { const cs = getComputedStyle(e); op *= parseFloat(cs.opacity); if (cs.visibility === 'hidden') vis = false; if (cs.display === 'none') gone = true; if (/inset\(\s*0(px)?\s+0(px)?\s+100%/.test(cs.clipPath || '')) vis = false; e = e.parentElement; }
+      if (gone) continue; // display:none is a deliberate omission (responsive duplicates, owner-gated extras), not hidden-but-present text
       if (op < 0.2 || !vis) hidden.push(el.tagName + '.' + el.className + ': ' + node.nodeValue.trim().slice(0, 40));
     }
     return { scrollWidth: de.scrollWidth, innerWidth: vpWidth, scrollHeight: de.scrollHeight, imgs, missing, hidden: hidden.slice(0, 20), hiddenCount: hidden.length, title: document.title };
