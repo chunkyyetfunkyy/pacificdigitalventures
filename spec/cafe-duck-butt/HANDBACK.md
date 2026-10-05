@@ -76,15 +76,29 @@ drawings are stand-ins; their photos replace them the night they send them.
 
 ## 6. Review record
 
-Four fine-tooth-comb passes ran, each with parallel critics and adversarial verification against the code:
+Four review passes raised 177 findings. Only 26 were checked by an independent verifier agent: a dedupe bug
+merged pass 1's 68 findings down to 3, pass 2's verification was cut short, and passes 3–4 verified only
+blockers and majors by design. Afterwards every one of the 177 was triaged by hand against the final code:
 
-| Pass | Critics | Confirmed and fixed |
+| Outcome | Count | Notes |
 |---|---|---|
-| 1 | 7 | reveal observer never fired; hero warm-up never ran; phone number wrapped; content overstatements (tacos date, in-room service, quote cut mid-sentence); okina fell back to a system font; OFL licenses not shipped |
-| 2 | 7 | reveal sentinels shifted the layout; broken home-screen icon; Hangul synthetic-bolded; tacos ungated; room copy stronger than its one source |
-| 3 | 4 | valet shown ungated; street map drew an unsourced Ward crossing; watermelon rind cropped; desktop quote cards stretched |
-| 4 | 4 | invented flavor pairings; "known for" gizzards claim; "plain building" wording; glow edge in the first screen; deploy could trigger a Netlify build |
+| Fixed | ~150 | content accuracy, motion, layout, accessibility, build, deploy |
+| Refuted on review | 4 | e.g. "Hangul shouldn't sit on the sign" (the design spec calls for it; the verifier refuted it twice) |
+| Left as-is, low risk | 8 | Windows High Contrast mode styling; 200% zoom on a 375px phone; font-swap reflow on slow networks (no metric-matched fallbacks); Safari ≤15 nested scroll; queue-step 400ms hole; the Next button appearing after load; hero warm-up also dims the rails; plates narrower than the grid beside them |
 
-No pass came back with zero confirmed defects; each pass's findings were smaller than the last. The loop
-stopped after pass 4 to keep usage cost in check. Remaining unverified minors are listed in
-`research/pass2-majors.md` and the workflow journals; none affects a fact on the page.
+New checks added after the passes, all green on the final build:
+
+- `node tools/verify.js dist` — 21/21 (console, 404s, images, overflow 375/1440, no-JS, reduced motion, weight 147 KB, scroll timing, axe)
+- `node tools/gates.js` — 30/30 owner-gate checks: flags off shows nothing unconfirmed; each flag reveals only its own value; prices stay hidden until a value is typed
+- `node tools/verify.js https://<live-url>` — the same checks against the live deploy, plus the noindex header and meta
+
+## 7. Not verified from here — do these yourself
+
+| Check | Why it could not be done here | How |
+|---|---|---|
+| Live URL proof | Netlify is blocked from the build container | `scripts/deploy.sh` prints the exact `verify.js` command for the live URL; run it |
+| Real iPhone | only headless Chromium was available; 60 fps is indicative | open the live URL on your phone, scroll the whole page, rotate once, try with Reduce Motion on |
+| Phone number | nobody has dialed it; seven listings agree | call (808) 593-1880, then set `phone.telVerified` |
+| cafeduckbutt.com redirect | the domain was unreachable from the container | your 4 Oct observation is the only evidence; re-check on your phone before you walk in |
+| Review quotes | read from search snippets, not the live pages | open the TripAdvisor and Yelp pages on your phone and confirm each quote on the page still exists |
+| Still website-less | only a 2013-era Weebly page and listings surfaced | a quick search the morning you go |

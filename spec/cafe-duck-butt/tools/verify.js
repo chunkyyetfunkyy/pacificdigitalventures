@@ -21,10 +21,12 @@ const { chromium } = (function () { for (const c of ['playwright', '/opt/node22/
 const args = process.argv.slice(2);
 const dirArg = args.find(a => !a.startsWith('--')) || 'dist';
 const ROOT = path.resolve(__dirname, '..');
-const DIR = path.resolve(ROOT, dirArg);
+const LIVE = /^https?:\/\//.test(dirArg);           // node tools/verify.js https://<site>.netlify.app  -> checks the live deploy
+const DIR = LIVE ? null : path.resolve(ROOT, dirArg);
 const OUT = path.resolve(ROOT, (args.includes('--out') ? args[args.indexOf('--out') + 1] : 'tools/out'));
 const PORT = Number(args.includes('--port') ? args[args.indexOf('--port') + 1] : 8765);
 fs.mkdirSync(OUT, { recursive: true });
+const BASE = LIVE ? dirArg.replace(/\/+$/, '') : `http://127.0.0.1:${PORT}`;
 
 const MIME = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.svg': 'image/svg+xml', '.avif': 'image/avif', '.webp': 'image/webp', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.woff2': 'font/woff2', '.woff': 'font/woff', '.json': 'application/json', '.txt': 'text/plain', '.ico': 'image/x-icon', '.webmanifest': 'application/manifest+json' };
 
@@ -58,11 +60,11 @@ async function pageProbe(browser, name, ctxOpts, opts = {}) {
   page.on('pageerror', e => consoleErrors.push('pageerror: ' + e.message));
   page.on('requestfailed', r => failed.push(r.url() + ' ' + (r.failure() && r.failure().errorText)));
   page.on('response', async r => {
-    const url = r.url(); if (!url.startsWith('http://127.0.0.1')) return;
+    const url = r.url(); if (!url.startsWith(BASE)) return;
     let size = 0; try { size = (await r.body()).length; } catch (e) {}
-    responses.push({ url: url.replace(`http://127.0.0.1:${PORT}`, ''), status: r.status(), type: r.request().resourceType(), size });
+    responses.push({ url: url.replace(BASE, ''), status: r.status(), type: r.request().resourceType(), size });
   });
-  await page.goto(`http://127.0.0.1:${PORT}/`, { waitUntil: 'networkidle' });
+  await page.goto(BASE + '/', { waitUntil: 'networkidle' });
   await page.waitForTimeout(opts.settle || 1500);
   // scroll through to trigger lazy work, then back to top
   if (ctxOpts.javaScriptEnabled !== false) {
@@ -98,7 +100,15 @@ async function pageProbe(browser, name, ctxOpts, opts = {}) {
 }
 
 (async () => {
-  const srv = await serve();
+  const srv = LIVE ? null : await serve();
+  if (LIVE) {
+    // headers the brief requires on the live deploy
+    const res = await fetch(BASE + '/');
+    const robots = res.headers.get('x-robots-tag') || '';
+    check('live: X-Robots-Tag noindex header present', /noindex/i.test(robots), robots || '(missing)');
+    const html = await res.text();
+    check('live: robots meta noindex present', /<meta name="robots" content="noindex/i.test(html));
+  }
   const browser = await chromium.launch({ args: ['--ignore-certificate-errors'] });
   try {
     // 1. mobile 375
@@ -142,7 +152,7 @@ async function pageProbe(browser, name, ctxOpts, opts = {}) {
     {
       const ctx = await browser.newContext({ viewport: { width: 375, height: 812 }, isMobile: true, hasTouch: true });
       const page = await ctx.newPage();
-      await page.goto(`http://127.0.0.1:${PORT}/`, { waitUntil: 'networkidle' });
+      await page.goto(BASE + '/', { waitUntil: 'networkidle' });
       await page.waitForTimeout(800);
       const fps = await page.evaluate(() => new Promise(resolve => {
         const deltas = []; let last = performance.now(); const start = last; const h = document.documentElement.scrollHeight - innerHeight;
@@ -158,7 +168,7 @@ async function pageProbe(browser, name, ctxOpts, opts = {}) {
     {
       const ctx = await browser.newContext({ viewport: { width: 375, height: 812 }, isMobile: true });
       const page = await ctx.newPage();
-      await page.goto(`http://127.0.0.1:${PORT}/`, { waitUntil: 'networkidle' });
+      await page.goto(BASE + '/', { waitUntil: 'networkidle' });
       await page.waitForTimeout(2500); // let the one-shot hero warm-up finish so axe measures the settled colours
       await page.addScriptTag({ path: path.join(__dirname, 'node_modules', 'axe-core', 'axe.min.js') });
       const res = await page.evaluate(async () => { const r = await axe.run(document, { runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21aa', 'best-practice'] } }); return r.violations.map(v => ({ id: v.id, impact: v.impact, help: v.help, nodes: v.nodes.slice(0, 6).map(n => ({ target: n.target.join(' '), summary: n.failureSummary && n.failureSummary.slice(0, 200) })) })); });
@@ -171,7 +181,7 @@ async function pageProbe(browser, name, ctxOpts, opts = {}) {
     }
   } finally {
     await browser.close();
-    srv.close();
+    if (srv) srv.close();
   }
   fs.writeFileSync(path.join(OUT, 'verify-report.json'), JSON.stringify(report, null, 2));
   console.log(`\n${report.checks.length - report.hardFailures}/${report.checks.length} checks passed. Report: ${path.join(OUT, 'verify-report.json')}`);

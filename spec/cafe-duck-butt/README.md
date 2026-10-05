@@ -29,8 +29,8 @@ scripts/deploy.sh            # builds dist/ then `netlify deploy --prod --dir=di
 The script creates a Netlify site named `cafe-duck-butt-spec` on first run (override with `SITE_NAME=...`),
 writes `scripts/deploy-state.json` with the site id and URLs, and uses the CLI at
 `/Users/kevinosborne/kailua-golf-shop/node_modules/.bin/netlify` (override with `NETLIFY_CLI=...`).
-Images are cached for a year; if you replace an image but keep its filename, bump a `?v=N` on the URL in
-`index.html`.
+Fonts, images, CSS and JS are fingerprinted with a content hash (`?v=…`) at build time, so replacing a file
+keeps its name and phones still get the new version. Do not add `?v=` by hand.
 
 ## Owner gates
 
@@ -50,7 +50,8 @@ empty `data-value` stays gated, so nothing unconfirmed can leak. The checklist o
 | `amenities.pool` | "Pool table" |
 | `social.facebook` | Facebook link in the footer |
 | `sign.duckConfirmed` | "Look for the duck on the sign." |
-| `name.hangulStandard` | dictionary spelling 오리궁둥이 instead of the owners' 오리궁뎅이 |
+| `name.hangulStandard` | dictionary spelling 오리궁둥이 (romanized "ori gungdungi") instead of 오리궁뎅이 |
+| `menu.tacosConfirmed` | the Korean Tacos row |
 | `photos.showSlots` | the seven labelled photo slots, for the photo conversation |
 
 ## Verify locally
@@ -58,6 +59,7 @@ empty `data-value` stays gated, so nothing unconfirmed can leak. The checklist o
 ```sh
 scripts/build-dist.sh
 node tools/verify.js dist          # 21 checks; writes tools/out/verify-report.json + screenshots
+node tools/verify.js https://<site>.netlify.app   # same checks against the live deploy, plus noindex headers
 node tools/contrast.js --css src/css/site.css
 node tools/shots.js dist           # per-section screenshots in tools/out/sections/
 ```

@@ -56,6 +56,7 @@ var TEL = '+18085931880'; // only used when phone.telVerified is true
 
   if (on('name.hangulStandard')) {
     each(d.querySelectorAll('[data-hangul]'), function (el) { el.textContent = '오리궁둥이'; });
+    each(d.querySelectorAll('[data-say]'), function (el) { el.textContent = 'ori gungdungi'; });
   }
 
   /* ---------------------------------------------------------------- open-now chip (only with confirmed days) */
@@ -86,6 +87,16 @@ var TEL = '+18085931880'; // only used when phone.telVerified is true
     var targets = d.querySelectorAll('.reveal, .melon, .phone-card');
     if (targets.length) {
       var inView = function (el) { var r = el.getBoundingClientRect(); return r.top < window.innerHeight && r.bottom > 0; };
+      var jumpTo = function (id) {               // a deep link or nav tap lands on a lit section, not a wiping one
+        var sec = id && d.getElementById(id);
+        if (!sec) return;
+        each(sec.querySelectorAll('.reveal, .melon, .phone-card'), function (t) { t.classList.add('is-in', 'is-instant'); setTimeout(function () { t.classList.remove('is-instant'); }, 100); });
+      };
+      if (location.hash) jumpTo(decodeURIComponent(location.hash.slice(1)));
+      d.addEventListener('click', function (e) {
+        var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+        if (a) jumpTo(a.getAttribute('href').slice(1));
+      });
       var initial = [];
       each(targets, function (t) { if (inView(t)) initial.push(t); });
       each(initial, function (t) { t.classList.add('is-in', 'is-instant'); });
@@ -121,7 +132,9 @@ var TEL = '+18085931880'; // only used when phone.telVerified is true
       if (busy) return;
       var first = list.firstElementChild;
       if (!first) return;
-      if (reduce) { list.appendChild(first); return; }
+      var status = d.getElementById('queue-status');
+      var say = function () { if (status) status.textContent = 'Now playing: ' + list.firstElementChild.textContent; };
+      if (reduce) { list.appendChild(first); say(); return; }
       busy = true;
       var rowH = first.getBoundingClientRect().height + 6;
       list.style.transition = 'transform 400ms ease-out';
@@ -130,6 +143,7 @@ var TEL = '+18085931880'; // only used when phone.telVerified is true
         list.style.transition = 'none';
         list.style.transform = '';
         list.appendChild(first);
+        say();
         busy = false;
       }, 420);
     });

@@ -61,7 +61,7 @@
   <div class="wrap">
     <div class="sign sign--hero">
       <div class="sign__rail sign__rail--red">
-        <span class="hangul hangul--hero" lang="ko" data-hangul>오리궁뎅이</span><!-- F023: the name in Korean; colloquial spelling matches the owners' "oh ri goong deng ee"; name.hangulStandard swaps to 오리궁둥이 -->
+        <span class="hangul hangul--hero" lang="ko" data-hangul>오리궁뎅이</span><!-- F023: the name in Korean; colloquial spelling matches the pronunciation Hawaii Business Magazine printed, "oh ri goong deng ee"; name.hangulStandard swaps to 오리궁둥이 -->
       </div>
       <div class="sign__face">
         <h1 class="hero__name" id="hero-name"><span class="visually-hidden">Café </span>
@@ -76,7 +76,7 @@
       </div>
     </div>
 
-    <p class="gloss"><span class="gloss__say">oh ri goong deng ee</span> — “duck butt,” a cute word for the shape of a behind.</p><!-- F023 -->
+    <p class="gloss"><span class="gloss__say" data-say>oh ri goong deng ee</span> — “duck butt,” a cute word for the shape of a behind.</p><!-- F023 -->
 
     <div class="hero__facts">
       <p class="hours-big">
@@ -91,7 +91,7 @@
         <a class="btn btn--red" href="#rooms">Book a room</a>
         <a class="btn btn--vinyl" href="#menu">The menu</a>
       </p>
-      <p class="street-strip ticket-type">901 Kawaiahaʻo St · 5 PM – 2 AM · Happy hour 5–8 · <span class="phone" data-phone>(808) 593-1880</span></p>
+      <p class="street-strip ticket-type"><span class="seg">901 Kawaiahaʻo St ·</span> <span class="seg">5 PM – 2 AM ·</span> <span class="seg">Happy hour 5–8 ·</span> <span class="seg"><span class="phone" data-phone>(808) 593-1880</span></span></p>
     </div>
 
     <figure class="slot slot--hero" data-gate="photos.showSlots" hidden>
@@ -112,7 +112,7 @@
       <div class="prose on-vinyl">
         <p>Korean tapas and flavored soju in a small, windowless bar on the back streets of Kakaʻako, a block off Ward. Same owners since 2010.</p><!-- F114, F063, F031, F261, F053, F005 ("since", never "founded") -->
         <p>Brothers-in-law Jin Hong and Henry Yoon took the place over in 2010, changed the décor, and kept the name.</p><!-- F005, F013 -->
-        <p>Duck butt in Korean is <span lang="ko" class="hangul-inline" data-hangul>오리궁뎅이</span>, <em>oh ri goong deng ee</em>, a cute word for the shape of a behind. They kept the name because it was catchy and easy to remember. Suppliers giggled. It worked.</p><!-- F023, F025, F017 -->
+        <p>Duck butt in Korean is <span lang="ko" class="hangul-inline" data-hangul>오리궁뎅이</span>, <em data-say>oh ri goong deng ee</em>, a cute word for the shape of a behind. They kept the name because it was catchy and easy to remember. Some suppliers giggled when he said it.</p><!-- F023, F025, F017 -->
         <p>Up front: booths, a bar, and K-pop videos on the screens. In the back: the private rooms.</p><!-- F276 (booths, SINGLE: no colour claimed), F278, F172 VERIFIED, F142 -->
         <ul class="label-row" role="list" aria-label="In short">
           <li>Since 2010</li>
@@ -154,7 +154,7 @@
           <span class="row__price gate" data-gate="prices.food" data-value=""><span class="visually-hidden">Price </span><span class="gate__value">—</span> <span class="stamp">Ask at the bar</span></span>
         </li>
         <li class="row">
-          <span class="row__name">Chicken wings</span><!-- F095 -->
+          <span class="row__name">Chicken Wings</span><!-- F095 -->
           <span class="row__desc">Spicy gochujang, garlic soy, or regular.</span><!-- F096 -->
           <span class="row__price gate" data-gate="prices.food" data-value=""><span class="visually-hidden">Price </span><span class="gate__value">—</span> <span class="stamp">Ask at the bar</span></span>
         </li>
@@ -207,7 +207,7 @@
         </div>
         <div class="ticket">
           <p class="ticket-type">Specials on drinks and pupu, 5–8.<br><span class="gate" data-gate="prices.drinks" data-value=""><span class="gate__value">Prices&nbsp;—</span> <span class="stamp">Ask at the bar</span></span></p><!-- F089, F092; prices gated -->
-          <p class="ticket-type">Portions are big. Vegetarian options, too.</p><!-- F117, F185 -->
+          <p class="ticket-type">A reviewer called the portions enormous. Vegetarian options, too.</p><!-- F117, F185 -->
         </div>
         <figure class="slot slot--square" data-gate="photos.showSlots" hidden><figcaption class="slot__label">Photo slot MENU-01 · the chicken · 1:1</figcaption></figure>
         <figure class="slot slot--square" data-gate="photos.showSlots" hidden><figcaption class="slot__label">Photo slot MENU-02 · kimchee fries · 1:1</figcaption></figure>
@@ -265,8 +265,9 @@
 
     <div class="soju__foot">
       <div class="ticket">
-        <p class="ticket-type">Flavored soju by the pitcher or carafe.<br>Hite, ice-cold, in very large bottles.<br>Full bar.<br><span class="gate" data-gate="prices.drinks" data-value=""><span class="gate__value">Prices&nbsp;—</span> <span class="stamp">Ask at the bar</span></span></p><!-- F131, F135, F137; F139 prices gated -->
+        <p class="ticket-type">Flavored soju by the pitcher or carafe.<br>Hite in very large bottles.<br>Full bar.<br><span class="gate" data-gate="prices.drinks" data-value=""><span class="gate__value">Prices&nbsp;—</span> <span class="stamp">Ask at the bar</span></span></p><!-- F131, F135, F137; F139 prices gated -->
       </div>
+      <div class="soju__quotes">
       <figure class="pull on-dark">
         <blockquote><p>“tastes just like watermelon juice .. until it hits you”</p></blockquote>
         <figcaption class="tiny">— a TripAdvisor reviewer, on the watermelon soju</figcaption><!-- F204 USABLE -->
@@ -275,6 +276,7 @@
         <blockquote><p>“I now dream of Watermelon soju.”</p></blockquote>
         <figcaption class="tiny">— a Yelp reviewer</figcaption><!-- F210 USABLE -->
       </figure>
+      </div>
       <figure class="slot slot--tall" data-gate="photos.showSlots" hidden><figcaption class="slot__label">Photo slot DRINKS-01 · watermelon soju on the table · 4:5</figcaption></figure>
     </div>
   </div>
@@ -294,7 +296,7 @@
 
     <div class="rooms__grid">
       <div class="prose on-vinyl rooms__copy">
-        <p>Private karaoke rooms in the back, going until close. Songs in English, Japanese and Korean. K-pop videos on the screens out front.</p><!-- F140, F142, F145, F147, F172 -->
+        <p>Private karaoke rooms in the back. Guides say the song lists run deep in English, Japanese and Korean, and the rooms go until close. K-pop videos play on the screens out front.</p><!-- F140, F142, F145, F147, F172 -->
         <p>Rooms have a couch, the machine, and a phone to call for the check.</p><!-- F143 (F146: in-room service is OWNER, not claimed) -->
         <p>Birthdays, bachelorettes, after-work groups. Fridays and Saturdays, call ahead — reviewers keep saying it. If you’re not booking a room, there’s seating by the bar.</p><!-- F164, F165, F160, F144 -->
         <dl class="terms ticket-type">
@@ -325,6 +327,7 @@
 
       <div class="queue ticket" role="group" aria-label="Song queue">
         <p class="label">Now playing</p>
+        <p class="visually-hidden" aria-live="polite" id="queue-status"></p>
         <div class="queue__viewport">
           <ol class="queue__list" id="queue" role="list">
             <li>English</li><li>Japanese</li><li>Korean</li><li>K-pop sing-alongs</li>
@@ -401,7 +404,7 @@
                     <rect x="148" y="40" width="46" height="26" fill="#F4F1E8" stroke="#E0202A" stroke-width="4"/>
           <circle cx="171" cy="70" r="7" fill="#F2A51A"/>
         </svg>
-        <figcaption class="street__labels ticket-type">
+        <figcaption class="street__labels ticket-type" aria-hidden="true">
           <span class="street__l street__l--st">Kawaiahaʻo St</span>
           <span class="street__l street__l--ward">A block off Ward Ave</span>
           <span class="street__l street__l--pin">901</span>
@@ -428,8 +431,8 @@
       <svg class="duck duck--vinyl"><use href="#duck"/></svg>
     </div>
     <div class="foot__text ticket-type">
-      <p><span lang="ko" class="hangul-inline" data-hangul>오리궁뎅이</span> <span class="foot__say">oh ri goong deng ee</span> · Café Duck Butt · Since 2010</p><!-- F001, F005, F023 -->
-      <p>901 Kawaiahaʻo St, Honolulu, HI 96814 · 5 PM – 2 AM · <span class="phone" data-phone>(808) 593-1880</span></p>
+      <p><span class="seg"><span lang="ko" class="hangul-inline" data-hangul>오리궁뎅이</span> <span class="foot__say" data-say>oh ri goong deng ee</span> ·</span> <span class="seg">Café Duck Butt ·</span> <span class="seg">Since 2010</span></p><!-- F001, F005, F023 -->
+      <p><span class="seg">901 Kawaiahaʻo St, Honolulu, HI 96814 ·</span> <span class="seg">5 PM – 2 AM ·</span> <span class="seg"><span class="phone" data-phone>(808) 593-1880</span></span></p>
       <p hidden data-gate="social.facebook"><a data-gate="social.facebook" href="https://www.facebook.com/Cafe-Duck-Butt-132145946808402/" rel="noopener">Facebook</a></p><!-- F065 / C17: hidden until social.facebook -->
       <p class="tiny foot__credit">Site concept by Kevin Osborne</p>
     </div>

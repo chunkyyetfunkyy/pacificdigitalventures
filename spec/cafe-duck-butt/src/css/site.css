@@ -449,3 +449,16 @@ em { font-style: normal; font-family: var(--f-mono); font-size: .9em; }
 }
 
 .flavors__more { margin-top: 14px; }
+
+/* ---- final review fixes ---- */
+.seg { white-space: nowrap; }
+p, blockquote p, figcaption { text-wrap: pretty; }
+.about .prose p { max-width: 62ch; }
+.terms__row dd { text-align: left; }
+.skip:focus-visible { outline-color: var(--c-ink); }
+.rail a:focus-visible, .rail .btn:focus-visible { outline-offset: -3px; }
+.addr:focus-visible { outline-offset: 0; }
+.street__l--pin { left: 50%; transform: translateX(-50%); }
+.soju__quotes { display: grid; gap: var(--gap); align-content: start; }
+@media (min-width: 1024px) { [id], a, button { scroll-margin-top: 56px; } }
+@media (min-width: 1024px) { .flavors__more { grid-column: 5 / 13; margin-top: 0; } }

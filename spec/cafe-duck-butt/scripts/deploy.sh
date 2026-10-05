@@ -19,12 +19,24 @@ fi
 SITE_ID="$(node -e 'try{const s=require(process.argv[1]);process.stdout.write(s.site_id||"")}catch(e){}' "$STATE")"
 
 if [[ -z "$SITE_ID" ]]; then
-  echo "No site id recorded; creating Netlify site '$SITE_NAME'..."
-  CREATE_JSON="$("$NETLIFY" sites:create --name "$SITE_NAME" --json 2>/dev/null || "$NETLIFY" sites:create --name "$SITE_NAME-$RANDOM" --json)"
-  SITE_ID="$(node -e 'const s=JSON.parse(require("fs").readFileSync(0,"utf8"));process.stdout.write(s.id||s.site_id||"")' <<<"$CREATE_JSON")"
-  [[ -n "$SITE_ID" ]] || { echo "Could not read site id from sites:create output:"; echo "$CREATE_JSON"; exit 1; }
-  node -e 'const fs=require("fs");let s={};try{s=JSON.parse(fs.readFileSync(process.argv[2],"utf8"))}catch(e){};s.site_id=process.argv[1];s.site_name=s.site_name||process.argv[3];fs.writeFileSync(process.argv[2],JSON.stringify(s,null,2)+"\n")' "$SITE_ID" "$STATE" "$SITE_NAME"
-  echo "Recorded site id $SITE_ID in $STATE"
+  # Run sites:create in the open so any prompt (e.g. "which team?") is visible, and never link this repo to the site.
+  LINKFLAG=()
+  "$NETLIFY" sites:create --help 2>/dev/null | grep -q -- '--disable-linking' && LINKFLAG=(--disable-linking)
+  NAME="$SITE_NAME"
+  echo "No site id recorded; creating Netlify site '$NAME'..."
+  if ! "$NETLIFY" sites:create --name "$NAME" "${LINKFLAG[@]}"; then
+    NAME="$SITE_NAME-$(date +%s | tail -c 5)"
+    echo "Name taken or create failed; trying '$NAME'..."
+    "$NETLIFY" sites:create --name "$NAME" "${LINKFLAG[@]}"
+  fi
+  # Look the new site up by name instead of parsing CLI output, which changes between CLI versions.
+  SITE_ID="$("$NETLIFY" api listSites --data '{"filter":"all","per_page":100}' | node -e '
+    const sites=JSON.parse(require("fs").readFileSync(0,"utf8"));
+    const s=sites.find(x=>x.name===process.argv[1]); process.stdout.write(s?s.id:"")' "$NAME")"
+  [[ -n "$SITE_ID" ]] || { echo "Created '$NAME' but could not find its id via 'netlify api listSites'. Put the id in $STATE and re-run."; exit 1; }
+  SITE_NAME="$NAME"
+  node -e 'const fs=require("fs");let s={};try{s=JSON.parse(fs.readFileSync(process.argv[2],"utf8"))}catch(e){};s.site_id=process.argv[1];s.site_name=process.argv[3];fs.writeFileSync(process.argv[2],JSON.stringify(s,null,2)+"\n")' "$SITE_ID" "$STATE" "$SITE_NAME"
+  echo "Recorded site id $SITE_ID ($SITE_NAME) in $STATE"
 fi
 
 NOBUILD=()
@@ -38,3 +50,6 @@ const state={site_id:process.argv[1],site_name:o.site_name||process.argv[2],url:
 fs.writeFileSync(process.argv[3],JSON.stringify(state,null,2)+"\n");
 console.log("Live:",state.url);console.log("Deploy:",state.deploy_url);console.log("State written to",process.argv[3]);
 ' "$SITE_ID" "$SITE_NAME" "$STATE"
+echo
+echo "Next: prove the live site (console, 404s, images, overflow, no-JS, reduced motion, weight, scroll, axe, noindex headers):"
+echo "  node \"$ROOT/tools/verify.js\" \"$(node -e 'process.stdout.write(require(process.argv[1]).url||"")' "$STATE")\""
