@@ -2,7 +2,8 @@
 <html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
 <title>Café Duck Butt — Korean tapas, soju and private karaoke rooms in Kakaʻako, Honolulu</title>
 <meta name="description" content="Café Duck Butt, 901 Kawaiahaʻo St, Honolulu. Korean tapas, flavored soju by the pitcher, watermelon soju in the watermelon, and private karaoke rooms in the back. 5 PM – 2 AM, happy hour 5–8.">
 <meta name="robots" content="noindex, nofollow">
@@ -14,8 +15,9 @@
 <link rel="preload" href="fonts/blackhansans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/archivo-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/spacemono-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/archivo-cond-600.woff2" as="font" type="font/woff2" crossorigin>
+<script>(function(h){h.className=h.className.replace('no-js','js');if(!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)){h.className+=' pre';setTimeout(function(){h.className=h.className.replace(/\s*\bpre\b/,'')},450)}})(document.documentElement)</script>
 <link rel="stylesheet" href="css/site.css">
-<script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
 <script defer src="js/site.js"></script>
 <!--
   Spec demo for Café Duck Butt. Every claim below cites research/FACTS.md by id (F###).
@@ -61,16 +63,15 @@
         <span class="hangul hangul--hero" lang="ko" data-hangul>오리궁뎅이</span><!-- F023: the name in Korean; colloquial spelling matches the owners' "oh ri goong deng ee"; name.hangulStandard swaps to 오리궁둥이 -->
       </div>
       <div class="sign__face">
-        <h1 class="hero__name" id="hero-name">
+        <h1 class="hero__name" id="hero-name"><span class="visually-hidden">Café </span>
           <span class="lyric">
             <span class="lyric__base">Duck<br>Butt</span>
             <span class="lyric__fill" aria-hidden="true"><span class="lyric__inner">Duck<br>Butt</span></span>
           </span>
-          <span class="visually-hidden">Café Duck Butt</span>
         </h1>
       </div>
       <div class="sign__rail sign__rail--green">
-        <span class="label">Café · Korean tapas · Soju · Karaoke rooms</span><!-- F114, F121, F140 -->
+        <span class="label">Korean tapas · Soju · Karaoke rooms</span><!-- F114, F121, F140 -->
       </div>
     </div>
 
@@ -79,14 +80,15 @@
     <div class="hero__facts">
       <p class="hours-big">
         <span class="hours-big__time">5 PM – 2 AM</span><!-- F069–F074 VERIFIED window -->
-        <span class="chip chip--open" id="open-chip"><span lang="ko" class="chip__ko">영업중</span><span class="chip__en">Open late</span></span>
+        <span class="chip chip--open" id="open-chip"><span lang="ko" class="chip__ko">영업중</span><span class="chip__en">yeongeop-jung</span></span><!-- the sign word; open-now text only under hours.daysConfirmed -->
       </p>
       <p class="gate-line ticket-type">
-        <span class="gate" data-gate="hours.daysConfirmed" data-value="Seven nights a week"><span class="gate__value">Nights: —</span><span class="stamp">Ask at the bar</span></span><!-- C1: days gated -->
-        <span class="sep">·</span> Happy hour 5–8<!-- F087 VERIFIED window -->
+        <span class="nowrap">Happy hour 5–8</span><!-- F087 VERIFIED window -->
+        <span class="sep">·</span>
+        <span class="gate" data-gate="hours.daysConfirmed" data-value="Seven nights a week"><span class="gate__value">Nights: —</span> <span class="stamp">Ask at the bar</span></span><!-- C1: days gated -->
       </p>
       <p class="addr-line ticket-type">
-        <a class="addr" href="https://maps.apple.com/?q=901+Kawaiahao+St+Honolulu+HI+96814" rel="noopener">901 Kawaiahaʻo St</a>, a block off Ward Avenue, Kakaʻako<!-- F052, F053, F055 -->
+        <a class="addr" href="https://maps.apple.com/?q=901+Kawaiahao+St+Honolulu+HI+96814" rel="noopener">901 Kawaiahaʻo St<span class="visually-hidden"> (opens map)</span></a>, <span class="nowrap">a block off Ward Avenue</span>, Kakaʻako<!-- F052, F053, F055 -->
       </p>
       <p class="hero__cta">
         <a class="btn btn--red" href="#rooms">Book a room</a>
@@ -115,7 +117,7 @@
         <p>Brothers-in-law Jin Hong and Henry Yoon took the place over in 2010, changed the décor, and kept the name.</p><!-- F005, F013 -->
         <p>The name is <span lang="ko" class="hangul-inline" data-hangul>오리궁뎅이</span>, <em>oh ri goong deng ee</em>, a cute word for the shape of a behind. They kept it because it was catchy and easy to remember. Suppliers giggled. It worked.</p><!-- F023, F025, F017 -->
         <p>Up front: booths, a bar, and K-pop videos on the screens. In the back: the private rooms.</p><!-- F276 (booths, SINGLE: no colour claimed), F278, F172 VERIFIED, F142 -->
-        <ul class="label-row" aria-label="In short">
+        <ul class="label-row" role="list" aria-label="In short">
           <li>Since 2010</li>
           <li><span lang="ko">안주</span> anju · drinking food</li><!-- F267 anju -->
           <li><span lang="ko">노래방</span> noraebang · singing rooms</li><!-- F268: dictionary word, not the bar's sign -->
@@ -123,10 +125,10 @@
       </div>
       <div class="about__aside">
         <svg class="duck duck--about" aria-hidden="true"><use href="#duck"/></svg>
-        <p class="press on-dark">
-          <q>A night out in Kakaako isn’t complete unless you finish at popular local hangout, Café Duck Butt.</q>
-          <span class="tiny">— HAWAIʻI Magazine</span><!-- F034 -->
-        </p>
+        <figure class="press on-dark">
+          <blockquote><p>“A night out in Kakaako isn’t complete unless you finish at popular local hangout, Café Duck Butt, a lively Korean restaurant and karaoke bar, and their watermelon soju is hard to resist.”</p></blockquote>
+          <figcaption class="tiny">— HAWAIʻI Magazine</figcaption><!-- F034, full sentence -->
+        </figure>
         <figure class="slot slot--square" data-gate="photos.showSlots" hidden>
           <figcaption class="slot__label">Photo slot ABOUT-01 · the owners at the bar · 1:1</figcaption>
         </figure>
@@ -139,72 +141,77 @@
 <section class="menu section" id="menu" aria-labelledby="menu-h">
   <div class="pool pool--bl" aria-hidden="true"></div>
   <div class="wrap">
-    <header class="plate plate--green reveal">
-      <p class="plate__ko"><span lang="ko" class="hangul hangul--rail">안주</span> <span class="label">anju · food that goes with drinks</span></p>
-      <h2 class="h2" id="menu-h">The board</h2>
+    <header class="plate plate--green plate--railed reveal">
+      <div class="plate__rail"><span lang="ko" class="hangul hangul--rail">안주</span></div>
+      <div class="plate__body">
+        <p class="label plate__gloss">anju · food that goes with drinks</p>
+        <h2 class="h2" id="menu-h">The board</h2>
+      </div>
     </header>
 
     <div class="menu__grid">
-      <ul class="board" aria-label="Dishes">
+      <ul class="board" role="list" aria-label="Dishes">
         <li class="row row--star">
-          <span class="row__name">Famous Duck Butt Chicken</span><!-- F094 -->
+          <span class="row__name"><span class="visually-hidden">House favorite. </span>Famous Duck Butt Chicken</span><!-- F094 -->
           <span class="row__desc">House fried chicken, fried twice, uncoated, until the skin goes parchment-thin. Comes with daikon.</span><!-- F094, F289 -->
-          <span class="row__price gate" data-gate="prices.food" data-value=""><span class="gate__value">—</span><span class="stamp">Ask at the bar</span></span>
+          <span class="row__price gate" data-gate="prices.food" data-value=""><span class="gate__value">—</span> <span class="stamp">Ask at the bar</span></span>
         </li>
         <li class="row">
           <span class="row__name">Chicken wings</span><!-- F095 -->
           <span class="row__desc">Spicy gochujang, garlic soy, or regular.</span><!-- F096 -->
-          <span class="row__price gate" data-gate="prices.food" data-value=""><span class="gate__value">—</span><span class="stamp">Ask at the bar</span></span>
+          <span class="row__price gate" data-gate="prices.food" data-value=""><span class="gate__value">—</span> <span class="stamp">Ask at the bar</span></span>
         </li>
         <li class="row row--star">
-          <span class="row__name">Kimchee Fries</span><!-- F097 -->
+          <span class="row__name"><span class="visually-hidden">House favorite. </span>Kimchee Fries</span><!-- F097 -->
           <span class="row__desc">Loaded crispy fries under spicy fermented kimchee.</span><!-- F287 -->
-          <span class="row__price gate" data-gate="prices.food" data-value=""><span class="gate__value">—</span><span class="stamp">Ask at the bar</span></span>
+          <span class="row__price gate" data-gate="prices.food" data-value=""><span class="gate__value">—</span> <span class="stamp">Ask at the bar</span></span>
         </li>
         <li class="row">
           <span class="row__name">Kimchee Pancake</span><!-- F098 -->
           <span class="row__desc">Thin and crisp, with Korean chili ponzu.</span><!-- F290 -->
-          <span class="row__price gate" data-gate="prices.food" data-value=""><span class="gate__value">—</span><span class="stamp">Ask at the bar</span></span>
+          <span class="row__price gate" data-gate="prices.food" data-value=""><span class="gate__value">—</span> <span class="stamp">Ask at the bar</span></span>
         </li>
         <li class="row">
           <span class="row__name">Bacon Kimchee Fried Rice</span><!-- F101 -->
           <span class="row__desc">Kimchee butter, crispy egg, scallion, seaweed.</span><!-- F291 -->
-          <span class="row__price gate" data-gate="prices.food" data-value=""><span class="gate__value">—</span><span class="stamp">Ask at the bar</span></span>
+          <span class="row__price gate" data-gate="prices.food" data-value=""><span class="gate__value">—</span> <span class="stamp">Ask at the bar</span></span>
         </li>
         <li class="row row--star">
-          <span class="row__name">Spicy Gizzards</span><!-- F103 -->
-          <span class="row__desc">The one the regulars tell you about.</span><!-- F103: "known for" -->
-          <span class="row__price gate" data-gate="prices.food" data-value=""><span class="gate__value">—</span><span class="stamp">Ask at the bar</span></span>
+          <span class="row__name"><span class="visually-hidden">House favorite. </span>Spicy Gizzards</span><!-- F103 -->
+          <span class="row__desc">What they’re known for.</span><!-- F103: Giftly "known for the Spicy Gizzards" -->
+          <span class="row__price gate" data-gate="prices.food" data-value=""><span class="gate__value">—</span> <span class="stamp">Ask at the bar</span></span>
         </li>
         <li class="row">
           <span class="row__name">Korean Tacos</span><!-- F102 -->
-          <span class="row__desc">Pork belly, kalbi or chicken on small corn tortillas, house chili sauce. On the menu since 2011.</span><!-- F292, F011 -->
-          <span class="row__price gate" data-gate="prices.food" data-value=""><span class="gate__value">—</span><span class="stamp">Ask at the bar</span></span>
+          <span class="row__desc">Pork belly, kalbi or chicken on small corn tortillas, house chili sauce. The owners added them in 2010.</span><!-- F292, F102 (Star-Advertiser 2010: "newly added") -->
+          <span class="row__price gate" data-gate="prices.food" data-value=""><span class="gate__value">—</span> <span class="stamp">Ask at the bar</span></span>
         </li>
         <li class="row">
           <span class="row__name">Spicy Mochi (dukbokki)</span><!-- F105 -->
           <span class="row__desc">Rice cakes and fish cake in a sweet, spicy sauce.</span><!-- F293 -->
-          <span class="row__price gate" data-gate="prices.food" data-value=""><span class="gate__value">—</span><span class="stamp">Ask at the bar</span></span>
+          <span class="row__price gate" data-gate="prices.food" data-value=""><span class="gate__value">—</span> <span class="stamp">Ask at the bar</span></span>
         </li>
         <li class="row row--more">
           <span class="row__name">Also</span>
           <span class="row__desc">Seafood pancake · green onion pancake · mochiko chicken · fried mandoo · fresh poke · shrimp tempura · sweet potato tempura · fried calamari.</span><!-- F099, F100, F104, F107, F108, F109 -->
-          <span class="row__price gate" data-gate="prices.food" data-value=""><span class="gate__value">—</span><span class="stamp">Ask at the bar</span></span>
+          <span class="row__price gate" data-gate="prices.food" data-value=""><span class="gate__value">—</span> <span class="stamp">Ask at the bar</span></span>
         </li>
       </ul>
 
-      <aside class="menu__aside">
+      <aside class="menu__aside" aria-label="Also on the board">
         <div class="ticket reveal">
-          <p class="label">What the regulars order</p><!-- F106 (Honolulu Magazine, 2011) -->
-          <p class="ticket-type">Locals: the fried chicken and the tacos.<br>Korean regulars: spicy squid and rabbokki.</p>
+          <p class="label">Two ordering cultures, one table</p><!-- F106, F118 (Honolulu Magazine, 2011) -->
+          <p class="ticket-type">Locals ordered the fried chicken and the tacos. Korean regulars ordered spicy squid and rabbokki.</p>
           <p class="tiny">— Honolulu Magazine, 2011</p>
         </div>
-        <div class="tag tag--sodium reveal">
+        <div class="tag tag--sodium reveal" aria-label="Happy hour, 5 to 8">
           <span class="label">Happy hour</span>
           <span class="tag__big">5–8</span><!-- F087 -->
-          <span class="ticket-type">Specials on drinks and pupu.<br><span class="gate" data-gate="prices.drinks" data-value=""><span class="gate__value">Prices —</span><span class="stamp">Ask at the bar</span></span></span><!-- F089 gated -->
         </div>
-        <p class="ticket-type on-dark">Portions are big. Vegetarian options, too.</p><!-- F117, F185 -->
+        <div class="ticket reveal">
+          <p class="ticket-type">Specials on drinks and pupu, 5–8.<br><span class="gate" data-gate="prices.drinks" data-value=""><span class="gate__value">Prices —</span> <span class="stamp">Ask at the bar</span></span></p><!-- F089, F092; prices gated -->
+          <p class="ticket-type">Portions are big. Vegetarian options, too.</p><!-- F117, F185 -->
+        </div>
         <figure class="slot slot--square" data-gate="photos.showSlots" hidden><figcaption class="slot__label">Photo slot MENU-01 · the chicken · 1:1</figcaption></figure>
         <figure class="slot slot--square" data-gate="photos.showSlots" hidden><figcaption class="slot__label">Photo slot MENU-02 · kimchee fries · 1:1</figcaption></figure>
       </aside>
@@ -222,8 +229,8 @@
     </header>
 
     <div class="soju__grid">
-      <figure class="melon reveal" aria-hidden="true">
-        <svg class="melon__svg" viewBox="0 0 320 200" role="img">
+      <figure class="melon reveal">
+        <svg class="melon__svg" viewBox="0 0 320 200" aria-hidden="true" focusable="false">
           <defs><clipPath id="flesh-clip"><rect class="melon__rise" x="0" y="0" width="320" height="200"/></clipPath></defs>
           <path d="M8 60a152 152 0 0 0 304 0z" fill="#15603C"/>
           <path d="M22 60a138 138 0 0 0 276 0z" fill="none" stroke="#F4F1E8" stroke-width="8"/>
@@ -245,9 +252,9 @@
         <figcaption class="tiny on-dark">Half a watermelon, carved out, soju and ice in the juice.</figcaption><!-- F282 -->
       </figure>
 
-      <ul class="flavors" aria-label="Soju flavors regulars talk about">
+      <ul class="flavors" role="list" aria-label="Soju flavors regulars talk about">
         <li class="sign sign--mini sign--red"><span class="flavor">Watermelon</span><span class="label">in the watermelon</span></li><!-- F121 -->
-        <li class="sign sign--mini sign--green"><span class="flavor">Strawberry</span><span class="label">a house pour since 2010</span></li><!-- F127 -->
+        <li class="sign sign--mini sign--green"><span class="flavor">Strawberry</span><span class="label">the one they wrote up in 2010</span></li><!-- F127: Star-Advertiser 2010 "popular strawberry soju" -->
         <li class="sign sign--mini sign--vinyl"><span class="flavor">Yogurt</span><span class="label">a little fizz</span></li><!-- F126 -->
         <li class="sign sign--mini sign--red"><span class="flavor">Lilikoi</span><span class="label">and taro</span></li><!-- F123, F124 -->
         <li class="sign sign--mini sign--green"><span class="flavor">Melona</span><span class="label">li hing · cereal milk</span></li><!-- F125 -->
@@ -257,12 +264,16 @@
 
     <div class="soju__foot">
       <div class="ticket reveal">
-        <p class="ticket-type">Flavored soju by the pitcher or carafe.<br>Hite, ice-cold, in very large bottles.<br>Full bar.<br><span class="gate" data-gate="prices.drinks" data-value=""><span class="gate__value">Prices —</span><span class="stamp">Ask at the bar</span></span></p><!-- F131, F135, F137; F139 prices gated -->
+        <p class="ticket-type">Flavored soju by the pitcher or carafe.<br>Hite, ice-cold, in very large bottles.<br>Full bar.<br><span class="gate" data-gate="prices.drinks" data-value=""><span class="gate__value">Prices —</span> <span class="stamp">Ask at the bar</span></span></p><!-- F131, F135, F137; F139 prices gated -->
       </div>
-      <blockquote class="pull on-dark">
-        <p>“tastes just like watermelon juice .. until it hits you”</p>
-        <footer class="tiny">— a TripAdvisor reviewer, on the watermelon soju</footer><!-- F204 USABLE -->
-      </blockquote>
+      <figure class="pull on-dark">
+        <blockquote><p>“tastes just like watermelon juice .. until it hits you”</p></blockquote>
+        <figcaption class="tiny">— a TripAdvisor reviewer, on the watermelon soju</figcaption><!-- F204 USABLE -->
+      </figure>
+      <figure class="pull on-dark">
+        <blockquote><p>“I now dream of Watermelon soju.”</p></blockquote>
+        <figcaption class="tiny">— a Yelp reviewer</figcaption><!-- F210 USABLE -->
+      </figure>
       <figure class="slot slot--tall" data-gate="photos.showSlots" hidden><figcaption class="slot__label">Photo slot DRINKS-01 · watermelon soju on the table · 4:5</figcaption></figure>
     </div>
   </div>
@@ -272,20 +283,23 @@
 <section class="rooms section" id="rooms" aria-labelledby="rooms-h">
   <div class="pool pool--bl" aria-hidden="true"></div>
   <div class="wrap">
-    <header class="plate plate--green reveal">
-      <p class="plate__ko"><span lang="ko" class="hangul hangul--rail">노래방</span> <span class="label">noraebang · a private singing room</span></p>
-      <h2 class="h2" id="rooms-h">The rooms</h2>
+    <header class="plate plate--green plate--railed reveal">
+      <div class="plate__rail"><span lang="ko" class="hangul hangul--rail">노래방</span></div>
+      <div class="plate__body">
+        <p class="label plate__gloss">noraebang · a private singing room</p>
+        <h2 class="h2" id="rooms-h">The rooms</h2>
+      </div>
     </header>
 
     <div class="rooms__grid">
       <div class="prose on-vinyl rooms__copy">
         <p>Private karaoke rooms in the back, going until close. Songs in English, Japanese and Korean. K-pop videos on the screens out front.</p><!-- F140, F142, F145, F147, F172 -->
-        <p>Each room has a couch, the machine, and a phone on the wall. Pick it up for more soju or the check.</p><!-- F143 -->
-        <p>Birthdays, bachelorettes, after-work groups. Fridays and Saturdays, call ahead — regulars and every guide say so. If you’d rather watch, there’s seating by the bar.</p><!-- F164, F165, F160, F144 -->
+        <p>Each room has a couch, the machine, and a phone on the wall. Pick it up to call for the check.</p><!-- F143 (F146: in-room service is OWNER, not claimed) -->
+        <p>Birthdays, bachelorettes, after-work groups. Fridays and Saturdays, call ahead — reviewers keep saying it. If you’d rather watch, there’s seating by the bar.</p><!-- F164, F165, F160, F144 -->
         <dl class="terms ticket-type">
-          <div class="terms__row"><dt>Per song</dt><dd><span class="gate" data-gate="rooms.perSong" data-value=""><span class="gate__value">—</span><span class="stamp">Ask at the bar</span></span></dd></div><!-- C4: $1 vs $2, gated -->
-          <div class="terms__row"><dt>Minimum</dt><dd><span class="gate" data-gate="rooms.minimum" data-value=""><span class="gate__value">—</span><span class="stamp">Ask at the bar</span></span></dd></div><!-- F155: none stated by any listing; one old review; gated -->
-          <div class="terms__row"><dt>Time blocks</dt><dd><span class="gate" data-gate="rooms.blocksConfirmed" data-value="5–8 · 8–11"><span class="gate__value">—</span><span class="stamp">Ask at the bar</span></span></dd></div><!-- F161 SINGLE -->
+          <div class="terms__row"><dt>Per song</dt><dd><span class="gate" data-gate="rooms.perSong" data-value=""><span class="gate__value">—</span> <span class="stamp">Ask at the bar</span></span></dd></div><!-- C4: sources conflict; gated -->
+          <div class="terms__row" data-gate="rooms.minimum" hidden><dt>Minimum</dt><dd><span class="gate" data-gate="rooms.minimum" data-value=""><span class="gate__value">—</span> <span class="stamp">Ask at the bar</span></span></dd></div><!-- F155: no listing states a minimum; row hidden until the owner answers Q4 -->
+          <div class="terms__row"><dt>Time blocks</dt><dd><span class="gate" data-gate="rooms.blocksConfirmed" data-value="5–8 · 8–11"><span class="gate__value">—</span> <span class="stamp">Ask at the bar</span></span></dd></div><!-- F161 SINGLE -->
           <div class="terms__row"><dt>Reservations</dt><dd>Taken. Call or ask at the bar.</dd></div><!-- F158 VERIFIED, F162 -->
         </dl>
       </div>
@@ -308,22 +322,24 @@
         <p class="ticket-type on-dark">To book a room: call, or ask at the bar.</p><!-- F162 -->
       </div>
 
-      <div class="queue ticket reveal" aria-label="Song queue">
+      <div class="queue ticket reveal" role="group" aria-label="Song queue">
         <p class="label">Now playing</p>
-        <ol class="queue__list" id="queue">
-          <li>English</li><li>Japanese</li><li>Korean</li><li>K-pop sing-alongs</li>
-        </ol><!-- F147, F151 -->
-        <button class="btn btn--vinyl btn--small queue__next" type="button" id="queue-next" hidden>Next</button>
-        <ul class="amenities" aria-label="Also">
+        <div class="queue__viewport">
+          <ol class="queue__list" id="queue" role="list">
+            <li>English</li><li>Japanese</li><li>Korean</li><li>K-pop sing-alongs</li>
+          </ol><!-- F147, F151 -->
+        </div>
+        <button class="btn btn--vinyl btn--small queue__next" type="button" id="queue-next" aria-label="Next in the song queue" hidden>Next</button>
+        <ul class="amenities" role="list" aria-label="Also">
           <li hidden data-gate="amenities.pool">Pool table</li><!-- F171 UNVERIFIED: hidden until amenities.pool -->
           <li>Take-out available</li><!-- F182 VERIFIED -->
         </ul>
       </div>
     </div>
-    <blockquote class="pull on-dark pull--wide">
-      <p>“K-Pop, Karaoke and Korean Food....What Could Go Wrong??”</p>
-      <footer class="tiny">— a TripAdvisor review title</footer><!-- F200 USABLE -->
-    </blockquote>
+    <figure class="pull on-dark pull--wide">
+      <blockquote><p>“K-Pop, Karaoke and Korean Food....What Could Go Wrong??”</p></blockquote>
+      <figcaption class="tiny">— a TripAdvisor review title</figcaption><!-- F200 USABLE -->
+    </figure>
     <figure class="slot slot--wide" data-gate="photos.showSlots" hidden><figcaption class="slot__label">Photo slot ROOM-01 · a room with people in it · 16:9</figcaption></figure>
   </div>
 </section>
@@ -337,17 +353,18 @@
     </header>
     <p class="prose-lede on-dark">Happy hour fills up. Later, especially on weekends, it’s full — rooms and tables.</p><!-- F087, F170 -->
 
-    <ul class="stickers" aria-label="What people say">
-      <li class="sticker sticker--a"><blockquote><p>“If the name makes you smile, so will the soju!”</p><footer class="tiny">— TripAdvisor review title, 2014</footer></blockquote></li><!-- F196 -->
-      <li class="sticker sticker--b"><blockquote><p>“The anju. The drinks. The fun vibe. The ridiculous name. It’s a slice of Korea in Honolulu, and well worth a visit.”</p><footer class="tiny">— TripAdvisor review, 2016</footer></blockquote></li><!-- F198 -->
-      <li class="sticker sticker--c"><blockquote><p>“Great Food &amp; Happy Hour, Locals Spot !”</p><footer class="tiny">— TripAdvisor review title</footer></blockquote></li><!-- F201 -->
-      <li class="sticker sticker--d"><blockquote><p>“It is family owned and the food is very well prepared and the portions are enormous.”</p><footer class="tiny">— TripAdvisor review</footer></blockquote></li><!-- F207 -->
-      <li class="sticker sticker--e"><blockquote><p>“Reminds me of LA… but without the pretentiousness… legit, all the food is delicious”</p><footer class="tiny">— Yelp reviewer</footer></blockquote></li><!-- F209 -->
+    <ul class="stickers" role="list" aria-label="What people say">
+      <li class="sticker sticker--a"><figure><blockquote><p>“If the name makes you smile, so will the soju!”</p></blockquote><figcaption class="tiny">— TripAdvisor review title, 2014</figcaption></figure></li><!-- F196 -->
+      <li class="sticker sticker--b"><figure><blockquote><p>“The anju. The drinks. The fun vibe. The ridiculous name. It’s a slice of Korea in Honolulu, and well worth a visit.”</p></blockquote><figcaption class="tiny">— TripAdvisor review, 2016</figcaption></figure></li><!-- F198 -->
+      <li class="sticker sticker--c"><figure><blockquote><p>“Great Food &amp; Happy Hour, Locals Spot !”</p></blockquote><figcaption class="tiny">— TripAdvisor review title</figcaption></figure></li><!-- F201 -->
+      <li class="sticker sticker--d"><figure><blockquote><p>“It is family owned and the food is very well prepared and the portions are enormous.”</p></blockquote><figcaption class="tiny">— TripAdvisor review</figcaption></figure></li><!-- F207 -->
+      <li class="sticker sticker--e"><figure><blockquote><p>“Reminds me of LA… but without the pretentiousness… legit, all the food is delicious”</p></blockquote><figcaption class="tiny">— Yelp reviewer</figcaption></figure></li><!-- F209 -->
+      <li class="sticker sticker--f"><figure><blockquote><p>“Awesomeness, silliness, just plain fun.”</p></blockquote><figcaption class="tiny">— TripAdvisor review title, 2016</figcaption></figure></li><!-- F197 -->
     </ul>
 
-    <ul class="counts" aria-label="By the numbers">
+    <ul class="counts" role="list" aria-label="By the numbers">
       <li class="ticket"><span class="count">616</span><span class="ticket-type">reviews on Yelp</span><span class="tiny">1,145 photos · Sept 2026</span></li><!-- F188 (star rating not shown: owner question 17) -->
-      <li class="ticket"><span class="count">4.5<span class="count__of">/5</span></span><span class="ticket-type">on TripAdvisor</span><span class="tiny">10 reviews</span></li><!-- F189 -->
+      <li class="ticket"><span class="count">4.5<span class="count__of">/5</span></span><span class="ticket-type">on TripAdvisor</span><span class="tiny">10 reviews · 2026</span></li><!-- F189 -->
       <li class="ticket"><span class="count">2018</span><span class="ticket-type">Hale ʻAina Awards · Bronze, Best Bar Food</span><span class="tiny">Honolulu Magazine</span></li><!-- F119 -->
     </ul>
   </div>
@@ -357,19 +374,22 @@
 <section class="find section" id="find" aria-labelledby="find-h">
   <div class="pool pool--bl" aria-hidden="true"></div>
   <div class="wrap">
-    <header class="plate plate--green reveal">
-      <p class="plate__ko"><span lang="ko" class="hangul hangul--rail">영업중</span> <span class="label">yeongeop-jung · open for business</span></p>
-      <h2 class="h2" id="find-h">Find us</h2>
+    <header class="plate plate--green plate--railed reveal">
+      <div class="plate__rail"><span lang="ko" class="hangul hangul--rail">영업중</span></div>
+      <div class="plate__body">
+        <p class="label plate__gloss">yeongeop-jung · open for business</p>
+        <h2 class="h2" id="find-h">Find us</h2>
+      </div>
     </header>
 
     <div class="find__grid">
       <div class="ticket ticket--big reveal">
         <dl class="findlist ticket-type">
-          <div class="findlist__row"><dt>Hours</dt><dd><strong>5 PM – 2 AM</strong><br><span class="gate" data-gate="hours.daysConfirmed" data-value="Seven nights a week"><span class="gate__value">Nights: —</span><span class="stamp">Ask at the bar</span></span><br>Happy hour 5–8</dd></div><!-- F069–F074; C1; F087 -->
-          <div class="findlist__row"><dt>Address</dt><dd><a class="addr" href="https://www.google.com/maps/search/?api=1&amp;query=901+Kawaiahao+St+Honolulu+HI+96814" rel="noopener">901 Kawaiahaʻo St<br>Honolulu, HI 96814</a><br>A block off Ward Avenue.</dd></div><!-- F052, F053, F057 -->
+          <div class="findlist__row"><dt>Hours</dt><dd><strong>5 PM – 2 AM</strong><br><span class="gate" data-gate="hours.daysConfirmed" data-value="Seven nights a week"><span class="gate__value">Nights: —</span> <span class="stamp">Ask at the bar</span></span><br>Happy hour 5–8</dd></div><!-- F069–F074; C1; F087 -->
+          <div class="findlist__row"><dt>Address</dt><dd><a class="addr" href="https://maps.apple.com/?q=901+Kawaiahao+St+Honolulu+HI+96814" rel="noopener">901 Kawaiahaʻo St<br>Honolulu, HI 96814<span class="visually-hidden"> (opens map)</span></a><br>A block off Ward Avenue.</dd></div><!-- F052, F053, F057 -->
           <div class="findlist__row"><dt>Phone</dt><dd><span class="phone" data-phone>(808) 593-1880</span></dd></div><!-- F056 -->
-          <div class="findlist__row"><dt>Parking</dt><dd>Street parking nearby.<br><span class="gate" data-gate="parking.validation" data-value="Validated parking available"><span class="gate__value">Validation —</span><span class="stamp">Ask at the bar</span></span><br><span class="gate" data-gate="parking.valet" data-value="Valet available"><span class="gate__value">Valet —</span><span class="stamp">Ask at the bar</span></span></dd></div><!-- F058–F062 -->
-          <div class="findlist__row"><dt>Look for</dt><dd>A plain gray one-story building with no windows.<span class="gate gate--inline" data-gate="sign.duckConfirmed" data-value=" Look for the duck on the sign."><span class="gate__value"></span></span></dd></div><!-- F270, F271, F272 -->
+          <div class="findlist__row"><dt>Parking</dt><dd>Street parking nearby.<br><span class="gate" data-gate="parking.validation" data-value="Validated parking available"><span class="gate__value">Validation —</span> <span class="stamp">Ask at the bar</span></span><br><span class="gate" data-gate="parking.valet" data-value="Valet available"><span class="gate__value">Valet —</span> <span class="stamp">Ask at the bar</span></span></dd></div><!-- F058–F062 -->
+          <div class="findlist__row"><dt>Look for</dt><dd>A plain building with no windows.<span class="gate gate--inline" data-gate="sign.duckConfirmed" data-value=" Look for the duck on the sign."><span class="gate__value"></span></span></dd></div><!-- F271 VERIFIED windowless, F272 VERIFIED plain; "gray, one-story" is SINGLE and old, not used -->
         </dl>
       </div>
 
@@ -408,7 +428,7 @@
       <svg class="duck duck--vinyl"><use href="#duck"/></svg>
     </div>
     <div class="foot__text ticket-type">
-      <p><span lang="ko" class="hangul-inline" data-hangul>오리궁뎅이</span> · Café Duck Butt · Since 2010</p><!-- F001, F005 -->
+      <p><span lang="ko" class="hangul-inline" data-hangul>오리궁뎅이</span> <span class="foot__say">oh ri goong deng ee</span> · Café Duck Butt · Since 2010</p><!-- F001, F005, F023 -->
       <p>901 Kawaiahaʻo St, Honolulu, HI 96814 · 5 PM – 2 AM · <span class="phone" data-phone>(808) 593-1880</span></p>
       <p><a hidden data-gate="social.facebook" href="https://www.facebook.com/Cafe-Duck-Butt-132145946808402/" rel="noopener">Facebook</a></p><!-- F065 / C17: hidden until social.facebook -->
       <p class="tiny foot__credit">Site concept by Kevin Osborne</p>

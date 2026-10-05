@@ -68,6 +68,16 @@ def subset(src, dst, text_file=None, unicodes=None, instance=None):
     if text_file:
         cmd.append("--text-file=" + text_file)
     subprocess.check_call(cmd)
+    # The ʻokina (U+02BB) is drawn like a left single quote; fonts that lack it get the ‘ glyph mapped to it,
+    # so Hawaiian words set in the body fonts instead of a system fallback.
+    from fontTools.ttLib import TTFont
+    f = TTFont(dst)
+    changed = False
+    for t in f["cmap"].tables:
+        if 0x2018 in t.cmap and 0x02BB not in t.cmap:
+            t.cmap[0x02BB] = t.cmap[0x2018]; changed = True
+    if changed:
+        f.flavor = "woff2"; f.save(dst)
     if work != src and os.path.exists(work):
         os.remove(work)
     # carry the license next to the output

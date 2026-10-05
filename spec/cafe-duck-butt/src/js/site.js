@@ -9,7 +9,7 @@ var FLAGS = {
   'prices.food':          false, // shows food prices typed into data-value on each .row__price (F120, Q7)
   'prices.drinks':        false, // shows drink prices typed into data-value (F139, Q7)
   'rooms.perSong':        false, // shows the per-song price typed into data-value (C4, Q3)
-  'rooms.minimum':        false, // shows the minimum (or "None") typed into data-value (F155, Q4)
+  'rooms.minimum':        false, // reveals the Minimum row and the value typed into data-value, e.g. "None" (F155, Q4)
   'rooms.blocksConfirmed':false, // shows "5–8 · 8–11" (F161, Q5)
   'parking.validation':   false, // "Validated parking available" (F058, Q11)
   'parking.valet':        false, // "Valet available" (F060, Q11)
@@ -24,12 +24,12 @@ var TEL = '+18085931880'; // only used when phone.telVerified is true
 (function () {
   'use strict';
   var d = document, root = d.documentElement;
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  /* ---------------------------------------------------------------- gates */
+  var reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  function each(list, fn) { Array.prototype.forEach.call(list, fn); }
   function on(flag) { return FLAGS[flag] === true; }
 
-  Array.prototype.forEach.call(d.querySelectorAll('[data-gate]'), function (el) {
+  /* ---------------------------------------------------------------- gates */
+  each(d.querySelectorAll('[data-gate]'), function (el) {
     var flag = el.getAttribute('data-gate');
     if (!on(flag)) return;
     if (el.classList.contains('gate')) {
@@ -39,13 +39,14 @@ var TEL = '+18085931880'; // only used when phone.telVerified is true
       if (out) out.textContent = v;
       el.classList.add('is-on');
     } else if (el.hasAttribute('hidden')) {
-      el.removeAttribute('hidden');         // boolean reveal (pool table, facebook, photo slots)
+      el.removeAttribute('hidden');         // boolean reveal (pool table, facebook, photo slots, minimum row)
     }
   });
 
   if (on('phone.telVerified')) {
-    Array.prototype.forEach.call(d.querySelectorAll('.phone[data-phone]'), function (el) {
-      if (el.closest('a')) return;
+    each(d.querySelectorAll('.phone[data-phone]'), function (el) {
+      var p = el.parentNode;
+      while (p && p !== d.body) { if (p.tagName === 'A') return; p = p.parentNode; }
       var a = d.createElement('a');
       a.href = 'tel:' + TEL; a.className = el.className; a.textContent = el.textContent;
       el.parentNode.replaceChild(a, el);
@@ -53,41 +54,50 @@ var TEL = '+18085931880'; // only used when phone.telVerified is true
   }
 
   if (on('name.hangulStandard')) {
-    Array.prototype.forEach.call(d.querySelectorAll('[data-hangul]'), function (el) { el.textContent = '오리궁둥이'; });
+    each(d.querySelectorAll('[data-hangul]'), function (el) { el.textContent = '오리궁둥이'; });
   }
 
   /* ---------------------------------------------------------------- open-now chip (only with confirmed days) */
   var chip = d.getElementById('open-chip');
-  if (chip && on('hours.daysConfirmed')) {
+  if (chip && on('hours.daysConfirmed') && window.Intl && Intl.DateTimeFormat) {
     try {
       var h = Number(new Intl.DateTimeFormat('en-US', { hour: 'numeric', hour12: false, timeZone: 'Pacific/Honolulu' }).format(new Date()));
       if (h === 24) h = 0;
       var openNow = (h >= 17 || h < 2);
+      chip.querySelector('.chip__en').textContent = openNow ? 'Open now · till 2 AM' : 'Opens at 5 PM';
       chip.classList.add(openNow ? 'is-open' : 'is-closed');
-      chip.querySelector('.chip__en').textContent = openNow ? 'till 2 AM' : '5 PM – 2 AM';
     } catch (e) { /* leave the static chip */ }
   }
 
-  /* ---------------------------------------------------------------- motion (one-shot reveals; never on reduced motion) */
+  /* ---------------------------------------------------------------- motion (one-shot reveals; never on reduced motion)
+     A clipped element reports zero intersection, so each target gets an unclipped 1px sentinel before it,
+     and the observer watches the sentinel. Targets already on screen are revealed without a transition. */
   if (!reduce && 'IntersectionObserver' in window) {
     var targets = d.querySelectorAll('.reveal, .melon, .phone-card');
     if (targets.length) {
-      root.classList.add('io');             // pre-states only apply once observers are live
+      var inView = function (el) { var r = el.getBoundingClientRect(); return r.top < window.innerHeight && r.bottom > 0; };
+      var initial = [];
+      each(targets, function (t) { if (inView(t)) initial.push(t); });
+      each(initial, function (t) { t.classList.add('is-in', 'is-instant'); });
+      root.classList.add('io');             // pre-states apply from here on, after the in-view ones are already revealed
+      var marks = [];
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
-          if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+          if (!e.isIntersecting) return;
+          var t = e.target.__target;
+          if (t) t.classList.add('is-in');
+          io.unobserve(e.target);
+          if (e.target.parentNode) e.target.parentNode.removeChild(e.target);
         });
-      }, { threshold: 0.3, rootMargin: '0px 0px -5% 0px' });
-      Array.prototype.forEach.call(targets, function (t) { io.observe(t); });
-      // Anything already in view at load is revealed on the next frame so it never flashes hidden.
-      requestAnimationFrame(function () {
-        Array.prototype.forEach.call(targets, function (t) {
-          var r = t.getBoundingClientRect();
-          if (r.top < window.innerHeight && r.bottom > 0) t.classList.add('is-in');
-        });
+      }, { threshold: 0, rootMargin: '0px 0px -12% 0px' });
+      each(targets, function (t) {
+        if (t.classList.contains('is-in')) return;
+        var m = d.createElement('i'); m.className = 'io-mark'; m.setAttribute('aria-hidden', 'true'); m.__target = t;
+        t.parentNode.insertBefore(m, t); marks.push(m); io.observe(m);
       });
-      // Safety net: whatever the observer misses is revealed after 4s.
-      setTimeout(function () { Array.prototype.forEach.call(targets, function (t) { t.classList.add('is-in'); }); }, 4000);
+      setTimeout(function () { each(initial, function (t) { t.classList.remove('is-instant'); }); }, 100);
+      // Safety net: anything on screen that the observer somehow missed is revealed; off-screen targets keep their motion.
+      setInterval(function () { each(targets, function (t) { if (!t.classList.contains('is-in') && inView(t)) t.classList.add('is-in'); }); }, 1500);
     }
   }
 

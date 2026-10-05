@@ -85,12 +85,32 @@ for (const rel of seen.keys()) {
   manifest.push({ rel, size });
 }
 
-// fingerprint css/js references inside dist html files so immutable caching is safe
+// ship the OFL license files next to any font that ships
+if ([...seen.keys()].some(r => /^fonts\//.test(r))) {
+  for (const f of fs.readdirSync(path.join(SRC, 'fonts'))) {
+    if (/^OFL-.*\.txt$/.test(f)) { fs.copyFileSync(path.join(SRC, 'fonts', f), path.join(DIST, 'fonts', f)); seen.set('fonts/' + f, true); manifest.push({ rel: 'fonts/' + f, size: fs.statSync(path.join(SRC, 'fonts', f)).size }); }
+  }
+}
+
+// fingerprint font and image references inside dist css so immutable caching is safe
+for (const rel of seen.keys()) {
+  if (!/\.css$/i.test(rel)) continue;
+  const file = path.join(DIST, rel);
+  let css = fs.readFileSync(file, 'utf8');
+  css = css.replace(/url\((["']?)([^"')?#]+\.(?:woff2|woff|svg|png|jpg|webp|avif))\1\)/gi, (m, q, ref) => {
+    const abs = ref.startsWith('/') ? path.join(DIST, ref) : path.resolve(path.dirname(file), ref);
+    if (!fs.existsSync(abs)) return m;
+    return 'url(' + q + ref + '?v=' + hash(abs) + q + ')';
+  });
+  fs.writeFileSync(file, css);
+}
+
+// fingerprint css/js/font/image references inside dist html files so immutable caching is safe
 for (const rel of seen.keys()) {
   if (!/\.html?$/i.test(rel)) continue;
   const file = path.join(DIST, rel);
   let html = fs.readFileSync(file, 'utf8');
-  html = html.replace(/((?:src|href)\s*=\s*")([^"?#]+\.(?:css|js))(")/gi, (m, pre, ref, post) => {
+  html = html.replace(/((?:src|href)\s*=\s*")([^"?#]+\.(?:css|js|woff2|woff|svg|png|jpg|webp|avif))(")/gi, (m, pre, ref, post) => {
     const abs = ref.startsWith('/') ? path.join(DIST, ref) : path.resolve(path.dirname(file), ref);
     if (!fs.existsSync(abs)) return m;
     return pre + ref + '?v=' + hash(abs) + post;

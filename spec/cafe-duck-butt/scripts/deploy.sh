@@ -23,6 +23,8 @@ if [[ -z "$SITE_ID" ]]; then
   CREATE_JSON="$("$NETLIFY" sites:create --name "$SITE_NAME" --json 2>/dev/null || "$NETLIFY" sites:create --name "$SITE_NAME-$RANDOM" --json)"
   SITE_ID="$(node -e 'const s=JSON.parse(require("fs").readFileSync(0,"utf8"));process.stdout.write(s.id||s.site_id||"")' <<<"$CREATE_JSON")"
   [[ -n "$SITE_ID" ]] || { echo "Could not read site id from sites:create output:"; echo "$CREATE_JSON"; exit 1; }
+  node -e 'const fs=require("fs");let s={};try{s=JSON.parse(fs.readFileSync(process.argv[2],"utf8"))}catch(e){};s.site_id=process.argv[1];s.site_name=s.site_name||process.argv[3];fs.writeFileSync(process.argv[2],JSON.stringify(s,null,2)+"\n")' "$SITE_ID" "$STATE" "$SITE_NAME"
+  echo "Recorded site id $SITE_ID in $STATE"
 fi
 
 echo "Deploying dist/ to site $SITE_ID (production)..."

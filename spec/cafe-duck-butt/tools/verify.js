@@ -16,7 +16,7 @@
 const path = require('path');
 const fs = require('fs');
 const http = require('http');
-const { chromium } = require('/opt/node22/lib/node_modules/playwright');
+const { chromium } = (function () { for (const c of ['playwright', '/opt/node22/lib/node_modules/playwright', '/opt/node-tools/node_modules/playwright']) { try { return require(c); } catch (e) {} } throw new Error('playwright not found: run `npm i -D playwright` in tools/'); })();
 
 const args = process.argv.slice(2);
 const dirArg = args.find(a => !a.startsWith('--')) || 'dist';

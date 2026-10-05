@@ -1,6 +1,6 @@
 // Viewport screenshots of each section at phone and desktop sizes, for visual review.
 const path = require('path'); const http = require('http'); const fs = require('fs');
-const { chromium } = require('/opt/node22/lib/node_modules/playwright');
+const { chromium } = (function () { for (const c of ['playwright', '/opt/node22/lib/node_modules/playwright', '/opt/node-tools/node_modules/playwright']) { try { return require(c); } catch (e) {} } throw new Error('playwright not found: run `npm i -D playwright` in tools/'); })();
 const DIR = path.resolve(__dirname, '..', process.argv[2] || 'dist'); const OUT = path.resolve(__dirname, 'out', 'sections'); fs.mkdirSync(OUT, { recursive: true });
 const MIME = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.svg': 'image/svg+xml', '.png': 'image/png', '.woff2': 'font/woff2' };
 const srv = http.createServer((req, res) => { let p = decodeURIComponent(req.url.split('?')[0]); if (p.endsWith('/')) p += 'index.html'; const f = path.join(DIR, p); if (!fs.existsSync(f) || fs.statSync(f).isDirectory()) { res.writeHead(404); return res.end(); } res.writeHead(200, { 'Content-Type': MIME[path.extname(f)] || 'application/octet-stream' }); fs.createReadStream(f).pipe(res); }).listen(8790);
