@@ -27,8 +27,10 @@ if [[ -z "$SITE_ID" ]]; then
   echo "Recorded site id $SITE_ID in $STATE"
 fi
 
+NOBUILD=()
+"$NETLIFY" deploy --help 2>/dev/null | grep -q -- '--no-build' && NOBUILD=(--no-build)   # dist/ is already built; never let Netlify build
 echo "Deploying dist/ to site $SITE_ID (production)..."
-OUT="$("$NETLIFY" deploy --prod --dir="$ROOT/dist" --site "$SITE_ID" --json --message "cafe-duck-butt spec $(date -u +%Y-%m-%dT%H:%MZ)")"
+OUT="$("$NETLIFY" deploy --prod "${NOBUILD[@]}" --dir="$ROOT/dist" --site "$SITE_ID" --json --message "cafe-duck-butt spec $(date -u +%Y-%m-%dT%H:%MZ)")"
 echo "$OUT" | node -e '
 const o=JSON.parse(require("fs").readFileSync(0,"utf8"));
 const fs=require("fs");

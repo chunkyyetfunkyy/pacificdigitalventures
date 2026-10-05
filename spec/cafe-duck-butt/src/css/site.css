@@ -106,7 +106,7 @@ em { font-style: normal; font-family: var(--f-mono); font-size: .9em; }
 
 /* ------------------------------------------------------------------ pools (streetlight) */
 .pool { position: absolute; pointer-events: none; width: 70vw; max-width: 720px; aspect-ratio: 1.6; background: radial-gradient(60% 50% at 50% 50%, rgba(242,165,26,.16), transparent 70%); }
-.pool--hero { left: -10vw; bottom: -10%; width: 90vw; max-width: 900px; background: radial-gradient(60% 40% at 50% 100%, rgba(242,165,26,.28), transparent 70%); }
+.pool--hero { left: -10vw; bottom: -30%; width: 90vw; max-width: 900px; background: radial-gradient(60% 40% at 50% 66%, rgba(242,165,26,.28), transparent 70%); }
 .pool--tr { right: -20vw; top: -10%; }
 .pool--bl { left: -25vw; bottom: -10%; background: radial-gradient(60% 50% at 50% 50%, rgba(242,165,26,.11), transparent 70%); }
 
@@ -447,3 +447,5 @@ em { font-style: normal; font-family: var(--f-mono); font-size: .9em; }
   .rail, .pool, .btn, .slot { display: none !important; }
   .reveal, .melon .melon__rise, .cord { clip-path: none !important; transform: none !important; stroke-dashoffset: 0 !important; }
 }
+
+.flavors__more { margin-top: 14px; }

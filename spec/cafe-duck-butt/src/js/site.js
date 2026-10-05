@@ -69,8 +69,13 @@ var TEL = '+18085931880'; // only used when phone.telVerified is true
       if (h < 2) day = (day + 6) % 7;      // 00:00–01:59 belongs to the previous night
       var days = chip.getAttribute('data-days') || '0123456';   // edit in index.html with the confirmed nights (0 = Sun)
       var openNow = days.indexOf(String(day)) !== -1 && (h >= 17 || h < 2);
-      chip.querySelector('.chip__en').textContent = openNow ? 'Open now · till 2 AM' : 'Opens at 5 PM';
-      chip.classList.add(openNow ? 'is-open' : 'is-closed');
+      var openTonight = days.indexOf(String(h < 2 ? (day + 1) % 7 : day)) !== -1;
+      if (!openNow && !openTonight) {
+        chip.hidden = true;                 // closed tonight: no 'open' chip at all
+      } else {
+        chip.querySelector('.chip__en').textContent = openNow ? 'Open now · till 2 AM' : 'Opens at 5 PM';
+        chip.classList.add(openNow ? 'is-open' : 'is-closed');
+      }
     } catch (e) { /* leave the static chip */ }
   }
 

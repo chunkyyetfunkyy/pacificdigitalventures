@@ -6,9 +6,12 @@ Not deployed from the build environment: Netlify's API is blocked there and the 
 One command deploys it (15 credits, once):
 
 ```sh
-git pull   # branch claude/loving-feynman-vs2w6p
+git fetch origin claude/loving-feynman-vs2w6p && git checkout claude/loving-feynman-vs2w6p
 cd spec/cafe-duck-butt && scripts/deploy.sh
 ```
+
+Do not merge this branch into `main`: `main` is the live pacificdigitalventures.org Pages site. (`_config.yml`
+excludes `spec/` from Pages as a safety net, but the folder is still readable on GitHub while this repo is public.)
 
 `scripts/deploy.sh` builds `dist/`, creates the Netlify site `cafe-duck-butt-spec`, deploys with `_headers`
 (noindex + cache rules), and writes the site id and URLs to `scripts/deploy-state.json`. The local proof run
@@ -52,8 +55,9 @@ flag at the top of `src/js/site.js`. The full counter checklist is `research/FAC
 | Per song "—" | `rooms.perSong` (+ value) | "$1 or $2 a song?" (sources split) |
 | Minimum row hidden | `rooms.minimum` (+ value or "None") | "Any food-and-drink minimum or hourly room fee?" (no listing states one; one old review says $150) |
 | Time blocks "—" | `rooms.blocksConfirmed` | "Booked in 5–8 / 8–11 blocks, or by the hour?" |
-| Parking: validation / valet "—" | `parking.validation`, `parking.valet` | "Do you validate? Still valet, still free?" |
+| Parking: validation "—"; valet hidden | `parking.validation`, `parking.valet` | "Do you validate? Still valet, still free?" |
 | Pool table (hidden) | `amenities.pool` | "Pool table?" (never stated by a source) |
+| Korean Tacos row (hidden) | `menu.tacosConfirmed` | "Still serving the Korean tacos?" (last current-menu evidence is old) |
 | Facebook link (hidden) | `social.facebook` | which of the two Facebook URLs is theirs; Instagram? |
 | "Look for the duck on the sign" (hidden) | `sign.duckConfirmed` | is the comic duck still on the sign |
 | 오리궁뎅이 vs 오리궁둥이 | `name.hangulStandard` | which spelling they use (the page uses the one they say) |
@@ -69,3 +73,18 @@ No photography ships and none was generated: the build environment has no image 
 Yelp is ours. The page stands on SVG and CSS — the sign box, the half watermelon, the wall phone, the duck mark —
 and seven labelled, aspect-locked photo slots wait for the owner's real photos. Tell the owner plainly: the
 drawings are stand-ins; their photos replace them the night they send them.
+
+## 6. Review record
+
+Four fine-tooth-comb passes ran, each with parallel critics and adversarial verification against the code:
+
+| Pass | Critics | Confirmed and fixed |
+|---|---|---|
+| 1 | 7 | reveal observer never fired; hero warm-up never ran; phone number wrapped; content overstatements (tacos date, in-room service, quote cut mid-sentence); okina fell back to a system font; OFL licenses not shipped |
+| 2 | 7 | reveal sentinels shifted the layout; broken home-screen icon; Hangul synthetic-bolded; tacos ungated; room copy stronger than its one source |
+| 3 | 4 | valet shown ungated; street map drew an unsourced Ward crossing; watermelon rind cropped; desktop quote cards stretched |
+| 4 | 4 | invented flavor pairings; "known for" gizzards claim; "plain building" wording; glow edge in the first screen; deploy could trigger a Netlify build |
+
+No pass came back with zero confirmed defects; each pass's findings were smaller than the last. The loop
+stopped after pass 4 to keep usage cost in check. Remaining unverified minors are listed in
+`research/pass2-majors.md` and the workflow journals; none affects a fact on the page.
