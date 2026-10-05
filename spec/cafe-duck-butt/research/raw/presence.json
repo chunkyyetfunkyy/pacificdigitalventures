@@ -1,0 +1,396 @@
+{
+  "angle": "presence",
+  "facts": [
+    {
+      "claim": "No dedicated official website domain for Cafe Duck Butt surfaced in name searches; results were third-party listings (Yelp, TripAdvisor, NetWaiter, menupix, Wheree, Apple Maps, Postmates/DoorDash) plus a Weebly-hosted site.",
+      "category": "website",
+      "source_url": "https://cafeduckbutt.weebly.com/",
+      "source_title": "Cafe Duck Butt - Home of the Duck Butt",
+      "source_date": "",
+      "verbatim_snippet": "While the search didn't reveal a dedicated official website for the restaurant ... The search results show listings on third-party platforms like Yelp, TripAdvisor, and menu sites, but I did not locate a dedicated official website domain for Café Duck Butt.",
+      "confidence": "unverified",
+      "notes": "Absence-of-evidence finding from the search-engine summary for the query 'Cafe Duck Butt Honolulu official website' run 2026-10-05 (result set: TripAdvisor, Yelp, NetWaiter, menupix, Wheree). The Weebly site is the closest thing to a self-published site and is recorded separately."
+    },
+    {
+      "claim": "A search for the literal string 'cafeduckbutt.com' returned no page hosted at that domain; the only Cafe-Duck-Butt-related results were Apple Maps, Hawaii Business Magazine, and Postmates, with the rest being unrelated Wikipedia pages.",
+      "category": "website",
+      "source_url": "https://maps.apple.com/place?place-id=IE5E6F554C2685A7D",
+      "source_title": "Cafe Duck Butt in Honolulu, HI United States - Apple Maps",
+      "source_date": "",
+      "verbatim_snippet": "I should note that the search results reference cafeduckbutt.com but don't provide specific details about the website itself. The results primarily show information about the physical restaurant locations and their reviews.",
+      "confidence": "unverified",
+      "notes": "Query 'cafeduckbutt.com' run 2026-10-05. No result indicated the domain redirecting elsewhere or belonging to another party; the search simply produced nothing hosted there. See the DNS fact for what could be checked directly."
+    },
+    {
+      "claim": "cafeduckbutt.com and www.cafeduckbutt.com resolve in DNS (IPv6 2606:4700:3035::ac43:9b92 and 2606:4700:3035::6815:5a64), but HTTP and HTTPS requests were blocked by this environment's proxy (403), so whether the domain serves the cafe's site, a parked page, or a redirect could not be determined.",
+      "category": "website",
+      "source_url": "https://cafeduckbutt.com/",
+      "source_title": "(page not retrievable from this environment)",
+      "source_date": "2026-10-05",
+      "verbatim_snippet": "2606:4700:3035::ac43:9b92 cafeduckbutt.com | 2606:4700:3035::6815:5a64 cafeduckbutt.com | curl: (56) CONNECT tunnel failed, response 403 | http_code=403 final_url=http://cafeduckbutt.com/ redirects=0",
+      "confidence": "unverified",
+      "notes": "Direct getent/curl check on 2026-10-05. The 403 is from the agent proxy, not the site. 2606:4700::/32 is a Cloudflare-announced range, which only indicates Cloudflare-fronted hosting and says nothing about content or ownership. Needs a browser check from an unrestricted network to answer the 'does the domain now belong to someone else / redirect' question."
+    },
+    {
+      "claim": "A Weebly-hosted site titled 'Cafe Duck Butt - Home of the Duck Butt' exists at cafeduckbutt.weebly.com, with an 'About the Duck' subpage.",
+      "category": "website",
+      "source_url": "https://cafeduckbutt.weebly.com/",
+      "source_title": "Cafe Duck Butt - Home of the Duck Butt",
+      "source_date": "",
+      "verbatim_snippet": "Cafe Duck Butt - Home of the Duck Butt | About the Duck - Cafe Duck Butt (http://cafeduckbutt.weebly.com/about-the-duck.html)",
+      "confidence": "single-source",
+      "notes": "Result titles from a weebly.com-restricted search. The site reads as self-published by the venue but no result states who maintains it or when it was last updated; the page could not be fetched (proxy 403)."
+    },
+    {
+      "claim": "Weebly site states the cafe was founded in 2010 and is located 'off Ward' at 901 Kawaiahao St, offering food, drinks and fun 'with a Korean flair'.",
+      "category": "website",
+      "source_url": "https://cafeduckbutt.weebly.com/",
+      "source_title": "Cafe Duck Butt - Home of the Duck Butt",
+      "source_date": "",
+      "verbatim_snippet": "Cafe Duck Butt was founded in 2010 and is located off Ward at 901 Kawaiahao St. It offers quality food, drinks, and fun with a Korean flair.",
+      "confidence": "single-source",
+      "notes": "'Off Ward' is the only cross-street/location descriptor any source gave (Ward Ave). The 2010 date is consistent with the Hawaii Business Magazine statement that the bar was taken over in 2010 (separate fact)."
+    },
+    {
+      "claim": "Weebly site hours: open 5pm-2am daily, happy hour 5pm-8pm, phone 1-808-593-1880.",
+      "category": "hours",
+      "source_url": "https://cafeduckbutt.weebly.com/",
+      "source_title": "Cafe Duck Butt - Home of the Duck Butt",
+      "source_date": "",
+      "verbatim_snippet": "They are open from 5pm-2am daily with happy hours from 5pm-8pm, and can be reached at 1-808-593-1880.",
+      "confidence": "conflicting",
+      "notes": "The '5pm-2am daily' portion agrees with Yelp, menupix, Wheree and Apple Maps. The happy-hour window (5-8pm) conflicts with the 'Monday-Friday from 4:30 to 7pm' version attributed to totalhappyhour.com. Site date unknown; Weebly content may be stale."
+    },
+    {
+      "claim": "Weebly site describes the concept as soju, beer, food, karaoke and 'social fun', with a stated mission to share Korean culture and host 'the most enjoyable Korean karaoke experience'.",
+      "category": "website",
+      "source_url": "https://cafeduckbutt.weebly.com/",
+      "source_title": "Cafe Duck Butt - Home of the Duck Butt",
+      "source_date": "",
+      "verbatim_snippet": "The establishment features soju, beer, food, karaoke, and is a place for social fun. ... Their mission is to share their culture, offer a unique experience for each customer, and host the most enjoyable Korean karaoke experience by offering the best service, food, and beverages.",
+      "confidence": "single-source",
+      "notes": "Paraphrase from the search summary of the Weebly page; useful as brand-voice material."
+    },
+    {
+      "claim": "A Facebook page titled 'Cafe Duck Butt' exists at facebook.com/Cafe-Duck-Butt-132145946808402 and is the top result for the name plus 'facebook'.",
+      "category": "social",
+      "source_url": "https://www.facebook.com/Cafe-Duck-Butt-132145946808402/",
+      "source_title": "Cafe Duck Butt",
+      "source_date": "",
+      "verbatim_snippet": "The Facebook page for Cafe Duck Butt can be found at: https://www.facebook.com/Cafe-Duck-Butt-132145946808402/",
+      "confidence": "single-source",
+      "notes": "URL matches the page ID supplied in the brief; it was also the top result for the name plus 'instagram'. Follower count, last-post date and page status were not visible in results and Facebook cannot be fetched from this environment."
+    },
+    {
+      "claim": "Descriptive line associated with the Facebook/listing results: 'a Korean stop for wonderful food, delicious drinks and company on the island'.",
+      "category": "social",
+      "source_url": "https://www.facebook.com/Cafe-Duck-Butt-132145946808402/",
+      "source_title": "Cafe Duck Butt",
+      "source_date": "",
+      "verbatim_snippet": "It's a Korean stop for wonderful food, delicious drinks and company on the island.",
+      "confidence": "unverified",
+      "notes": "Appeared in the search summary for the query '\"Cafe Duck Butt\" facebook'; the summary did not explicitly attribute it to the Facebook page (result set also included TripAdvisor, Yelp, totalhappyhour, menupix, Weebly). Reads like a page 'About' blurb."
+    },
+    {
+      "claim": "No official Instagram account for Cafe Duck Butt surfaced; the only Instagram handle associated in results was '@beaksup808', linked to a Flickr photographer ('Beaks McFlap') who posted a photo titled 'Cafe Duck Butt'.",
+      "category": "social",
+      "source_url": "https://flickr.com/photos/14136614@N03/40910303311",
+      "source_title": "Cafe Duck Butt by Beaks McFlap",
+      "source_date": "",
+      "verbatim_snippet": "The search results included a reference to the Instagram handle \"@beaksup808\" appearing in relation to Café Duck Butt, but I didn't find the official Café Duck Butt Instagram account directly in these results.",
+      "confidence": "unverified",
+      "notes": "Query '\"Cafe Duck Butt\" instagram' run 2026-10-05 returned Facebook, Flickr, TripAdvisor, Yelp and Wheree, no instagram.com result. @beaksup808 appears to be a third party, not the venue. A TikTok query could not be run (search budget exhausted)."
+    },
+    {
+      "claim": "Yelp listing: 'CAFÉ DUCK BUTT', 1145 photos and 616 reviews, category Karaoke, address 901 Kawaiahao St, Honolulu, Hawaii, 'Updated September 2026'.",
+      "category": "listing",
+      "source_url": "https://www.yelp.com/biz/caf%C3%A9-duck-butt-honolulu-2",
+      "source_title": "CAFÉ DUCK BUTT - Updated September 2026 - 1145 Photos & 616 Reviews - 901 Kawaiahao St, Honolulu, Hawaii - Karaoke - Restaurant Reviews - Phone Number - Menu - Yelp",
+      "source_date": "2026-09",
+      "verbatim_snippet": "CAFÉ DUCK BUTT - Updated September 2026 - 1145 Photos & 616 Reviews - 901 Kawaiahao St, Honolulu, Hawaii - Karaoke - Restaurant Reviews - Phone Number - Menu - Yelp",
+      "confidence": "verified",
+      "notes": "Older cached variants of the same listing (?start=20/40/80/160) are titled 'Updated October 2025 / November 2025 / December 2025 / February 2026 - 1142 Photos & 616 Reviews'. Review count has stayed at 616 from Oct 2025 through Sept 2026; photos rose 1142 to 1145."
+    },
+    {
+      "claim": "Yelp rating is 3.7 stars with 616 reviews.",
+      "category": "listing",
+      "source_url": "https://www.yelp.com/biz/caf%C3%A9-duck-butt-honolulu-2",
+      "source_title": "CAFÉ DUCK BUTT - Updated September 2026 - 1145 Photos & 616 Reviews - Yelp",
+      "source_date": "2026-09",
+      "verbatim_snippet": "Café Duck Butt has a 3.7 rating with 616 reviews on Yelp.",
+      "confidence": "verified",
+      "notes": "Apple Maps listing summary independently states 'with a 3.7 rating on Yelp'."
+    },
+    {
+      "claim": "Yelp hours: Monday through Sunday, 5:00 PM to 2:00 AM (next day).",
+      "category": "hours",
+      "source_url": "https://www.yelp.com/biz/caf%C3%A9-duck-butt-honolulu-2",
+      "source_title": "CAFÉ DUCK BUTT - Updated September 2026 - 1145 Photos & 616 Reviews - Yelp",
+      "source_date": "2026-09",
+      "verbatim_snippet": "The establishment is open Monday through Sunday from 5:00 PM to 2:00 AM (next day).",
+      "confidence": "verified",
+      "notes": "Same seven-day 5 PM-2 AM schedule on menupix ('5:00pm-2:00am daily'), Wheree ('Monday-Sunday: 5:00 P.M - 2:00 A.M'), Apple Maps ('5:00 PM to 2:00 AM daily') and Weebly ('5pm-2am daily'). Conflicts with NetWaiter (Friday closed) and Postmates (5:00 PM-11:30 PM)."
+    },
+    {
+      "claim": "Yelp characterizes the venue as a karaoke establishment with a casual, loud atmosphere that is good for groups.",
+      "category": "listing",
+      "source_url": "https://www.yelp.com/biz/caf%C3%A9-duck-butt-honolulu-2",
+      "source_title": "CAFÉ DUCK BUTT - Updated September 2026 - 1145 Photos & 616 Reviews - Yelp",
+      "source_date": "2026-09",
+      "verbatim_snippet": "Café Duck Butt is a karaoke establishment, and it offers a casual, loud atmosphere that's good for groups.",
+      "confidence": "verified",
+      "notes": "A second Yelp-derived summary used the same tags: 'The vibe is loud, casual, and good for groups'. These read as Yelp amenity/ambience tags."
+    },
+    {
+      "claim": "Phone number is (808) 593-1880.",
+      "category": "contact",
+      "source_url": "https://www.yelp.com/biz/caf%C3%A9-duck-butt-honolulu-2",
+      "source_title": "CAFÉ DUCK BUTT - Updated September 2026 - 1145 Photos & 616 Reviews - Yelp",
+      "source_date": "2026-09",
+      "verbatim_snippet": "Café Duck Butt is located at 901 Kawaiahao St, Honolulu, HI 96814, and their phone number is (808) 593-1880.",
+      "confidence": "verified",
+      "notes": "Identical number on menupix, NetWaiter, Weebly (1-808-593-1880), Apple Maps (+1 (808) 593-1880) and TripAdvisor (+1 808-593-1880)."
+    },
+    {
+      "claim": "Guide/listing copy: customers love the chicken wings and kimchee fries; full bar with soju cocktails including watermelon, yogurt and Skittles soju; advice to reserve a karaoke room on weekends; crowd includes bachelorette parties and birthdays.",
+      "category": "listing",
+      "source_url": "https://blog.giftya.com/article/cant-miss-karaoke-bars-and-lounges-in-hawaii",
+      "source_title": "8 Can't-Miss Karaoke Bars and Lounges in Hawaii",
+      "source_date": "",
+      "verbatim_snippet": "Customers love the chicken wings and kimchee fries at Café Duck Butt which offers great Korean food and drinks along with their karaoke rooms. Their full bar offers a variety of soju (Korean alcohol) cocktails, including watermelon soju, yogurt soju, and even Skittles soju. ... A word of advice: reserve your karaoke room especially on the weekends. The fun, friendly atmosphere attracts plenty of people celebrating special occasions like bachelorette parties, birthdays, or just fun night outs with friends.",
+      "confidence": "unverified",
+      "notes": "From the search summary for '\"Cafe Duck Butt\" Yelp Honolulu karaoke soju' (results: giftya blog, TripAdvisor review pages, Yelp listing and Yelp category pages). Attribution to the giftya article is inferred from the guide-style wording and is not confirmed."
+    },
+    {
+      "claim": "TripAdvisor carries multiple listings for the venue: an Attraction listing (d5835416), a Restaurant listing (d4634698) and a newer Restaurant listing (d27921500).",
+      "category": "listing",
+      "source_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d5835416-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Cafe Duck Butt - All You SHOULD Know Before Going 2026 (with Reviews)",
+      "source_date": "2026",
+      "verbatim_snippet": "Cafe Duck Butt - All You SHOULD Know Before Going 2026 (with Reviews) | CAFE DUCK BUTT, Honolulu - Restaurant Reviews & Phone Number - Tripadvisor (https://www.tripadvisor.com/Restaurant_Review-g60982-d27921500-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html)",
+      "confidence": "verified",
+      "notes": "Restaurant listing d4634698 appears via review URLs such as https://www.tripadvisor.com/Restaurant_Review-g60982-d4634698-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html. Duplicate listings mean reviews are split across pages; the d27921500 listing looks like a newer entry."
+    },
+    {
+      "claim": "TripAdvisor shows the venue as opening after 5 PM but does not list complete hours; phone shown as +1 808-593-1880.",
+      "category": "hours",
+      "source_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d5835416-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Cafe Duck Butt - All You SHOULD Know Before Going 2026 (with Reviews)",
+      "source_date": "2026",
+      "verbatim_snippet": "The restaurant/bar/nightclub opens after 5 (5 PM). However, no complete hours are currently available on Tripadvisor. ... calling them directly at +1 808-593-1880",
+      "confidence": "single-source",
+      "notes": "tripadvisor.com-restricted search, 2026-10-05. TripAdvisor is therefore not a reliable hours source for this venue."
+    },
+    {
+      "claim": "TripAdvisor review titles include 'K-Pop, Karaoke and Korean Food....What Could Go Wrong??', 'Great Food & Happy Hour, Locals Spot !', 'Awesomeness, silliness, just plain fun.', 'If the name makes you smile, so will the soju!' and 'Fantastic place!'.",
+      "category": "listing",
+      "source_url": "https://www.tripadvisor.com/ShowUserReviews-g60982-d5835416-r723875643-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "K-Pop, Karaoke and Korean Food....What Could Go Wrong?? - Review of Cafe Duck Butt, Honolulu, HI - Tripadvisor",
+      "source_date": "",
+      "verbatim_snippet": "K-Pop, Karaoke and Korean Food....What Could Go Wrong?? | Great Food & Happy Hour, Locals Spot ! | Awesomeness, silliness, just plain fun. | If the name makes you smile, so will the soju! | Fantastic place!",
+      "confidence": "single-source",
+      "notes": "Review titles only (result titles); review bodies and dates were not visible. Other review URLs: r312898237, r419919617, r235106513, r217629824 on the same tripadvisor.com paths."
+    },
+    {
+      "claim": "A NetWaiter online-ordering listing exists at cafduckbutt.netwaiter.com (note the subdomain spelling 'cafduckbutt'), titled 'Cafe Duck Butt - Honolulu, HI', listing cuisine as 'Korean and Cafe Food' and offering takeout, delivery, reservations and a full bar with happy hour.",
+      "category": "listing",
+      "source_url": "https://cafduckbutt.netwaiter.com/",
+      "source_title": "Cafe Duck Butt - Honolulu, HI",
+      "source_date": "",
+      "verbatim_snippet": "Cuisine: Korean and Cafe Food ... The restaurant offers takeout, delivery, accepts reservations, and has a full bar with happy hour",
+      "confidence": "single-source",
+      "notes": "netwaiter.com-restricted search, 2026-10-05. Address shown as 901 Kawaiaha'o St; phone (808) 593-1880."
+    },
+    {
+      "claim": "NetWaiter hours (as surfaced 2026-10-05): Sunday-Thursday 5:00pm-2:00am; Friday: Closed All Day; Saturday 5:00pm-2:00am.",
+      "category": "hours",
+      "source_url": "https://cafduckbutt.netwaiter.com/",
+      "source_title": "Cafe Duck Butt - Honolulu, HI",
+      "source_date": "",
+      "verbatim_snippet": "Sunday-Thursday: 5:00pm - 2:00am / Friday: Closed All Day / Saturday: 5:00pm - 2:00am",
+      "confidence": "conflicting",
+      "notes": "Conflicts with every other listing (seven days 5 PM-2 AM) and with a second version seen in another summary that also used NetWaiter's 'Korean and Cafe Food' label (Mon-Fri 5 PM-2 AM, Sat & Sun 5 PM-2 AM). 'Friday: Closed All Day' may be an online-ordering override rather than actual bar hours; flag for owner confirmation."
+    },
+    {
+      "claim": "Alternate hours version: 'Monday - Friday: 5:00 PM - 2:00 AM, Saturday & Sunday: 5:00 PM - 2:00 AM', described as a 'Korean and Cafe Food restaurant that also features karaoke'.",
+      "category": "hours",
+      "source_url": "https://cafduckbutt.netwaiter.com/",
+      "source_title": "Cafe Duck Butt - Honolulu, HI",
+      "source_date": "",
+      "verbatim_snippet": "Hours of Operation: Monday - Friday: 5:00 PM - 2:00 AM, Saturday & Sunday: 5:00 PM - 2:00 AM ... The restaurant is a Korean and Cafe Food restaurant that also features karaoke.",
+      "confidence": "unverified",
+      "notes": "From the search summary for '\"Cafe Duck Butt\" 901 Kawaiahao St hours' (results: corner.inc, Yelp, NetWaiter, menupix, Weebly, Wheree). The 'Korean and Cafe Food' phrase matches NetWaiter's cuisine label, so NetWaiter is the probable source, but attribution is not explicit. Net effect is still 5 PM-2 AM seven days."
+    },
+    {
+      "claim": "Alternate hours version: 'Monday through Friday: 5:00 pm - 2:00 am, Saturday: 5:00 pm onwards' (no Sunday stated), with the venue described as 'K-Pop, Karaoke and Korean Food' and karaoke rooms reservable for private events.",
+      "category": "hours",
+      "source_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d5835416-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Cafe Duck Butt - All You SHOULD Know Before Going 2026 (with Reviews)",
+      "source_date": "",
+      "verbatim_snippet": "Hours: Monday through Friday: 5:00 pm - 2:00 am, Saturday: 5:00 pm onwards ... Café Duck Butt features K-Pop, Karaoke and Korean Food, and the venue offers karaoke rooms that can be reserved for private events and gatherings.",
+      "confidence": "unverified",
+      "notes": "From the search summary for 'Cafe Duck Butt Honolulu official website' (results: TripAdvisor, Yelp, NetWaiter, menupix, Wheree). Source not explicitly attributed; the 'K-Pop, Karaoke and Korean Food' phrase is a TripAdvisor review title, so TripAdvisor is the probable origin. This is the 'Mon-Fri 5 pm to 2 am' variant the brief asked to capture."
+    },
+    {
+      "claim": "Alternate hours version: open Monday through Saturday 5:00 pm to 2:00 am, with happy hour Monday-Friday 4:30 to 7 pm.",
+      "category": "hours",
+      "source_url": "https://www.totalhappyhour.com/happy-hour-for-cafe-duck-butt-in-honolulu-hi-96814/",
+      "source_title": "Join the Happy Hour at Cafe Duck Butt in Honolulu, HI 96814",
+      "source_date": "",
+      "verbatim_snippet": "The restaurant is open Monday through Saturday from 5:00 pm to 2:00 am, and they offer happy hours Monday-Friday from 4:30 to 7pm with great drink specials.",
+      "confidence": "unverified",
+      "notes": "From the search summary for '\"Cafe Duck Butt\" facebook' (results: Facebook, TripAdvisor, Yelp, totalhappyhour, menupix, Weebly). Attribution to totalhappyhour.com inferred because it is the only happy-hour-specific result; a domain-restricted confirmation search could not be run (budget exhausted). Note the 4:30 pm happy-hour start precedes the 5 pm opening every other source states, and the 4:30-7 window conflicts with Weebly's 5-8 pm."
+    },
+    {
+      "claim": "menupix listing: open 5:00pm-2:00am daily; 901 Kawaiahao St, Honolulu, HI 96814; (808) 593-1880.",
+      "category": "hours",
+      "source_url": "https://www.menupix.com/hawaii/restaurants/751408/Cafe-Duck-Butt-Honolulu-HI",
+      "source_title": "Online Menu of Cafe Duck Butt, Honolulu, HI",
+      "source_date": "",
+      "verbatim_snippet": "Cafe Duck Butt in Honolulu is open 5:00pm-2:00am daily. The restaurant is located at 901 Kawaiahao St, Honolulu, HI 96814, and their phone number is (808) 593-1880.",
+      "confidence": "verified",
+      "notes": "menupix.com-restricted search, 2026-10-05. Agrees with Yelp, Wheree, Apple Maps and Weebly."
+    },
+    {
+      "claim": "Wheree listing (Updated May 2026), categorized under Karaoke Bars in Honolulu City: hours Monday-Sunday 5:00 P.M - 2:00 A.M; address 901 Kawaiaha'o St, Honolulu, HI 96814; described as a karaoke bar blending Korean cuisine with a karaoke experience.",
+      "category": "hours",
+      "source_url": "https://cafe-duck-butt.wheree.com/",
+      "source_title": "Cafe Duck Butt - Reviews, Photos & Phone Number - Updated May 2026 - Karaoke Bars in Honolulu City, Honolulu County - Wheree",
+      "source_date": "2026-05",
+      "verbatim_snippet": "Hours: Monday-Sunday: 5:00 P.M - 2:00 A.M ... Cafe Duck Butt is a karaoke bar that blends Korean cuisine with a karaoke experience.",
+      "confidence": "verified",
+      "notes": "wheree.com-restricted search, 2026-10-05. Wheree is an aggregator; its data likely derives from Google/Yelp."
+    },
+    {
+      "claim": "Apple Maps lists Cafe Duck Butt as a bar in the Kakaako area of Honolulu, a good late-night spot open 5:00 PM to 2:00 AM daily, with private karaoke rooms, reservations, happy hour, and an exterior that 'may not look impressive from the outside'.",
+      "category": "listing",
+      "source_url": "https://maps.apple.com/place?place-id=IE5E6F554C2685A7D",
+      "source_title": "Cafe Duck Butt in Honolulu, HI United States - Apple Maps",
+      "source_date": "",
+      "verbatim_snippet": "Cafe Duck Butt is a bar located in the Kakaako area of Honolulu, HI, with a 3.7 rating on Yelp. ... It's described as a good late night spot with operating hours from 5:00 PM to 2:00 AM daily. The bar features private karaoke rooms and has an ambiance that may not look impressive from the outside but has more to offer inside. ... You can reach them at +1 (808) 593-1880.",
+      "confidence": "single-source",
+      "notes": "maps.apple.com-restricted search, 2026-10-05. Apple Maps place ID IE5E6F554C2685A7D. Apple's description appears to be synthesized from Yelp reviews."
+    },
+    {
+      "claim": "Apple Maps lists the venue as having validated parking and being smoking-free.",
+      "category": "parking",
+      "source_url": "https://maps.apple.com/place?place-id=IE5E6F554C2685A7D",
+      "source_title": "Cafe Duck Butt in Honolulu, HI United States - Apple Maps",
+      "source_date": "",
+      "verbatim_snippet": "The establishment accepts reservations, offers happy hour, has validated parking, and is smoking-free.",
+      "confidence": "single-source",
+      "notes": "Only source that mentioned parking at all. Where the validated lot is (and whether validation still applies) was not stated. Dedicated parking/'how to get there' searches could not be run (budget exhausted)."
+    },
+    {
+      "claim": "A DoorDash store page 'Cafe Duck Butt (Kawaiahao St)' exists and offers both delivery and pickup.",
+      "category": "listing",
+      "source_url": "https://www.doordash.com/store/cafe-duck-butt-honolulu-1243951/",
+      "source_title": "Order Cafe Duck Butt (Kawaiahao St) - Honolulu, HI Menu Delivery [Menu & Prices]",
+      "source_date": "",
+      "verbatim_snippet": "You can order for both Delivery and Pickup on DoorDash. There's no delivery fee on your first order.",
+      "confidence": "single-source",
+      "notes": "Delivery-platform-restricted search (postmates.com, doordash.com, ubereats.com), 2026-10-05. The summary called DoorDash 'the most reliable delivery platform currently available for this location'."
+    },
+    {
+      "claim": "Postmates store page lists the venue as open every day 5:00 PM - 11:30 PM and names Famous Duck Butt Chicken (served with side daikon) and Kimchi Fried Rice among popular items.",
+      "category": "hours",
+      "source_url": "https://postmates.com/store/cafe-duck-butt-kawaiaha%E2%80%98o-st/mfKJqauFV56u8CaOi_JhoQ",
+      "source_title": "Cafe Duck Butt (Kawaiaha‘o St) Menu Honolulu • Order Cafe Duck Butt (Kawaiaha‘o St) Delivery Online • Postmates",
+      "source_date": "",
+      "verbatim_snippet": "According to Postmates, the restaurant is open every day from 5:00 PM - 11:30 PM. Some popular menu items include Famous Duck Butt Chicken served with side daikon, Kimchi Fried Rice, and various other Korean and Asian fusion dishes.",
+      "confidence": "conflicting",
+      "notes": "The 11:30 PM close conflicts with the 2:00 AM close on every bar/directory listing; most likely this is the delivery/kitchen window rather than bar hours, but Postmates does not say so."
+    },
+    {
+      "claim": "An Uber Eats page for Cafe Duck Butt exists but the restaurant is marked unavailable there.",
+      "category": "listing",
+      "source_url": "https://www.ubereats.com/honolulu/food-delivery/cafe-duck-butt/XkxSU8BPTDCwru15EtB7ZQ",
+      "source_title": "Cafe Duck Butt",
+      "source_date": "",
+      "verbatim_snippet": "However, Cafe Duck Butt is unavailable on Uber Eats at this time.",
+      "confidence": "single-source",
+      "notes": "Postmates and Uber Eats share a backend, so the Postmates listing may be the live one; not confirmed."
+    },
+    {
+      "claim": "A corner.inc place listing 'Cafe Duck Butt • restaurant' exists.",
+      "category": "listing",
+      "source_url": "https://www.corner.inc/place/17581?listId=3b01cbeb-7ed9-4146-b4e6-c540b0603f72",
+      "source_title": "Cafe Duck Butt • restaurant",
+      "source_date": "",
+      "verbatim_snippet": "Cafe Duck Butt • restaurant",
+      "confidence": "single-source",
+      "notes": "Result title only; listing contents were not captured and a corner.inc-restricted search could not be run (budget exhausted)."
+    },
+    {
+      "claim": "A totalhappyhour.com listing for Cafe Duck Butt (Honolulu, HI 96814) exists.",
+      "category": "listing",
+      "source_url": "https://www.totalhappyhour.com/happy-hour-for-cafe-duck-butt-in-honolulu-hi-96814/",
+      "source_title": "Join the Happy Hour at Cafe Duck Butt in Honolulu, HI 96814",
+      "source_date": "",
+      "verbatim_snippet": "Join the Happy Hour at Cafe Duck Butt in Honolulu, HI 96814",
+      "confidence": "single-source",
+      "notes": "Result title only. The happy-hour times probably drawn from this page are recorded as a separate (unverified-attribution) hours fact."
+    },
+    {
+      "claim": "Hawaii Business Magazine profile: the bar was taken over in 2010 by Jin Hong and Henry Yoon, who changed the decor and some menu items but kept the name; the focus is the K-pop karaoke experience with Korean stir-fries and finger food.",
+      "category": "background",
+      "source_url": "https://www.hawaiibusiness.com/duck-what-duck-butt-thats-what/",
+      "source_title": "Duck What? Duck Butt, That's What. - Hawaii Business Magazine",
+      "source_date": "",
+      "verbatim_snippet": "The focus at Cafe Duck Butt is the K-pop karaoke experience with steaming platters of Korean stir-fries and finger food. The bar was taken over in 2010 by Jin Hong and Henry Yoon, who changed the décor and some menu items but kept the name.",
+      "confidence": "unverified",
+      "notes": "From the search summary for 'cafeduckbutt.com'; the summary did not say whether this text came from hawaiibusiness.com or the honolulumagazine.com result in the same set. The remainder of that summary concerned an out-of-scope topic and is omitted. The 2010 date is consistent with the Weebly 'founded in 2010' statement."
+    },
+    {
+      "claim": "Yelp category pages for 'Korean Karaoke Bar', 'Korean Soju Bar', 'KTV Karaoke' and 'Korean Karaoke' in Honolulu were returned for Cafe Duck Butt name queries.",
+      "category": "listing",
+      "source_url": "https://www.yelp.com/search?find_desc=Korean+Karaoke+Bar&find_loc=Honolulu%2C+HI",
+      "source_title": "TOP 10 BEST Korean Karaoke Bar in Honolulu, HI - Updated 2026 - Yelp",
+      "source_date": "2026",
+      "verbatim_snippet": "TOP 10 BEST Korean Karaoke Bar in Honolulu, HI - Updated 2026 - Yelp | TOP 10 BEST Korean Soju Bar in Honolulu, HI - Updated 2025 - Yelp | TOP 10 BEST KTV Karaoke in Honolulu, HI - Updated 2026 - Yelp",
+      "confidence": "unverified",
+      "notes": "Their appearance for the name query suggests the venue is listed on these category pages, but its presence/rank on them was not visible. Other URL: https://www.yelp.com/search?find_desc=Korean+Soju+Bar&find_loc=Honolulu,+HI"
+    },
+    {
+      "claim": "Listing copy places the venue 'in the Kaka'ako area', tags it casual, loud, good for groups, karaoke, dogs allowed, with hours 'typically 5:00 PM - 2:00 AM daily', and names spicy chicken gizzards, kimchi fried rice (vegetarian), watermelon soju and lilikoi soju.",
+      "category": "neighborhood",
+      "source_url": "https://cafe-duck-butt.wheree.com/",
+      "source_title": "Cafe Duck Butt - Reviews, Photos & Phone Number - Updated May 2026 - Karaoke Bars in Honolulu City, Honolulu County - Wheree",
+      "source_date": "",
+      "verbatim_snippet": "The venue is located at 901 Kawaiahao St in the Kaka'ako area and features a casual, loud atmosphere that's good for groups, with karaoke and dogs allowed. Hours are typically 5:00 PM - 2:00 AM daily. ... The menu includes items like spicy chicken gizzards and vegetarian options like kimchi fried rice, along with creative cocktails such as watermelon soju and lilikoi soju.",
+      "confidence": "unverified",
+      "notes": "From the search summary for '\"Cafe Duck Butt\" instagram' (results: Facebook, Flickr, TripAdvisor, Yelp, Wheree). Attribution to Wheree is probable but not explicit; 'dogs allowed' reads like a Yelp amenity tag and should be confirmed before use."
+    },
+    {
+      "claim": "Delivery-listing copy: operates 5:00 PM - 2:00 AM every day; menu framed as Korean, Asian, BBQ and comfort food, including Mochiko Chicken and the Famous Duck Butt Chicken.",
+      "category": "hours",
+      "source_url": "https://postmates.com/store/cafe-duck-butt-kawaiaha%E2%80%98o-st/mfKJqauFV56u8CaOi_JhoQ",
+      "source_title": "Cafe Duck Butt (Kawaiaha‘o St) Menu Honolulu • Postmates",
+      "source_date": "",
+      "verbatim_snippet": "The main location is at 901 Kawaiahao St, Honolulu, HI 96814, and operates from 5:00 PM – 2:00 AM every day. Their menu features Korean, Asian, BBQ, and comfort food, including items like Mochiko Chicken and their Famous Duck Butt Chicken.",
+      "confidence": "unverified",
+      "notes": "From the search summary for 'cafeduckbutt.com' (Cafe-Duck-Butt-related results: Apple Maps, Hawaii Business, Postmates). Attribution uncertain; note this '5 PM-2 AM every day' wording differs from the '5:00 PM - 11:30 PM' hours the Postmates-restricted search returned."
+    },
+    {
+      "claim": "The only neighborhood/cross-street descriptors any source gave are 'off Ward' (Weebly) and 'in the Kakaako area' (Apple Maps); no result mentioned Cooke St, Ward Village, SALT at Our Kaka'ako, Kawaiaha'o Church, the murals, breweries or nearby bars.",
+      "category": "neighborhood",
+      "source_url": "https://cafeduckbutt.weebly.com/",
+      "source_title": "Cafe Duck Butt - Home of the Duck Butt",
+      "source_date": "",
+      "verbatim_snippet": "is located off Ward at 901 Kawaiahao St",
+      "confidence": "unverified",
+      "notes": "Absence finding. The planned neighborhood searches (901 Kawaiahao cross streets/building, Kaka'ako character incl. POW! WOW!/warehouses/breweries, Ward Village/SALT/Cooke St proximity, parking and directions) were blocked by the session search budget and must be rerun."
+    }
+  ],
+  "dead_ends": [
+    "Session WebSearch budget (200/200) was exhausted after 14 completed searches on this angle; 8 planned queries were refused and must be rerun: totalhappyhour.com-restricted, hawaiibusiness.com-restricted, '\"Cafe Duck Butt\" tiktok', '\"901 Kawaiahao\" Honolulu Kakaako building', '\"Cafe Duck Butt\" parking Kakaako', 'Kakaako neighborhood known for murals warehouses breweries POW WOW', corner.inc-restricted, and '\"Cafe Duck Butt\" Kakaako near Ward Village SALT Cooke Street'.",
+    "cafeduckbutt.com: DNS resolves (Cloudflare-range IPv6) but HTTP/HTTPS is blocked by the environment proxy (403), so the live content, owner, or any redirect could not be observed; no search result referenced a page hosted at that domain.",
+    "cafeduckbutt.weebly.com: HTTP blocked by proxy (403); content known only from the search summary; last-updated date unknown.",
+    "Facebook page facebook.com/Cafe-Duck-Butt-132145946808402: found in results but not fetchable; follower count, last post date and whether the page is still active are unknown.",
+    "No official Instagram account surfaced (only a third-party photographer handle @beaksup808); TikTok was not searched (budget).",
+    "No Google Maps / Google Business Profile URL appeared in any result set, so Google's hours wording could not be captured.",
+    "TripAdvisor states no complete hours are available ('opens after 5').",
+    "Several hours variants in search summaries (Mon-Fri 5 pm-2 am / Sat 5 pm onwards; Mon-Sat 5 pm-2 am with 4:30-7 pm happy hour; Mon-Fri + Sat & Sun 5 PM-2 AM) could not be tied to a specific page with certainty; they are recorded with their probable source and marked unverified.",
+    "Nothing found on cross streets, nearby landmarks, the Kaka'ako warehouse/mural district, nearby bars, or directions beyond 'off Ward' and 'Kakaako area'; Apple Maps' 'validated parking' is the only parking statement."
+  ]
+}
