@@ -148,4 +148,5 @@ fs.writeFileSync(path.join(DIST, '_headers'), headers);
 manifest.sort((a, b) => b.size - a.size);
 console.log('dist/ assembled: ' + manifest.length + ' files, ' + (total / 1024).toFixed(1) + ' KB total');
 for (const m of manifest) console.log('  ' + String(m.size).padStart(9) + '  ' + m.rel);
+fs.mkdirSync(path.join(DIST, '..', 'tools', 'out'), { recursive: true });
 fs.writeFileSync(path.join(DIST, '..', 'tools', 'out', 'dist-manifest.json'), JSON.stringify({ total, files: manifest }, null, 2));

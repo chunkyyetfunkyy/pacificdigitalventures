@@ -159,6 +159,7 @@ async function pageProbe(browser, name, ctxOpts, opts = {}) {
       const ctx = await browser.newContext({ viewport: { width: 375, height: 812 }, isMobile: true });
       const page = await ctx.newPage();
       await page.goto(`http://127.0.0.1:${PORT}/`, { waitUntil: 'networkidle' });
+      await page.waitForTimeout(2500); // let the one-shot hero warm-up finish so axe measures the settled colours
       await page.addScriptTag({ path: path.join(__dirname, 'node_modules', 'axe-core', 'axe.min.js') });
       const res = await page.evaluate(async () => { const r = await axe.run(document, { runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21aa', 'best-practice'] } }); return r.violations.map(v => ({ id: v.id, impact: v.impact, help: v.help, nodes: v.nodes.slice(0, 6).map(n => ({ target: n.target.join(' '), summary: n.failureSummary && n.failureSummary.slice(0, 200) })) })); });
       report.axe = res;

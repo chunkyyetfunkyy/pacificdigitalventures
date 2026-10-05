@@ -17,7 +17,8 @@ var FLAGS = {
   'social.facebook':      false, // reveals the Facebook link in the footer (F065 / C17, Q16)
   'sign.duckConfirmed':   false, // adds "Look for the duck on the sign." to Find us (F270, Q20)
   'name.hangulStandard':  false, // swaps 오리궁뎅이 (as the owners say it) for dictionary 오리궁둥이 (Q26)
-  'photos.showSlots':     false  // reveals the labelled, aspect-locked photo slots for the photo conversation (Q20)
+  'photos.showSlots':     false, // reveals the labelled, aspect-locked photo slots for the photo conversation (Q20)
+  'menu.tacosConfirmed':  false  // reveals the Korean Tacos row once the owner confirms they are still served (F102, Q12)
 };
 var TEL = '+18085931880'; // only used when phone.telVerified is true
 
@@ -70,8 +71,8 @@ var TEL = '+18085931880'; // only used when phone.telVerified is true
   }
 
   /* ---------------------------------------------------------------- motion (one-shot reveals; never on reduced motion)
-     A clipped element reports zero intersection, so each target gets an unclipped 1px sentinel before it,
-     and the observer watches the sentinel. Targets already on screen are revealed without a transition. */
+     Targets are observed directly (threshold 0; the -24px top inset keeps a strip of the box visible to the
+     observer). Targets already on screen are revealed without a transition. */
   if (!reduce && 'IntersectionObserver' in window) {
     var targets = d.querySelectorAll('.reveal, .melon, .phone-card');
     if (targets.length) {
@@ -80,24 +81,17 @@ var TEL = '+18085931880'; // only used when phone.telVerified is true
       each(targets, function (t) { if (inView(t)) initial.push(t); });
       each(initial, function (t) { t.classList.add('is-in', 'is-instant'); });
       root.classList.add('io');             // pre-states apply from here on, after the in-view ones are already revealed
-      var marks = [];
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
           if (!e.isIntersecting) return;
-          var t = e.target.__target;
-          if (t) t.classList.add('is-in');
+          e.target.classList.add('is-in');
           io.unobserve(e.target);
-          if (e.target.parentNode) e.target.parentNode.removeChild(e.target);
         });
-      }, { threshold: 0, rootMargin: '0px 0px -12% 0px' });
-      each(targets, function (t) {
-        if (t.classList.contains('is-in')) return;
-        var m = d.createElement('i'); m.className = 'io-mark'; m.setAttribute('aria-hidden', 'true'); m.__target = t;
-        t.parentNode.insertBefore(m, t); marks.push(m); io.observe(m);
-      });
+      }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
+      each(targets, function (t) { if (!t.classList.contains('is-in')) io.observe(t); });
       setTimeout(function () { each(initial, function (t) { t.classList.remove('is-instant'); }); }, 100);
-      // Safety net: anything on screen that the observer somehow missed is revealed; off-screen targets keep their motion.
-      setInterval(function () { each(targets, function (t) { if (!t.classList.contains('is-in') && inView(t)) t.classList.add('is-in'); }); }, 1500);
+      // Safety net: anything on screen that the observer somehow missed lights without rolling; off-screen targets keep their motion.
+      setInterval(function () { each(targets, function (t) { if (!t.classList.contains('is-in') && inView(t)) { t.classList.add('is-in', 'is-instant'); setTimeout(function () { t.classList.remove('is-instant'); }, 100); } }); }, 1500);
     }
   }
 
