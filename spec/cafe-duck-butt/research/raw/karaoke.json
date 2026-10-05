@@ -1,0 +1,373 @@
+{
+  "angle": "karaoke",
+  "facts": [
+    {
+      "claim": "Karaoke costs $2 per song.",
+      "category": "pricing",
+      "source_url": "https://hawaiitravelspot.com/where-to-find-the-best-karaoke-in-honolulu/",
+      "source_title": "Where to Find the Best Karaoke in Honolulu (2023)",
+      "source_date": "2023",
+      "verbatim_snippet": "Cafe Duck Butt is located in Ala Moana in Honolulu and is open from 5:00 pm to 2:00 am. The venue features private rooms for karaoke, and it costs $2 per song.",
+      "confidence": "single-source",
+      "notes": "This is the only web source found that states the per-song price, and it is a 2023 travel blog; no second source confirms it. Price is UNCONFIRMED BY THE OWNER and may be out of date. Whether rooms are charged per song only (no hourly room fee) is not stated. The blog places the venue in 'Ala Moana' rather than Kaka'ako. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "The venue has private karaoke ('singing') rooms.",
+      "category": "rooms",
+      "source_url": "https://www.giftly.com/gift-card/caf%C3%A9-duck-butt-honolulu-2",
+      "source_title": "Café Duck Butt Giftly - Email, Text or Print, 901 Kawaiahao St, Honolulu, HI",
+      "source_date": "",
+      "verbatim_snippet": "Located near Blaisdell Arena and Concert Hall, this casual karaoke bar serves Korean food, soju drinks, happy hour deals, and private singing rooms, and is located at 901 Kawaiahao St, Honolulu, HI.",
+      "confidence": "verified",
+      "notes": "Corroborated by hawaiitravelspot.com ('The venue features private rooms for karaoke'), hshawaii.com ('a choice between private rooms and an open space near the bar') and the 2010 Star-Advertiser column ('karaoke-room revelers'). Giftly is a third-party gift-card site; the blurb is not owner-authored. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "Guests can choose between private rooms and an open space near the bar.",
+      "category": "rooms",
+      "source_url": "https://hshawaii.com/the-best-karaoke-spots-in-hawaii/",
+      "source_title": "The Best Karaoke Spots In Hawaii: Where To Sing Your Heart Out In Paradise",
+      "source_date": "",
+      "verbatim_snippet": "Café Duck Butt is a relaxed karaoke bar with a local crowd and laid-back atmosphere. The venue offers a choice between private rooms and an open space near the bar, and each room has a solid song selection with plenty of English, Japanese, and Korean choices.",
+      "confidence": "verified",
+      "notes": "The 2010 Star-Advertiser column likewise describes both 'karaoke-room revelers and tables full of in-the-know locals'. Whether the open bar area has its own karaoke (open mic) or is seating only is not stated. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "Each room's song selection includes plenty of English, Japanese, and Korean choices.",
+      "category": "song-selection",
+      "source_url": "https://hshawaii.com/the-best-karaoke-spots-in-hawaii/",
+      "source_title": "The Best Karaoke Spots In Hawaii: Where To Sing Your Heart Out In Paradise",
+      "source_date": "",
+      "verbatim_snippet": "The venue offers a choice between private rooms and an open space near the bar, and each room has a solid song selection with plenty of English, Japanese, and Korean choices.",
+      "confidence": "single-source",
+      "notes": "Only hshawaii.com names the three languages; breadth of the English catalog is separately corroborated by Wheree and Wanderly. No source mentions Tagalog, Chinese or other languages, or the karaoke system brand. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "There are hundreds of songs to choose from, covering today's top hits and oldies.",
+      "category": "song-selection",
+      "source_url": "https://gowanderly.com/karaoke-oahu/",
+      "source_title": "Karaoke In Oahu: Guide To The Best Karaoke Bars - Wanderly",
+      "source_date": "",
+      "verbatim_snippet": "Café Duck Butt is described as a fun way to end the night after spending time in the sun. The venue has hundreds of songs to choose from, offering both today's top hits and oldies but goodies.",
+      "confidence": "single-source",
+      "notes": "'Hundreds' is the blog's wording; actual catalog size not stated by any source. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "Reviewers praise a diverse karaoke song selection with many English options.",
+      "category": "song-selection",
+      "source_url": "https://cafe-duck-butt.wheree.com/",
+      "source_title": "Cafe Duck Butt - Reviews, Photos & Phone Number - Updated May 2026 - Karaoke Bars in Honolulu City, Honolulu County - Wheree",
+      "source_date": "2026-05",
+      "verbatim_snippet": "Reviewers praise the diverse karaoke song selection, which includes many English options, and highlight the vibrant atmosphere that enhances socializing.",
+      "confidence": "verified",
+      "notes": "Agrees with hshawaii.com and gowanderly.com on breadth of selection. Wheree is an aggregator that auto-summarizes third-party reviews, so treat as secondhand. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "There are 'several' private karaoke rooms, and rooms can be reserved for private events and gatherings.",
+      "category": "rooms",
+      "source_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d5835416-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Cafe Duck Butt - All You SHOULD Know Before Going 2026 (with Reviews)",
+      "source_date": "2026",
+      "verbatim_snippet": "There are several private rooms designed for karaoke, and the venue offers karaoke rooms that can be reserved for private events and gatherings.",
+      "confidence": "single-source",
+      "notes": "ATTRIBUTION UNCERTAIN: the search summary returned this sentence for a query whose results were TripAdvisor, Yelp and Wheree pages, without saying which page it came from; the wording resembles a listing 'About' blurb (TripAdvisor, or Yelp's 'From the business'). The EXACT NUMBER of rooms is not stated by any source found ('several' only); room sizes/capacities not stated. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "The venue takes reservations.",
+      "category": "booking",
+      "source_url": "https://www.yelp.com/biz/caf%C3%A9-duck-butt-honolulu-2",
+      "source_title": "CAFÉ DUCK BUTT - Updated September 2026 - 1145 Photos & 616 Reviews - 901 Kawaiahao St, Honolulu, Hawaii - Karaoke - Restaurant Reviews - Phone Number - Menu - Yelp",
+      "source_date": "2026-09",
+      "verbatim_snippet": "The venue takes reservations, and reservations are highly needed for Friday and Saturday.",
+      "confidence": "verified",
+      "notes": "'Takes Reservations' matches Yelp's amenity label; corroborated by the separate statement that rooms 'can be reserved for private events and gatherings'. HOW to reserve (phone only vs. online), deposits, lead time, time slots and cancellation terms were not found in any source; no online booking link surfaced in any result. Attribution of this exact sentence to the Yelp page is inferred from the result set. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "Reservations are 'highly needed' for Friday and Saturday.",
+      "category": "booking",
+      "source_url": "https://www.tripadvisor.com/ShowUserReviews-g60982-d5835416-r404298920-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Good place for drinks, food, social. - Review of Cafe Duck Butt, Honolulu, HI - Tripadvisor",
+      "source_date": "",
+      "verbatim_snippet": "The venue takes reservations, and reservations are highly needed for Friday and Saturday.",
+      "confidence": "single-source",
+      "notes": "Reads as reviewer advice, not an owner policy; whether reservations are REQUIRED on Fri/Sat (vs. recommended) is not stated. ATTRIBUTION UNCERTAIN: the summary did not name the page; this TripAdvisor review was the top result for the reservation query. The review ID (r404298920) suggests it is several years old. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "The place gets busy at night; arriving early is recommended to get a spot.",
+      "category": "crowds",
+      "source_url": "https://hshawaii.com/the-best-karaoke-spots-in-hawaii/",
+      "source_title": "The Best Karaoke Spots In Hawaii: Where To Sing Your Heart Out In Paradise",
+      "source_date": "",
+      "verbatim_snippet": "The location is convenient and close to shopping areas, though the place gets busy at night, so arriving early is recommended to grab a spot.",
+      "confidence": "verified",
+      "notes": "Corroborated by the 2010 Star-Advertiser ('may fill to capacity') and a TripAdvisor-sourced statement that seats are hard to get during 5-8 pm happy hour. No source describes crowd levels or wait times specifically at 1-2 am, or typical waits for a room. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "During happy hour (5:00 PM to 8:00 PM) it is often difficult to get a seat.",
+      "category": "crowds",
+      "source_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d5835416-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Cafe Duck Butt - All You SHOULD Know Before Going 2026 (with Reviews)",
+      "source_date": "2026",
+      "verbatim_snippet": "It has a well-appointed interior despite the outside of the building being very plain. During happy hour from 5:00 PM to 8:00 PM, it is often difficult to get a seat.",
+      "confidence": "single-source",
+      "notes": "Reviewer observation. ATTRIBUTION UNCERTAIN: the search summary for the Kaka'ako query did not name the page; TripAdvisor pages dominated that result set. The 5-8 pm happy-hour window itself is corroborated by the official Weebly site. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "Happy hour runs 5pm-8pm.",
+      "category": "hours",
+      "source_url": "http://cafeduckbutt.weebly.com/about-the-duck.html",
+      "source_title": "About the Duck - Cafe Duck Butt",
+      "source_date": "",
+      "verbatim_snippet": "The hours of operation are 5pm-2am daily, with happy hours from 5pm-8pm, and the contact number is 1-808-593-1880.",
+      "confidence": "verified",
+      "notes": "Official (Weebly) site; corroborated by the TripAdvisor-sourced 'happy hour from 5:00 PM to 8:00 PM'. A totalhappyhour.com listing also exists (title: 'Join the Happy Hour at Cafe Duck Butt in Honolulu, HI 96814') but its details were not returned. Whether happy-hour pricing applies inside karaoke rooms is not stated. Age of the Weebly page unknown. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "Operating hours are 5pm to 2am.",
+      "category": "hours",
+      "source_url": "http://cafeduckbutt.weebly.com/about-the-duck.html",
+      "source_title": "About the Duck - Cafe Duck Butt",
+      "source_date": "",
+      "verbatim_snippet": "The hours of operation are 5pm-2am daily, with happy hours from 5pm-8pm, and the contact number is 1-808-593-1880.",
+      "confidence": "verified",
+      "notes": "Also stated by Yelp ('open Mon-Sun from 5:00 pm - 2:00 am') and hawaiitravelspot.com ('open from 5:00 pm to 2:00 am'). LAST CALL time is not stated by any source; closing is listed as 2am. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "Open every day of the week (Mon-Sun / 'daily').",
+      "category": "hours",
+      "source_url": "https://www.yelp.com/biz/caf%C3%A9-duck-butt-honolulu-2",
+      "source_title": "CAFÉ DUCK BUTT - Updated September 2026 - 1145 Photos & 616 Reviews - 901 Kawaiahao St, Honolulu, Hawaii - Karaoke - Restaurant Reviews - Phone Number - Menu - Yelp",
+      "source_date": "2026-09",
+      "verbatim_snippet": "The restaurant is located at 901 Kawaiahao St, Honolulu, HI 96814 and is open Mon-Sun from 5:00 pm - 2:00 am. You can reach them at (808) 593-1880.",
+      "confidence": "conflicting",
+      "notes": "CONFLICT: Yelp and the official Weebly site ('5pm-2am daily') say seven days, but a TripAdvisor-sourced statement says 'Monday through Saturday' (recorded as a separate fact). Confirm Sunday hours with the owner. Attribution of the 'Mon-Sun' sentence to Yelp is inferred from Yelp's hours format. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "Open Monday through Saturday, 5:00 PM to 2:00 AM (implying closed Sunday).",
+      "category": "hours",
+      "source_url": "https://www.tripadvisor.com/Attraction_Review-g60982-d5835416-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Cafe Duck Butt - All You SHOULD Know Before Going 2026 (with Reviews)",
+      "source_date": "2026",
+      "verbatim_snippet": "Café Duck Butt is located at 901 Kawaiahao St, Honolulu, HI 96814, and is open Monday through Saturday from 5:00 PM to 2:00 AM. It's a bar in Kaka'ako.",
+      "confidence": "conflicting",
+      "notes": "CONFLICT with Yelp ('Mon-Sun') and the official site ('daily'). The same 'Monday through Saturday' wording appeared in two separate search summaries (Kaka'ako query and pool-table query). ATTRIBUTION UNCERTAIN: could be TripAdvisor's hours block or Apple Maps. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "The venue can fill to capacity with karaoke-room groups and tables of locals (2010 report).",
+      "category": "crowds",
+      "source_url": "https://www.staradvertiser.com/2010/09/17/play/pau-hana-patrol/do-the-duck/",
+      "source_title": "Do the duck",
+      "source_date": "2010-09-17",
+      "verbatim_snippet": "Cafe Duck Butt is described as a karaoke joint located in Honolulu. The establishment may fill to capacity with karaoke-room revelers and tables full of in-the-know locals who have the good grinds and reasonable drink prices.",
+      "confidence": "single-source",
+      "notes": "Honolulu Star-Advertiser 'Pau Hana Patrol' column dated 2010-09-17 (16 years old, from the year the current owners took over). Mentions 'reasonable drink prices' but gives no room minimum or per-song price. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "Parking options listed: parking validation, street parking, and valet service.",
+      "category": "parking",
+      "source_url": "https://www.yelp.com/biz/caf%C3%A9-duck-butt-honolulu-2",
+      "source_title": "CAFÉ DUCK BUTT - Updated September 2026 - 1145 Photos & 616 Reviews - 901 Kawaiahao St, Honolulu, Hawaii - Karaoke - Restaurant Reviews - Phone Number - Menu - Yelp",
+      "source_date": "2026-09",
+      "verbatim_snippet": "The venue offers parking validation and street parking, and there's valet service available.",
+      "confidence": "single-source",
+      "notes": "Wording matches Yelp's amenity list (Parking: Street / Validated / Valet). ATTRIBUTION UNCERTAIN: the search summary did not name the page. Which lot is validated, validation terms, valet hours/cost, and whether valet still operates are not stated. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "Reviewers say parking is extremely difficult to find, but free valet service is available.",
+      "category": "parking",
+      "source_url": "https://www.tripadvisor.com/ShowUserReviews-g60982-d5835416-r404298920-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "Good place for drinks, food, social. - Review of Cafe Duck Butt, Honolulu, HI - Tripadvisor",
+      "source_date": "",
+      "verbatim_snippet": "However, reviewers have noted that parking is extremely difficult to find. That said, free valet service is available to help with the parking challenge.",
+      "confidence": "single-source",
+      "notes": "Reviewer-reported; 'free valet' may be stale (this review appears to be several years old). ATTRIBUTION UNCERTAIN: this TripAdvisor review was the top non-map result for the parking query but the summary did not name it. Confirm current valet status and cost with the owner. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "Yelp attributes: casual, loud, good for groups, dogs allowed, happy hour specials.",
+      "category": "policies",
+      "source_url": "https://www.yelp.com/biz/caf%C3%A9-duck-butt-honolulu-2",
+      "source_title": "CAFÉ DUCK BUTT - Updated September 2026 - 1145 Photos & 616 Reviews - 901 Kawaiahao St, Honolulu, Hawaii - Karaoke - Restaurant Reviews - Phone Number - Menu - Yelp",
+      "source_date": "2026-09",
+      "verbatim_snippet": "The vibe is described as casual, loud, and good for groups, with dogs allowed and happy hour specials.",
+      "confidence": "single-source",
+      "notes": "Matches Yelp amenity labels ('Good for Groups', 'Dogs Allowed', 'Happy Hour Specials', noise level 'Loud'); these are often owner- or user-toggled and should be confirmed (especially whether dogs are allowed, and in rooms). Attribution to Yelp inferred from the label wording. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "Café Duck Butt appears in Yelp's search results for 'Pool Table near Kaka'ako'.",
+      "category": "amenities",
+      "source_url": "https://www.yelp.com/search?find_desc=Pool+Table&find_loc=Kaka%27ako%2C+Honolulu%2C+HI",
+      "source_title": "TOP 10 BEST Pool Table near Kaka'ako, Honolulu, HI - Updated 2026 - Yelp",
+      "source_date": "2026",
+      "verbatim_snippet": "Regarding pool tables, Café Duck Butt appears in listings of places with pool tables in Honolulu, suggesting that it does have pool table facilities available.",
+      "confidence": "unverified",
+      "notes": "Yelp search listings match on review text and categories, so inclusion does NOT confirm a pool table on site. No source explicitly states the venue has pool tables. Ask the owner."
+    },
+    {
+      "claim": "A TripAdvisor review is titled 'K-Pop, Karaoke and Korean Food', indicating K-pop is part of the experience.",
+      "category": "amenities",
+      "source_url": "https://www.tripadvisor.com/ShowUserReviews-g60982-d5835416-r723875643-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "K-Pop, Karaoke and Korean Food....What Could Go Wrong?? - Review of Cafe Duck Butt, Honolulu, HI - Tripadvisor",
+      "source_date": "",
+      "verbatim_snippet": "K-Pop, Karaoke and Korean Food....What Could Go Wrong?? - Review of Cafe Duck Butt, Honolulu, HI - Tripadvisor",
+      "confidence": "unverified",
+      "notes": "Only the review title was returned; the body was not accessible. It does not state whether K-pop music videos play on screens in the bar or in the rooms. Ask the owner."
+    },
+    {
+      "claim": "Phone number is (808) 593-1880.",
+      "category": "contact",
+      "source_url": "http://cafeduckbutt.weebly.com/about-the-duck.html",
+      "source_title": "About the Duck - Cafe Duck Butt",
+      "source_date": "",
+      "verbatim_snippet": "The hours of operation are 5pm-2am daily, with happy hours from 5pm-8pm, and the contact number is 1-808-593-1880.",
+      "confidence": "verified",
+      "notes": "Same number on Giftly ('(808) 593-1880') and Yelp. Relevant to booking because no online reservation channel surfaced in any result; phone appears to be the only reservation path (unconfirmed). Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "Yelp categorizes the business under Karaoke, Bars, and Korean, and shows 616 reviews and 1,145 photos as of September 2026.",
+      "category": "listings",
+      "source_url": "https://www.yelp.com/biz/caf%C3%A9-duck-butt-honolulu-2",
+      "source_title": "CAFÉ DUCK BUTT - Updated September 2026 - 1145 Photos & 616 Reviews - 901 Kawaiahao St, Honolulu, Hawaii - Karaoke - Restaurant Reviews - Phone Number - Menu - Yelp",
+      "source_date": "2026-09",
+      "verbatim_snippet": "CAFÉ DUCK BUTT - Updated September 2026 - 1145 Photos & 616 Reviews - 901 Kawaiahao St, Honolulu, Hawaii - Karaoke - Restaurant Reviews - Phone Number - Menu - Yelp",
+      "confidence": "single-source",
+      "notes": "Category list per search summary: 'categorized as a Karaoke, Bars, and Korean restaurant'. Indexed Yelp titles dated Oct 2025, Dec 2025, Feb 2026 and Sep 2026 all show 616 reviews (photos 1142 -> 1145)."
+    },
+    {
+      "claim": "Gift cards for Café Duck Butt are sold through Giftly in amounts from $5 to $1,000.",
+      "category": "amenities",
+      "source_url": "https://www.giftly.com/gift-card/caf%C3%A9-duck-butt-honolulu-2",
+      "source_title": "Café Duck Butt Giftly - Email, Text or Print, 901 Kawaiahao St, Honolulu, HI",
+      "source_date": "",
+      "verbatim_snippet": "Café Duck Butt offers gift cards that can be purchased through Giftly, with amounts ranging from $5 to $1,000.",
+      "confidence": "single-source",
+      "notes": "Giftly is a third-party service that issues its own gift cards (redeemable as bank/PayPal/prepaid-card funds), not a merchant-issued card; this does not establish that the venue sells its own gift cards. Amounts unconfirmed by owner. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "A Giftly listing exists titled 'CMYE Quacky Hour @ Cafe Duck Butt' (shown at 902 Kawaiahao St).",
+      "category": "events",
+      "source_url": "https://www.giftly.com/gift-card/cmye-quacky-hour-cafe-duck-butt-honolulu",
+      "source_title": "CMYE Quacky Hour @ Cafe Duck Butt Gift & Greeting Cards - Email, Text or Print - 902 Kawaiahao St, Honolulu, HI",
+      "source_date": "",
+      "verbatim_snippet": "CMYE Quacky Hour @ Cafe Duck Butt Gift & Greeting Cards - Email, Text or Print - 902 Kawaiahao St, Honolulu, HI",
+      "confidence": "unverified",
+      "notes": "Title only; hints at a recurring 'Quacky Hour' event hosted at the venue ('CMYE' unidentified). Address shown as 902, not 901, Kawaiahao St. Ask the owner whether this is a current event."
+    },
+    {
+      "claim": "The venue is located near Blaisdell Arena and Concert Hall.",
+      "category": "location",
+      "source_url": "https://www.giftly.com/gift-card/caf%C3%A9-duck-butt-honolulu-2",
+      "source_title": "Café Duck Butt Giftly - Email, Text or Print, 901 Kawaiahao St, Honolulu, HI",
+      "source_date": "",
+      "verbatim_snippet": "Café Duck Butt is located near Blaisdell Arena and Concert Hall and serves Korean food, soju drinks, happy hour deals, and private singing rooms. The venue is situated at 901 Kawaiahao St, Honolulu, HI with phone number (808) 593-1880.",
+      "confidence": "single-source",
+      "notes": "Relevant to parking: Blaisdell event nights may affect street parking availability. Third-party blurb. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "The official site describes the location as 'off Ward'.",
+      "category": "location",
+      "source_url": "http://cafeduckbutt.weebly.com/about-the-duck.html",
+      "source_title": "About the Duck - Cafe Duck Butt",
+      "source_date": "",
+      "verbatim_snippet": "Cafe Duck Butt was founded in 2010 and is located off Ward at 901 Kawaiahao St. The establishment offers quality food, drinks, and fun with a Korean flair.",
+      "confidence": "single-source",
+      "notes": "Weebly site appears to be the owner's own page (age unknown). No parking instructions were returned from it. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "Stated mission includes hosting 'the most enjoyable Korean karaoke experience'.",
+      "category": "rooms",
+      "source_url": "http://cafeduckbutt.weebly.com/about-the-duck.html",
+      "source_title": "About the Duck - Cafe Duck Butt",
+      "source_date": "",
+      "verbatim_snippet": "The venue's mission is to \"share our culture, to offer a unique experience for each customer and to host the most enjoyable Korean karaoke experience by offering the best service, food, and beverages.\"",
+      "confidence": "single-source",
+      "notes": "Owner-authored positioning statement on the Weebly site; useful for voice/positioning, not a policy. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "Karaoke rooms let guests sing while enjoying food (aggregator description).",
+      "category": "rooms",
+      "source_url": "https://cafe-duck-butt.wheree.com/",
+      "source_title": "Cafe Duck Butt - Reviews, Photos & Phone Number - Updated May 2026 - Karaoke Bars in Honolulu City, Honolulu County - Wheree",
+      "source_date": "2026-05",
+      "verbatim_snippet": "The venue features a cozy ambiance enhanced by intimate booths and inviting decor. Karaoke rooms provide a unique twist, allowing guests to immerse themselves in music while enjoying food.",
+      "confidence": "single-source",
+      "notes": "Implies food service in the rooms but does not state it explicitly; confirm with owner whether full food/drink service is available inside rooms. Wheree is an auto-generated aggregator. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "Staff frequently checked on guests and managed drink orders despite busy periods.",
+      "category": "service",
+      "source_url": "https://cafe-duck-butt.wheree.com/",
+      "source_title": "Cafe Duck Butt - Reviews, Photos & Phone Number - Updated May 2026 - Karaoke Bars in Honolulu City, Honolulu County - Wheree",
+      "source_date": "2026-05",
+      "verbatim_snippet": "The attentive hospitality from staff receives consistent commendation; they frequently checked on guests and managed drink orders despite busy periods.",
+      "confidence": "single-source",
+      "notes": "Wheree's auto-summary of third-party reviews; secondhand. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "Some customers report bartenders sometimes forget or miss requests during peak hours.",
+      "category": "service",
+      "source_url": "https://cafe-duck-butt.wheree.com/",
+      "source_title": "Cafe Duck Butt - Reviews, Photos & Phone Number - Updated May 2026 - Karaoke Bars in Honolulu City, Honolulu County - Wheree",
+      "source_date": "2026-05",
+      "verbatim_snippet": "Some customers mention occasional lapses in order accuracy, as bartenders sometimes forget or miss requests during peak hours.",
+      "confidence": "single-source",
+      "notes": "Wheree's auto-summary of third-party reviews; secondhand. Supports that peak periods are busy. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "Described as working well for birthdays, bachelorette gatherings, after-work get-togethers, or spontaneous evenings with friends.",
+      "category": "booking",
+      "source_url": "https://www.giftly.com/gift-card/caf%C3%A9-duck-butt-honolulu-2",
+      "source_title": "Café Duck Butt Giftly - Email, Text or Print, 901 Kawaiahao St, Honolulu, HI",
+      "source_date": "",
+      "verbatim_snippet": "Café Duck Butt is a casual Korean karaoke bar that works well for birthdays, bachelorette gatherings, after-work get-togethers, or spontaneous evenings with friends.",
+      "confidence": "single-source",
+      "notes": "ATTRIBUTION UNCERTAIN: marketing-style sentence from a search summary; phrasing matches Giftly's listing blurb style but the summary did not name the page. No group-size limits, buyout terms, or outside-cake/decoration policies were found. Page could not be fetched in this environment (proxy blocked); snippet is the search engine's summary of this result, not text copied from the page itself."
+    },
+    {
+      "claim": "TripAdvisor carries two separate listings: an attraction/nightlife listing (d5835416) and a restaurant listing (d27921500).",
+      "category": "listings",
+      "source_url": "https://www.tripadvisor.com/Restaurant_Review-g60982-d27921500-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html",
+      "source_title": "CAFE DUCK BUTT, Honolulu - Restaurant Reviews & Phone Number - Tripadvisor",
+      "source_date": "",
+      "verbatim_snippet": "CAFE DUCK BUTT, Honolulu - Restaurant Reviews & Phone Number - Tripadvisor",
+      "confidence": "single-source",
+      "notes": "The attraction listing is https://www.tripadvisor.com/Attraction_Review-g60982-d5835416-Reviews-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html ('All You SHOULD Know Before Going 2026'). Duplicate listings split reviews; worth noting for listing hygiene. Both URLs appeared directly in search results."
+    },
+    {
+      "claim": "A NetWaiter page exists for the business (cafduckbutt.netwaiter.com).",
+      "category": "amenities",
+      "source_url": "https://cafduckbutt.netwaiter.com/",
+      "source_title": "Cafe Duck Butt - Honolulu, HI",
+      "source_date": "",
+      "verbatim_snippet": "Cafe Duck Butt - Honolulu, HI",
+      "confidence": "unverified",
+      "notes": "NetWaiter is an online-ordering platform; the page's existence hints at online ordering/takeout, but the result returned only the title and the page could not be fetched. Ask the owner whether online ordering is live."
+    }
+  ],
+  "dead_ends": [
+    "Exact number of private karaoke rooms: sources only say 'several'; no count found.",
+    "Room sizes / capacity per room (min-max guests): not stated anywhere.",
+    "$150 food/drink minimum for rooms: NOT found in any web source; the only pricing found is '$2 per song' (one 2023 blog). Ask owner for current per-song price, any hourly/room fee, and any minimum spend.",
+    "Whether per-song pricing is still $2 in 2026, and whether it applies in rooms only or also at the open bar area.",
+    "Reservation method (phone only vs. online/text/Instagram DM), deposit, lead time, time-slot length, and cancellation/no-show policy: not found. No online booking link surfaced.",
+    "Whether reservations are REQUIRED on Fri/Sat or merely recommended (one old TripAdvisor review says 'highly needed').",
+    "Walk-in rules for rooms (waitlist, first-come, time limits when others are waiting): not found.",
+    "Typical wait times for a room on weekends: not found.",
+    "Crowd levels at 1-2am specifically: not found (sources only say it gets busy at night and during 5-8pm happy hour).",
+    "Last call time: not stated (closing listed as 2am).",
+    "Days open: conflicting (official site/Yelp say daily; a TripAdvisor-sourced line says Mon-Sat). Confirm Sunday.",
+    "Pool tables: only an unverified Yelp search-listing hint; not confirmed.",
+    "TVs / sports broadcasts (UFC, NFL, etc.) in the bar or rooms: nothing found.",
+    "K-pop music videos on screens: only a TripAdvisor review title mentions 'K-Pop'; not confirmed.",
+    "Parking specifics: which lot is validated, validation terms, valet hours/cost, and whether valet still operates (one old review says 'free valet').",
+    "Payment types accepted (credit cards, Apple Pay, cash-only rules, split checks, auto-gratuity/service charge for rooms or large parties): nothing found.",
+    "Age / ID policy (21+ only? minors allowed in rooms or dining area before a certain hour? ID checks at door): nothing found.",
+    "Smoking / vaping policy (indoor, lanai, outside area): nothing found.",
+    "Dress code: nothing found.",
+    "Whether food and drink can be ordered inside the rooms (one aggregator implies it) and whether happy-hour pricing applies in rooms.",
+    "Maximum group size, private buyout availability, and outside food/cake/decoration policy for birthdays: not found.",
+    "Dogs allowed: Yelp amenity says yes; confirm with owner (and whether dogs are allowed in rooms).",
+    "Karaoke system brand and whether languages beyond English/Japanese/Korean (e.g., Tagalog, Chinese) are available: not found.",
+    "Whether the open bar area has its own karaoke/open mic or is seating only: not stated.",
+    "Online ordering / takeout: a NetWaiter page exists but could not be verified as live.",
+    "'CMYE Quacky Hour @ Cafe Duck Butt' Giftly listing: unidentified event; confirm whether current."
+  ]
+}
