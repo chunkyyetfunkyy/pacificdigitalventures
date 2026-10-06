@@ -1,8 +1,8 @@
 {
-  "site_id": "",
+  "site_id": "d732d395-c724-458a-b2c1-d8717d045553",
   "site_name": "cafe-duck-butt-spec",
-  "url": "",
-  "deploy_url": "",
-  "deploy_id": "",
-  "deployed_at": ""
+  "url": "https://cafe-duck-butt-spec.netlify.app",
+  "deploy_url": "https://6ac45c62eeaac373228c040b--cafe-duck-butt-spec.netlify.app",
+  "deploy_id": "6ac45c62eeaac373228c040b",
+  "deployed_at": "2026-10-06T02:26:58.390Z"
 }

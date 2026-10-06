@@ -8,15 +8,12 @@
  */
 const QUOTES = [
   // [fact id, quote text exactly as on the site, source page]
-  ['F196', 'If the name makes you smile, so will the soju!', 'https://www.tripadvisor.com/ShowUserReviews-g60982-d4634698-r235106513-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html'],
-  ['F204', 'tastes just like watermelon juice', 'https://www.tripadvisor.com/ShowUserReviews-g60982-d4634698-r235106513-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html'],
   ['F197', 'Awesomeness, silliness, just plain fun', 'https://www.tripadvisor.com/ShowUserReviews-g60982-d5835416-r419919617-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html'],
   ['F198', 'slice of Korea in Honolulu', 'https://www.tripadvisor.com/ShowUserReviews-g60982-d5835416-r419919617-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html'],
   ['F200', 'K-Pop, Karaoke and Korean Food', 'https://www.tripadvisor.com/ShowUserReviews-g60982-d5835416-r723875643-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html'],
-  ['F201', 'Great Food & Happy Hour, Locals Spot', 'https://www.tripadvisor.com/ShowUserReviews-g60982-d4634698-r312898237-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html'],
-  ['F207', 'the portions are enormous', 'https://www.tripadvisor.com/ShowUserReviews-g60982-d4634698-r217629824-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html'],
-  ['F209', 'Reminds me of LA', 'https://www.yelp.com/biz/caf%C3%A9-duck-butt-honolulu-2'],
-  ['F210', 'I now dream of Watermelon soju', 'https://www.yelp.com/biz/caf%C3%A9-duck-butt-honolulu-2'],
+  ['F207', 'the portions are enormous', 'https://www.tripadvisor.com/ShowUserReviews-g60982-d5835416-r221873180-Cafe_Duck_Butt-Honolulu_Oahu_Hawaii.html'],
+  ['F209', 'Reminds me of LA', 'https://www.yelp.com/biz/caf%C3%A9-duck-butt-honolulu-2?q=Reminds+me+of+LA'],
+  ['F210', 'I now dream of Watermelon soju', 'https://www.yelp.com/biz/caf%C3%A9-duck-butt-honolulu-2?q=dream+of+Watermelon+soju'],
   ['F034', 'complete unless you finish at popular local hangout', 'https://www.hawaiimagazine.com/an-insiders-guide-to-16-of-honolulus-bars-clubs-and-brewpubs/'],
   ['F029', 'a strange bird', 'https://www.staradvertiser.com/2010/09/17/play/pau-hana-patrol/do-the-duck/'],
 ];

@@ -2,6 +2,8 @@
 
 ## 1. Live URL
 
+**Deployed 5 Oct 2026: https://cafe-duck-butt-spec.netlify.app** (results in section 7).
+
 Not deployed from the build environment: Netlify's API is blocked there and the CLI session lives on your Mac.
 One command deploys it (15 credits, once):
 
@@ -102,3 +104,64 @@ New checks added after the passes, all green on the final build:
 | cafeduckbutt.com redirect | the domain was unreachable from the container | your 4 Oct observation is the only evidence; re-check on your phone before you walk in |
 | Review quotes | read from search snippets, not the live pages | open the TripAdvisor and Yelp pages on your phone and confirm each quote on the page still exists |
 | Still website-less | only a 2013-era Weebly page and listings surfaced | a quick search the morning you go |
+
+### Results — run on Kevin's Mac, 5 Oct 2026
+
+**Live URL:** https://cafe-duck-butt-spec.netlify.app (Netlify site `cafe-duck-butt-spec`,
+id `d732d395-c724-458a-b2c1-d8717d045553`, team Pacific Digital Ventures LLC). **One production deploy.**
+
+- **Deploy hiccup (no credits lost):** the first run created the site, but the deploy step failed with
+  `Project not found. Please rerun "netlify link"`. It fired ~1 s after site creation, before Netlify's config
+  API returned the new site, so the CLI fell back to a by-name lookup that can't match an id. That attempt
+  created 0 deploys. Retried the deploy step once (`--no-build`); `scripts/deploy.sh` now waits until the new
+  site is visible before deploying.
+- **Live verify** (`node tools/verify.js https://cafe-duck-butt-spec.netlify.app`): **23/24 PASS**, including
+  `X-Robots-Tag: noindex, nofollow` and the robots meta tag. **1 FAIL:** `scroll: average frame time under 18ms
+  (headless, indicative)` — avg 437 ms, caused by one 8.8 s stall (20 of 21 frames were fine). Four runs of
+  identical code on this Mac ranged from 19 ms to 437 ms with a load average of ~43 on 8 cores, so the number
+  reflects the machine, not the page. Judge smoothness on a real iPhone.
+- **Netlify badge:** new free-plan sites are created with `built_with_badge_enabled: true`, which injects a
+  34 KB script and a "Powered by Netlify" pill that floats bottom-right over the content. It is not part of
+  the build. Switch it off before the pitch (site setting; awaiting Kevin's OK).
+
+**cafeduckbutt.com** (HTTP headers only; the target was never loaded):
+
+| URL | Status | Location |
+|---|---|---|
+| http://cafeduckbutt.com/ | 301 | https://www.dbltoto.online/ |
+| https://cafeduckbutt.com/ | 301 | https://www.dbltoto.online/ |
+| https://www.cafeduckbutt.com/ | 301 | https://www.dbltoto.online/ |
+
+WHOIS (4 Oct): registered at GoDaddy behind Domains By Proxy, created 2020-04-08, paid through 2027-04-08.
+Ask the owners whether they (or a web person) registered it in 2020 — if so it may be recoverable.
+
+**Review quotes** (11 checked; 8 remain on the page):
+
+| ID | Quote | Result |
+|---|---|---|
+| F197 | Awesomeness, silliness, just plain fun | FOUND (script) |
+| F198 | slice of Korea in Honolulu | FOUND (script) |
+| F200 | K-Pop, Karaoke and Korean Food | FOUND (script) |
+| F034 | complete unless you finish at popular local hangout | FOUND (script, Hawaii Magazine) |
+| F029 | a strange bird | FOUND (script, Star-Advertiser) |
+| F207 | the portions are enormous | FOUND in browser — review moved: TripAdvisor r221873180 "Fantastic place" (Tim K, Aug 2014), listing d5835416. Checker URL updated. |
+| F209 | Reminds me of LA | FOUND in browser — Yelp, Erica M., 26 Oct 2021 |
+| F210 | I now dream of Watermelon soju | FOUND in browser — Yelp, Luckyginger K., 18 Jun 2015 |
+| F196 | If the name makes you smile, so will the soju! | **MISSING — removed.** Review r235106513 returns *410 Gone* |
+| F204 | tastes just like watermelon juice .. until it hits you | **MISSING — removed.** Same deleted review |
+| F201 | Great Food & Happy Hour, Locals Spot ! | **MISSING — removed.** Review r312898237 returns *410 Gone* |
+
+TripAdvisor deleted the legacy listing `d4634698` entirely; its review URLs now redirect to generic Honolulu
+pages, which is why the script first reported them as MISSING. The surviving listing `d5835416` (10 reviews)
+was read in full in a browser; none of the three appear there. They were removed **before** the deploy, so the
+live site already excludes them and no redeploy is needed. After removal: `verify.js dist` all substantive
+checks PASS (same scroll caveat), `gates.js` all PASS. Stickers re-lettered a–d so their tilts still alternate.
+`tools/check-claims.js` now lists the 8 on-page quotes (Yelp entries deep-link via `?q=`), and
+`research/FACTS.md` notes the removals and F117/F207's new source.
+
+Small notes:
+- F209 on the page lightly tidies the reviewer ("with out" → "without", ".." → "…", comma after "legit").
+  Editorially fine; set it verbatim if you want zero edits.
+- Their Yelp page is **Unclaimed** and shows **3.7★** (616 reviews). The site shows the count, not the
+  rating — keep it that way. Claiming the Yelp page for them is an easy add-on.
+- Still website-less: re-verified 4 Oct (searches + domain checks).

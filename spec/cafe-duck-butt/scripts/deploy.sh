@@ -37,6 +37,13 @@ if [[ -z "$SITE_ID" ]]; then
   SITE_NAME="$NAME"
   node -e 'const fs=require("fs");let s={};try{s=JSON.parse(fs.readFileSync(process.argv[2],"utf8"))}catch(e){};s.site_id=process.argv[1];s.site_name=process.argv[3];fs.writeFileSync(process.argv[2],JSON.stringify(s,null,2)+"\n")' "$SITE_ID" "$STATE" "$SITE_NAME"
   echo "Recorded site id $SITE_ID ($SITE_NAME) in $STATE"
+  # A brand-new site is not instantly visible to the config lookup `netlify deploy` runs first; deploying in the
+  # same second fails with 'Project not found. Please rerun "netlify link"' (the CLI falls back to a by-name
+  # lookup). Wait until the API returns the site's url before deploying.
+  for _ in $(seq 1 15); do
+    "$NETLIFY" api getSite --data "{\"site_id\":\"$SITE_ID\"}" 2>/dev/null | grep -q '"url"' && break
+    sleep 2
+  done
 fi
 
 NOBUILD=()
