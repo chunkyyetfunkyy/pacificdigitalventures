@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keepworthy Support — Pacific Digital Ventures</title>
+  <meta name="description" content="Help with Keepworthy, the photo cleanup app for iPhone: how deleting works, getting photos back, the duplicate finder, the widget, and Keepworthy Pro.">
+  <meta name="theme-color" content="#0b1f33">
+  <link rel="canonical" href="https://pacificdigitalventures.org/keepworthy/support/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <script>
+    // Keep the theme the visitor picked on the main site.
+    (function () {
+      try {
+        var t = localStorage.getItem('pdv-theme');
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+  <style>
+    /* Tokens match pacificdigitalventures.org. */
+    :root {
+      --bg: #f6f8fb;
+      --bg-elev: #ffffff;
+      --bg-soft: #eef2f7;
+      --ink: #0b1f33;
+      --ink-2: #33475b;
+      --ink-3: #6b7d90;
+      --line: #dfe6ee;
+      --teal: #0fb5a5;
+      --teal-2: #0a8f83;
+      --teal-soft: #d7f5f1;
+      --radius: 18px;
+      --font: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+      --gutter: clamp(16px, 4vw, 40px);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #0a1626;
+        --bg-elev: #0f1f33;
+        --bg-soft: #0d1b2d;
+        --ink: #e9f1fa;
+        --ink-2: #c1cfdd;
+        --ink-3: #8598ac;
+        --line: #1e3048;
+        --teal-2: #3fd3c3;
+        --teal-soft: #0f3a3a;
+      }
+    }
+    :root[data-theme="dark"] {
+      --bg: #0a1626;
+      --bg-elev: #0f1f33;
+      --bg-soft: #0d1b2d;
+      --ink: #e9f1fa;
+      --ink-2: #c1cfdd;
+      --ink-3: #8598ac;
+      --line: #1e3048;
+      --teal-2: #3fd3c3;
+      --teal-soft: #0f3a3a;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--teal-2); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    a:hover { text-decoration-thickness: 2px; }
+    ::selection { background: var(--teal); color: #fff; }
+
+    .wrap { max-width: 760px; margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
+
+    .top { border-bottom: 1px solid var(--line); background: var(--bg-elev); }
+    .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 14px; padding-bottom: 14px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; letter-spacing: -0.01em; font-size: 16px; color: var(--ink); text-decoration: none; }
+    .brand .mark { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: linear-gradient(135deg, var(--teal) 0%, #1c6fd1 100%); flex-shrink: 0; }
+    .brand .mark svg { width: 21px; height: 21px; }
+    .top .back { font-weight: 600; font-size: 14px; color: var(--ink-2); text-decoration: none; white-space: nowrap; }
+    .top .back:hover { color: var(--ink); }
+
+    main { padding: clamp(40px, 7vw, 72px) 0 clamp(56px, 8vw, 96px); }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--teal-2); font-weight: 500;
+    }
+    .eyebrow::before { content: ''; width: 22px; height: 2px; background: var(--teal); border-radius: 2px; }
+    h1 { font-size: clamp(34px, 6vw, 48px); line-height: 1.08; letter-spacing: -0.02em; font-weight: 800; margin-top: 14px; }
+    .dates { color: var(--ink-3); font-size: 15px; margin-top: 12px; }
+
+    .summary {
+      margin-top: 32px; padding: 22px 24px; border-radius: var(--radius);
+      background: var(--teal-soft); border: 1px solid color-mix(in srgb, var(--teal) 30%, transparent);
+    }
+    .summary h2 { margin: 0 0 8px; font-size: 18px; border: 0; padding: 0; }
+    .summary p { color: var(--ink); }
+
+    h2 {
+      font-size: clamp(21px, 3vw, 25px); line-height: 1.25; letter-spacing: -0.015em; font-weight: 800;
+      margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line);
+    }
+    h3 { font-size: 17px; font-weight: 700; margin-top: 22px; }
+    p, ul { margin-top: 12px; color: var(--ink-2); }
+    ul { padding-left: 22px; }
+    li { margin-top: 8px; }
+    li::marker { color: var(--teal); }
+    strong { color: var(--ink); font-weight: 700; }
+
+    .contact { margin-top: 16px; padding: 20px 22px; border-radius: var(--radius); background: var(--bg-elev); border: 1px solid var(--line); }
+    .contact p { margin-top: 2px; }
+    .contact p:first-child { margin-top: 0; }
+
+    footer { border-top: 1px solid var(--line); color: var(--ink-3); font-size: 13.5px; }
+    footer .wrap { padding-top: 22px; padding-bottom: 28px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+    footer a { color: inherit; }
+
+    /* Questions: one card each, the answer folded under the question. */
+    .faq { margin-top: 16px; display: grid; gap: 10px; }
+    details { background: var(--bg-elev); border: 1px solid var(--line); border-radius: 14px; padding: 0 18px; }
+    summary {
+      list-style: none; cursor: pointer; padding: 15px 28px 15px 0; position: relative;
+      font-weight: 700; color: var(--ink); font-size: 16px; line-height: 1.4;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: ''; position: absolute; right: 2px; top: 50%; width: 8px; height: 8px; margin-top: -6px;
+      border-right: 2px solid var(--ink-3); border-bottom: 2px solid var(--ink-3); transform: rotate(45deg);
+      transition: transform .2s;
+    }
+    details[open] summary::after { transform: rotate(-135deg); margin-top: -2px; }
+    summary:focus-visible { outline: 2px solid var(--teal); outline-offset: 4px; border-radius: 6px; }
+    details > :not(summary) { margin-top: 0; padding-bottom: 14px; }
+    details > p + p, details > p + ul, details > ul + p { margin-top: -4px; }
+    .lead { margin-top: 16px; font-size: 18px; color: var(--ink-2); }
+    .contact .btn {
+      display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; padding: 11px 18px; border-radius: 999px;
+      background: var(--teal); color: #05231f; font-weight: 700; font-size: 15px; text-decoration: none;
+    }
+    .contact .btn:hover { background: #16c9b8; }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Pacific Digital Ventures home">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/><path d="M2 8c2-3 4-3 6 0s4 3 6 0 4-3 6 0" opacity=".55"/></svg>
+        </span>
+        <span>Pacific Digital Ventures</span>
+      </a>
+      <a class="back" href="/">Home</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <span class="eyebrow">Keepworthy for iPhone</span>
+      <h1>Keepworthy Support</h1>
+      <p class="lead">Answers to the usual questions. If yours isn’t here, email us and a person will reply.</p>
+
+      <div class="contact" style="margin-top:24px">
+        <p><strong>Contact</strong></p>
+        <p>Tell us what happened and which iPhone and iOS version you’re on. Please don’t send photos you’d rather keep private; a description is enough.</p>
+        <a class="btn" href="mailto:info@pacificdigitalventures.org?subject=Keepworthy%20support">Email support</a>
+        <p style="margin-top:10px;font-size:15px">or write to <a href="mailto:info@pacificdigitalventures.org?subject=Keepworthy%20support">info@pacificdigitalventures.org</a></p>
+      </div>
+
+      <h2>Deleting and getting photos back</h2>
+      <div class="faq">
+        <details open>
+          <summary>When does Keepworthy actually delete a photo?</summary>
+          <p>Only when you empty the bin. Swiping left puts a photo in Keepworthy’s bin, where nothing has left your library yet. Tapping <strong>Empty bin</strong> asks iOS to delete everything in it, and iOS shows its own confirmation first. Deleted photos go to the Recently Deleted album in Photos, where they stay for 30 days.</p>
+          <p>If iCloud Photos is on, deleting removes the photo from every device signed in to your iCloud account.</p>
+        </details>
+        <details>
+          <summary>I binned a photo by mistake. How do I get it back?</summary>
+          <p>If the bin hasn’t been emptied, open the bin and tap the photo to rescue it, or tap <strong>Rescue all</strong>. It goes back to unreviewed, so Keepworthy can deal it again.</p>
+          <p>If you already emptied the bin, open the Photos app and go to <strong>Albums › Recently Deleted</strong>. Select the photo and tap <strong>Recover</strong>. This works for 30 days after deleting.</p>
+        </details>
+        <details>
+          <summary>I emptied the bin. Why hasn’t my iCloud storage gone down?</summary>
+          <p>iOS keeps deleted photos in Recently Deleted for 30 days, and they still count toward your storage until then. Keepworthy shows these batches under <strong>Clearing</strong> in the bin, with the day each one lands. To free the space now, open Photos, go to <strong>Albums › Recently Deleted</strong>, and tap <strong>Delete All</strong>. That can’t be undone.</p>
+        </details>
+      </div>
+
+      <h2>Using Keepworthy</h2>
+      <div class="faq">
+        <details>
+          <summary>Keepworthy only shows some of my photos.</summary>
+          <p>You probably gave Keepworthy access to selected photos only. To let it deal from your whole library, open the Settings app, go to <strong>Keepworthy › Photos</strong> (<strong>Apps › Keepworthy › Photos</strong> on iOS 18 and later), and choose <strong>Full Access</strong>.</p>
+        </details>
+        <details>
+          <summary>Why does Keepworthy show dollar amounts for some people and not others?</summary>
+          <p>Keepworthy can’t read your iCloud plan or how much storage you use. It shows money only after you enter your plan, under <strong>Settings › Storage &amp; savings</strong> in Keepworthy. Adding your iCloud usage (shown in the Settings app under your name › iCloud) makes the numbers exact. Prices are US iCloud+ rates.</p>
+        </details>
+        <details>
+          <summary>How does the duplicate finder decide what’s a duplicate?</summary>
+          <p>It compares photos taken within two minutes of each other, on your iPhone, and groups the ones that look nearly the same. The best shot of each set is marked <strong>BEST</strong>, chosen by sharpness, exposure and open eyes, with favorites and edited photos first.</p>
+          <ul>
+            <li>Only near-identical extras are ticked for you; shots that differ a little more are shown but left to you.</li>
+            <li>Favorites and edited photos are never ticked for you.</li>
+            <li>Binning from a set only puts photos in Keepworthy’s bin, like a swipe.</li>
+            <li>The first scan of a big library takes a minute or two; later scans only check new photos.</li>
+          </ul>
+        </details>
+        <details>
+          <summary>How do I add the Home Screen widget?</summary>
+          <p>Touch and hold an empty spot on your Home Screen, tap <strong>Edit</strong>, then <strong>Add Widget</strong>, and search for Keepworthy. It comes in small and medium sizes. Open Keepworthy once afterwards so it can fill the widget with photos.</p>
+          <p>Keep and Bin on the widget are part of Keepworthy Pro. Taps made there are added to Keepworthy the next time you open it. Screenshots, favorites and photos that are mostly text are never shown on the widget.</p>
+        </details>
+        <details>
+          <summary>How do I start over?</summary>
+          <p>In Keepworthy, open <strong>Settings › Forget history</strong> and tap <strong>Forget review history</strong>. Every photo can be dealt again; your total of space cleared is kept. Photos waiting in the bin are untouched.</p>
+        </details>
+      </div>
+
+      <h2>Keepworthy Pro</h2>
+      <div class="faq">
+        <details>
+          <summary>What does Pro include, and what stays free?</summary>
+          <p>Swiping, the bin, Rewind, the details sheet and full-screen viewing are free, with no limits. Pro adds Heavy Hitters (your biggest files first), the duplicate finder’s binning beyond the first three sets, Keep and Bin on the widget, endless decks, and year and album filters.</p>
+          <p>Pro is <strong>$19.99 once</strong> (Lifetime) or <strong>$14.99 a year</strong> (Yearly), in US dollars; the App Store shows your local price.</p>
+        </details>
+        <details>
+          <summary>I bought Pro, but Keepworthy doesn’t show it.</summary>
+          <p>Make sure you’re signed in with the same Apple Account you bought it with. Then, in Keepworthy, open <strong>Settings › Pro</strong> and tap <strong>Restore purchases</strong>, or tap <strong>Restore</strong> at the bottom of the Pro screen.</p>
+        </details>
+        <details>
+          <summary>How do I cancel Yearly, or ask for a refund?</summary>
+          <p>Apple handles billing, so both happen with Apple. To cancel, open the Settings app, tap your name, then <strong>Subscriptions › Keepworthy</strong>. To ask for a refund, go to <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>. Lifetime is a single purchase with nothing to cancel.</p>
+        </details>
+      </div>
+
+      <h2>Privacy</h2>
+      <p>Keepworthy has no account, server or analytics, and your photos stay on your iPhone. The <a href="/keepworthy/privacy/">Keepworthy Privacy Policy</a> has the details.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>&copy; 2026 Pacific Digital Ventures LLC. Honolulu, Hawaiʻi.</span>
+      <span>iPhone, iCloud and App Store are trademarks of Apple Inc.</span>
+    </div>
+  </footer>
+</body>
+</html>
