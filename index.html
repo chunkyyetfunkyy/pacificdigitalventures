@@ -330,6 +330,16 @@
     .span-7 { grid-column: span 7; } .span-5 { grid-column: span 5; } .span-6 { grid-column: span 6; } .span-4 { grid-column: span 4; } .span-12 { grid-column: span 12; }
     @media (max-width: 900px) { .products > * { grid-column: span 12 !important; } }
 
+    /* Keepworthy: copy beside three of its screens */
+    .kw-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(22px, 4vw, 48px); align-items: center; }
+    .kw-copy { display: flex; flex-direction: column; gap: 14px; }
+    .kw-icon { background: #0e0e13; overflow: hidden; }
+    .kw-icon img { width: 100%; height: 100%; }
+    .kw-shots { display: flex; justify-content: center; gap: 12px; line-height: 0; }
+    .kw-shots img { width: 31%; max-width: 160px; height: auto; border-radius: 18px; border: 1px solid var(--line); box-shadow: var(--shadow-lg); }
+    .kw-shots img:nth-child(1), .kw-shots img:nth-child(3) { transform: translateY(14px); }
+    @media (max-width: 900px) { .kw-grid { grid-template-columns: 1fr; } }
+
     /* App Store badge (official Apple artwork, not restyled) */
     .appstore { display: inline-flex; align-items: center; transition: transform .25s; line-height: 0; }
     .appstore:hover { transform: translateY(-2px); }
@@ -645,6 +655,35 @@
           <div class="card-actions">
             <a class="appstore" href="https://apps.apple.com/us/app/mamba-hypertrophy-trainer/id6794737427" target="_blank" rel="noopener">
               <img src="assets/appstore-badge.svg" alt="Download on the App Store" width="120" height="40">
+            </a>
+          </div>
+        </article>
+
+        <!-- Keepworthy -->
+        <article class="card span-12 reveal">
+          <div class="kw-grid">
+            <div class="kw-copy">
+              <div class="card-top">
+                <div class="app-icon kw-icon"><img src="keepworthy/img/icon-256.png" alt="" width="52" height="52"></div>
+                <span class="status soon">Coming soon</span>
+              </div>
+              <h3>Keepworthy<small>A photo cleaner that deals your camera roll as cards</small></h3>
+              <p>Keepworthy deals the photos you haven't looked at in years as cards: swipe right to keep, left to bin, and nothing is deleted until you say so. It finds near-duplicates, shows how close you are to a cheaper iCloud plan, and keeps everything on your iPhone, with no account, ads or analytics. Free to use, with an optional one-time Pro.</p>
+              <ul class="feat">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span>Random decks of 20 or 50 photos you haven't judged yet</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span>A bin you can rescue from, and the day the space really comes back</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span>Near-duplicate finder that picks the best shot, on the device</span></li>
+              </ul>
+              <div class="card-actions">
+                <a class="link" href="keepworthy/">See Keepworthy
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+              </div>
+            </div>
+            <a class="kw-shots" href="keepworthy/" aria-label="See Keepworthy">
+              <img src="keepworthy/img/home.jpg" alt="" width="640" height="1391" loading="lazy">
+              <img src="keepworthy/img/deck-keep.jpg" alt="" width="640" height="1391" loading="lazy">
+              <img src="keepworthy/img/dupes.jpg" alt="" width="640" height="1391" loading="lazy">
             </a>
           </div>
         </article>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<!-- data-store="soon" shows "In App Review"; change it to "live" once Keepworthy is on the App Store. -->
+<html lang="en" data-store="soon">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keepworthy — Swipe your camera roll clean</title>
+  <meta name="description" content="Keepworthy deals the photos you haven't looked at in years as cards. Swipe right to keep, left to bin. Nothing is deleted until you say so. A photo cleaner for iPhone with no account, no ads and no analytics.">
+  <meta name="theme-color" content="#0e0e13">
+  <meta name="color-scheme" content="dark">
+  <meta name="apple-itunes-app" content="app-id=6827768037">
+  <link rel="canonical" href="https://pacificdigitalventures.org/keepworthy/">
+  <link rel="icon" href="/keepworthy/img/icon-256.png" type="image/png">
+  <link rel="apple-touch-icon" href="/keepworthy/img/icon-256.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pacific Digital Ventures">
+  <meta property="og:title" content="Keepworthy — Swipe your camera roll clean">
+  <meta property="og:description" content="Your photos, dealt as cards. Swipe right to keep, left to bin. Nothing is deleted until you say so.">
+  <meta property="og:url" content="https://pacificdigitalventures.org/keepworthy/">
+  <meta property="og:image" content="https://pacificdigitalventures.org/keepworthy/img/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Keepworthy — Swipe your camera roll clean">
+  <meta name="twitter:description" content="Your photos, dealt as cards. Swipe right to keep, left to bin. Nothing is deleted until you say so.">
+  <meta name="twitter:image" content="https://pacificdigitalventures.org/keepworthy/img/og.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Keepworthy: Photo Cleaner",
+    "operatingSystem": "iOS 17 or later",
+    "applicationCategory": "MultimediaApplication",
+    "description": "A photo cleaner for iPhone that deals your photos as cards: swipe right to keep, left to bin.",
+    "url": "https://pacificdigitalventures.org/keepworthy/",
+    "image": "https://pacificdigitalventures.org/keepworthy/img/icon-512.png",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "Pacific Digital Ventures LLC", "url": "https://pacificdigitalventures.org/" }
+  }
+  </script>
+
+  <style>
+    /* Keepworthy's own palette (the app's Theme.swift), on the site's type. */
+    :root {
+      --ground: #0e0e13;
+      --surface: #1c1c25;
+      --surface-2: #23232e;
+      --line: rgba(255, 255, 255, 0.08);
+      --line-strong: rgba(255, 255, 255, 0.14);
+      --ink: #f4f1ec;
+      --ink-2: #b4b0ba;
+      --ink-3: #918d99;
+      --amber: #ffb454;
+      --amber-ink: #1b1308;
+      --amber-tint: rgba(255, 180, 84, 0.12);
+      --mint: #4ade80;
+      --coral: #ff6b6b;
+      --radius: 22px;
+      --font: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+      --gutter: clamp(16px, 4vw, 40px);
+      color-scheme: dark;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: var(--font); background: var(--ground); color: var(--ink);
+      line-height: 1.6; font-size: 17px; -webkit-font-smoothing: antialiased; overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; height: auto; }
+    a { color: var(--amber); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    a:hover { text-decoration-thickness: 2px; }
+    ::selection { background: var(--amber); color: var(--amber-ink); }
+    :focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; border-radius: 8px; }
+
+    .wrap { max-width: 1120px; margin: 0 auto; padding-left: var(--gutter); padding-right: var(--gutter); }
+    .eyebrow {
+      font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--amber); font-weight: 500;
+    }
+    h1, h2, h3 { letter-spacing: -0.02em; line-height: 1.1; font-weight: 800; text-wrap: balance; }
+    p { color: var(--ink-2); text-wrap: pretty; }
+    .pro-tag {
+      display: inline-flex; align-items: center; font-family: var(--mono); font-size: 11px; font-weight: 500;
+      letter-spacing: .1em; padding: 3px 9px; border-radius: 999px; background: var(--amber); color: var(--amber-ink);
+      vertical-align: middle;
+    }
+
+    /* ---- Top bar (the site's, on Keepworthy's ground) ---- */
+    .top { border-bottom: 1px solid var(--line); }
+    .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 14px; padding-bottom: 14px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 15px; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
+    .brand .mark { width: 32px; height: 32px; border-radius: 9px; display: grid; place-items: center; background: linear-gradient(135deg, #0fb5a5 0%, #1c6fd1 100%); flex-shrink: 0; }
+    .brand .mark svg { width: 20px; height: 20px; }
+    .top nav { display: flex; gap: 20px; }
+    .top nav a { color: var(--ink-2); font-weight: 600; font-size: 14px; text-decoration: none; }
+    .top nav a:hover { color: var(--ink); }
+    @media (max-width: 520px) { .brand span:last-child { display: none; } }
+
+    /* ---- App Store state ---- */
+    .store { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; }
+    .store .badge { line-height: 0; transition: transform .25s; }
+    .store .badge:hover { transform: translateY(-2px); }
+    .store .badge img { height: 52px; width: auto; }
+    .soon-pill {
+      display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 999px;
+      background: var(--amber-tint); border: 1px solid rgba(255, 180, 84, .35); color: var(--ink); font-weight: 700; font-size: 15px;
+    }
+    .soon-pill::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--amber); box-shadow: 0 0 0 4px rgba(255,180,84,.18); }
+    [data-store="soon"] .when-live, [data-store="live"] .when-soon { display: none !important; }
+
+    /* ---- Hero ---- */
+    .hero { position: relative; padding: clamp(48px, 8vw, 96px) 0 clamp(40px, 6vw, 72px); overflow: hidden; }
+    .hero::before {
+      content: ''; position: absolute; inset: -30% -10% auto auto; width: 70vw; height: 70vw; max-width: 900px; max-height: 900px;
+      background: radial-gradient(closest-side, rgba(255, 180, 84, .16), transparent 70%); pointer-events: none;
+    }
+    .hero .wrap { position: relative; display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(32px, 5vw, 64px); align-items: center; }
+    .hero .app { display: flex; align-items: center; gap: 14px; }
+    .hero .app img { width: 64px; height: 64px; border-radius: 15px; box-shadow: 0 14px 30px -12px rgba(0,0,0,.7); }
+    .hero .app strong { font-size: 20px; font-weight: 800; display: block; line-height: 1.2; }
+    .hero .app span { font-size: 14px; color: var(--ink-3); }
+    .hero h1 { font-size: clamp(42px, 6.4vw, 72px); margin-top: 28px; }
+    .hero h1 em { font-style: normal; color: var(--amber); }
+    .hero .lede { font-size: clamp(18px, 2vw, 20px); margin-top: 20px; max-width: 34em; }
+    .hero .store { margin-top: 32px; }
+    .hero .fine { margin-top: 14px; font-size: 14.5px; color: var(--ink-3); }
+
+    /* Three screens fanned like a dealt hand, as on the app's onboarding. */
+    .fan { position: relative; height: clamp(420px, 52vw, 600px); }
+    .phone {
+      position: absolute; top: 50%; left: 50%; width: clamp(180px, 22vw, 268px); aspect-ratio: 1206 / 2622;
+      border-radius: clamp(26px, 3.2vw, 40px); padding: clamp(5px, .6vw, 8px); background: #22222b;
+      border: 1px solid var(--line-strong); box-shadow: 0 40px 80px -30px rgba(0,0,0,.85);
+    }
+    .phone img { width: 100%; height: 100%; object-fit: cover; border-radius: clamp(21px, 2.6vw, 32px); }
+    .fan .phone:nth-child(1) { transform: translate(-100%, -46%) rotate(-9deg); filter: brightness(.8); }
+    .fan .phone:nth-child(3) { transform: translate(0%, -46%) rotate(9deg); filter: brightness(.8); }
+    .fan .phone:nth-child(2) { transform: translate(-50%, -52%); z-index: 1; }
+
+    /* ---- Sections ---- */
+    section { padding: clamp(56px, 9vw, 112px) 0; }
+    .section-head { max-width: 680px; }
+    .section-head h2 { font-size: clamp(32px, 4.4vw, 48px); margin-top: 12px; }
+    .section-head p { margin-top: 16px; font-size: 18px; }
+
+    .steps { margin-top: 44px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; counter-reset: step; }
+    .step { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
+    .step::before {
+      counter-increment: step; content: counter(step);
+      display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%;
+      background: var(--amber-tint); color: var(--amber); font-weight: 800; font-size: 16px;
+    }
+    .step h3 { font-size: 21px; margin-top: 18px; }
+    .step p { margin-top: 8px; font-size: 16px; }
+
+    .feature { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 88px); align-items: center; }
+    .feature + .feature { margin-top: clamp(56px, 9vw, 112px); }
+    .feature.flip .shot { order: 2; }
+    .feature .shot { display: flex; justify-content: center; }
+    .feature .shot .phone { position: relative; top: auto; left: auto; transform: none; width: min(300px, 72vw); }
+    .feature h2 { font-size: clamp(30px, 4vw, 44px); margin-top: 12px; }
+    .feature h2 .pro-tag { margin-left: 8px; position: relative; top: -4px; }
+    .feature p { margin-top: 16px; font-size: 18px; max-width: 30em; }
+    .feature .note { font-size: 15px; color: var(--ink-3); margin-top: 12px; }
+
+    /* Free and Pro */
+    .plans { margin-top: 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .plan { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(24px, 3vw, 34px); }
+    .plan.pro { background: linear-gradient(180deg, rgba(255,180,84,.09), rgba(255,180,84,0) 55%), var(--surface); border-color: rgba(255,180,84,.35); }
+    .plan h3 { font-size: 24px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .plan .price { margin-top: 8px; color: var(--ink-2); font-size: 16px; }
+    .plan .price strong { color: var(--ink); font-size: 22px; font-weight: 800; letter-spacing: -0.01em; }
+    .plan ul { list-style: none; margin-top: 22px; display: grid; gap: 12px; }
+    .plan li { display: flex; gap: 12px; color: var(--ink-2); font-size: 16px; line-height: 1.45; }
+    .plan li strong { color: var(--ink); font-weight: 700; }
+    .plan li svg { width: 20px; height: 20px; flex-shrink: 0; margin-top: 1px; color: var(--mint); }
+    .plan.pro li svg { color: var(--amber); }
+    .plans-note { margin-top: 18px; font-size: 15px; color: var(--ink-3); }
+
+    /* Privacy */
+    .privacy {
+      background: var(--surface); border: 1px solid var(--line); border-radius: calc(var(--radius) + 6px);
+      padding: clamp(28px, 5vw, 56px); display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: center;
+    }
+    .privacy h2 { font-size: clamp(30px, 4vw, 44px); margin-top: 12px; }
+    .privacy p { margin-top: 14px; font-size: 18px; }
+    .nos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .nos div { border: 1px solid var(--line-strong); border-radius: 16px; padding: clamp(14px, 3.5vw, 18px); font-weight: 800; font-size: clamp(16px, 4.3vw, 19px); }
+    .nos div span { display: block; font-weight: 500; font-size: 14px; color: var(--ink-3); margin-top: 2px; }
+
+    /* Closing */
+    .closing { text-align: center; }
+    .closing img.icon { width: 96px; height: 96px; border-radius: 22px; margin: 0 auto; box-shadow: 0 20px 40px -18px rgba(0,0,0,.8); }
+    .closing h2 { font-size: clamp(34px, 5vw, 56px); margin-top: 24px; }
+    .closing p { margin: 14px auto 0; font-size: 18px; max-width: 32em; }
+    .closing .store { justify-content: center; margin-top: 28px; }
+    .closing .links { margin-top: 22px; display: flex; gap: 22px; justify-content: center; font-weight: 600; font-size: 15px; }
+    .closing .links a { color: var(--ink-2); text-decoration: none; }
+    .closing .links a:hover { color: var(--ink); }
+
+    footer { border-top: 1px solid var(--line); color: var(--ink-3); font-size: 13.5px; }
+    footer .wrap { padding-top: 22px; padding-bottom: 28px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+    footer a { color: inherit; }
+
+    @media (max-width: 860px) {
+      .hero .wrap { grid-template-columns: 1fr; }
+      .fan { height: clamp(380px, 110vw, 520px); margin-top: 8px; }
+      .phone { width: clamp(170px, 44vw, 240px); }
+      .fan .phone:nth-child(1) { transform: translate(-104%, -46%) rotate(-9deg); }
+      .fan .phone:nth-child(3) { transform: translate(4%, -46%) rotate(9deg); }
+      .steps, .plans { grid-template-columns: 1fr; }
+      .feature { grid-template-columns: 1fr; }
+      .feature .shot, .feature.flip .shot { order: 2; }
+      .privacy { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .fan .phone { transition: transform .6s cubic-bezier(.2,.8,.2,1); }
+      .fan:hover .phone:nth-child(1) { transform: translate(-106%, -45%) rotate(-12deg); }
+      .fan:hover .phone:nth-child(3) { transform: translate(6%, -45%) rotate(12deg); }
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Pacific Digital Ventures home">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/><path d="M2 8c2-3 4-3 6 0s4 3 6 0 4-3 6 0" opacity=".55"/></svg>
+        </span>
+        <span>Pacific Digital Ventures</span>
+      </a>
+      <nav aria-label="Keepworthy">
+        <a href="/keepworthy/support/">Support</a>
+        <a href="/keepworthy/privacy/">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <div class="hero">
+      <div class="wrap">
+        <div>
+          <div class="app">
+            <img src="/keepworthy/img/icon-256.png" alt="" width="64" height="64">
+            <div><strong>Keepworthy</strong><span>Photo cleaner for iPhone</span></div>
+          </div>
+          <h1>Swipe your camera roll <em>clean.</em></h1>
+          <p class="lede">Keepworthy deals the photos you haven’t looked at in years as cards. Swipe right to keep, left to bin. Nothing is deleted until you say so.</p>
+          <div class="store">
+            <a class="badge when-live" href="https://apps.apple.com/app/id6827768037">
+              <img src="/assets/appstore-badge.svg" alt="Download on the App Store" width="156" height="52">
+            </a>
+            <span class="soon-pill when-soon">Coming soon to the App Store</span>
+          </div>
+          <p class="fine">Free, with no swipe limits. Pro is $19.99 once or $14.99 a year.</p>
+        </div>
+        <div class="fan" aria-hidden="true">
+          <div class="phone"><img src="/keepworthy/img/rewind-love.jpg" alt="" width="640" height="1391"></div>
+          <div class="phone"><img src="/keepworthy/img/deck-keep.jpg" alt="" width="640" height="1391"></div>
+          <div class="phone"><img src="/keepworthy/img/dupes.jpg" alt="" width="640" height="1391"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">How it works</span>
+          <h2>Twenty cards at a time. No scrolling, no guilt.</h2>
+          <p>Most of a photo library is the middle nobody ever scrolls back to. Keepworthy brings it to you a few cards at a time.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <h3>Deal</h3>
+            <p>Get 20 or 50 random photos and videos you haven’t judged yet, from anywhere in your library.</p>
+          </div>
+          <div class="step">
+            <h3>Swipe</h3>
+            <p>Right to keep, left to bin. Swipe up to see when and where a photo was taken, and the shots around it.</p>
+          </div>
+          <div class="step">
+            <h3>Empty the bin</h3>
+            <p>Rescue anything you change your mind about. Emptying asks iOS first, and deleted photos wait 30 days in Recently Deleted.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section style="padding-top:0">
+      <div class="wrap">
+        <div class="feature">
+          <div class="shot"><div class="phone"><img src="/keepworthy/img/home.jpg" alt="Keepworthy's home screen: 3,210 of 9,412 photos reviewed, 12.6 GB cleared, and about 33 GB to go to a cheaper iCloud plan" width="640" height="1391" loading="lazy"></div></div>
+          <div>
+            <span class="eyebrow">Space cleared</span>
+            <h2>See the space come back.</h2>
+            <p>Every photo you bin counts toward the next cheaper iCloud+ plan. Tell Keepworthy which plan you’re on and it shows how far you are from dropping a tier, and what that would save you in a year.</p>
+            <p class="note">It never shows a dollar figure without your plan.</p>
+          </div>
+        </div>
+
+        <div class="feature flip">
+          <div class="shot"><div class="phone"><img src="/keepworthy/img/dupes.jpg" alt="The duplicate finder showing three sets of near-identical photos, with the best shot of each marked" width="640" height="1391" loading="lazy"></div></div>
+          <div>
+            <span class="eyebrow">Duplicate finder</span>
+            <h2>Near-duplicates, sorted. <span class="pro-tag">PRO</span></h2>
+            <p>Keepworthy finds shots taken moments apart that look alike, marks the best one, and bins the rest in one tap. It all happens on your iPhone; nothing is uploaded.</p>
+            <p class="note">Scanning is free, and so is binning from your first 3 sets.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="shot"><div class="phone"><img src="/keepworthy/img/rewind-love.jpg" alt="Rewind mode with a 2016 photo of Oia, Greece, mid-swipe to Love" width="640" height="1391" loading="lazy"></div></div>
+          <div>
+            <span class="eyebrow">Rewind</span>
+            <h2>Fall for old photos again.</h2>
+            <p>Rewind deals from your whole archive, years back. Love a photo and it’s added to your Favorites. Turn on On this day for memories from today’s date in earlier years.</p>
+          </div>
+        </div>
+
+        <div class="feature flip">
+          <div class="shot"><div class="phone"><img src="/keepworthy/img/bin.jpg" alt="The bin holding four photos, with two emptied batches and the days their space lands" width="640" height="1391" loading="lazy"></div></div>
+          <div>
+            <span class="eyebrow">The bin</span>
+            <h2>Nothing goes until you say so.</h2>
+            <p>Swiping left only puts a photo in Keepworthy’s bin. Empty it when you’re ready, and iOS asks you to confirm. Keepworthy shows the day that space really comes back, and can tell you when it does.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FREE AND PRO ===== -->
+    <section style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">Pricing</span>
+          <h2>Free to use. Pay once if you want more.</h2>
+          <p>Most photo cleaners charge by the week. Keepworthy’s core is free with no caps, and Pro is a single purchase.</p>
+        </div>
+        <div class="plans">
+          <div class="plan">
+            <h3>Free</h3>
+            <p class="price"><strong>$0</strong>, with no daily limits, timers or ads</p>
+            <ul>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span><strong>Unlimited swiping</strong> in 20- and 50-card decks</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span><strong>Rewind</strong> and On this day</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span><strong>The bin</strong>, rescue, and the day your space comes back</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span><strong>Photo details</strong>: date, place, map and the shots around it</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span><strong>Space tracking</strong> toward a cheaper iCloud+ plan</span></li>
+            </ul>
+          </div>
+          <div class="plan pro">
+            <h3>Keepworthy Pro <span class="pro-tag">PRO</span></h3>
+            <p class="price"><strong>$19.99</strong> once, or $14.99 a year</p>
+            <ul>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span><strong>Heavy Hitters</strong>: your biggest files first, so every swipe frees more space</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span><strong>Duplicate finder</strong>: bin the extras from every set</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span><strong>Home Screen widget</strong> with Keep and Bin</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span><strong>Endless decks</strong> past 50 cards</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg><span><strong>Year and album filters</strong></span></li>
+            </ul>
+          </div>
+        </div>
+        <p class="plans-note">No weekly plan, and no free trial that turns into a charge. US prices; the App Store shows yours.</p>
+      </div>
+    </section>
+
+    <!-- ===== PRIVACY ===== -->
+    <section style="padding-top:0">
+      <div class="wrap">
+        <div class="privacy">
+          <div>
+            <span class="eyebrow">Private by design</span>
+            <h2>Your photos stay on your iPhone.</h2>
+            <p>Keepworthy has no account and no server, so your photos and your choices never leave your phone. Place names and maps come from Apple. The <a href="/keepworthy/privacy/">privacy policy</a> has the details.</p>
+          </div>
+          <div class="nos">
+            <div>No account<span>Nothing to sign up for</span></div>
+            <div>No server<span>Nothing uploaded</span></div>
+            <div>No analytics<span>Nothing tracked</span></div>
+            <div>No ads<span>Nothing sold</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CLOSING ===== -->
+    <section class="closing" style="padding-top:0">
+      <div class="wrap">
+        <img class="icon" src="/keepworthy/img/icon-256.png" alt="Keepworthy app icon" width="96" height="96" loading="lazy">
+        <h2>Find out what’s keepworthy.</h2>
+        <p>For iPhone, on iOS 17 or later.</p>
+        <div class="store">
+          <a class="badge when-live" href="https://apps.apple.com/app/id6827768037">
+            <img src="/assets/appstore-badge.svg" alt="Download on the App Store" width="156" height="52">
+          </a>
+          <span class="soon-pill when-soon">Coming soon to the App Store</span>
+        </div>
+        <div class="links">
+          <a href="/keepworthy/support/">Support</a>
+          <a href="/keepworthy/privacy/">Privacy</a>
+          <a href="mailto:info@pacificdigitalventures.org?subject=Keepworthy">Contact</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>&copy; 2026 <a href="/">Pacific Digital Ventures LLC</a>. Honolulu, Hawaiʻi.</span>
+      <span>iPhone, iCloud and App Store are trademarks of Apple Inc.</span>
+    </div>
+  </footer>
+</body>
+</html>
